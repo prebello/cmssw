@@ -1,0 +1,1 @@
+{"filter": "generator", "pileup": "/RelValMinBiasFS_13_ForMixing/CMSSW_8_0_19-80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/GEN-SIM-RECO", "GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "FEVTDEBUGHLToutput": "file:step1.root", "DQMoutput": "file:step1_inDQM.root"}

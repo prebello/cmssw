@@ -1,0 +1,24 @@
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimPU going to execute cd 25407.0_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py SingleNuE10_cfi.py  --conditions auto:run2_mc --pileup_input das:/RelValMinBiasFS_13_ForMixing/CMSSW_8_0_19-80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/GEN-SIM-RECO --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,500 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --beamspot Realistic50ns13TeVCollision --datatier GEN-SIM-DIGI-RECO,DQMIO --pileup AVE_35_BX_25ns --io FS_NuGun_UP15_UP15_PU25.io --python FS_NuGun_UP15_UP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimPU going to execute cd 25407.0_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimPU going to execute cd 25407.0_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimPU dryRun for 'cd 25407.0_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py SingleNuE10_cfi.py  --conditions auto:run2_mc --pileup_input das:/RelValMinBiasFS_13_ForMixing/CMSSW_8_0_19-80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/GEN-SIM-RECO --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,500 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --beamspot Realistic50ns13TeVCollision --datatier GEN-SIM-DIGI-RECO,DQMIO --pileup AVE_35_BX_25ns --io FS_NuGun_UP15_UP15_PU25.io --python FS_NuGun_UP15_UP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --fileout file:step1.root  > step1_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimPU dryRun for 'cd 25407.0_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step1_inDQM.root --fileout file:step2.root  > step2_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimPU dryRun for 'cd 25407.0_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --fileout file:step3.root  > step3_NuGun_UP15+FS_NuGun_UP15_UP15_PU25+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 

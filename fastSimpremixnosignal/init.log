@@ -1,0 +1,72 @@
+ignoring non-requested file relval_standard
+ignoring non-requested file relval_highstats
+ignoring non-requested file relval_pileup
+ignoring non-requested file relval_generator
+ignoring non-requested file relval_extendedgen
+ignoring non-requested file relval_production
+ignoring non-requested file relval_ged
+ignoring non-requested file relval_upgrade
+ignoring non-requested file relval_2017
+ignoring non-requested file relval_identity
+ignoring non-requested file relval_machine
+ignoring non-requested file relval_unsch
+processing relval_premix
+Not running the wf, only creating cfgs and logs
+resetting to default number of threads
+Running in 4 thread(s)
+
+Preparing to run 250399.0 FS_PREMIXUP15_PU25+FS_PREMIXUP15_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimpremixnosignal going to execute cd 250399.0_FS_PREMIXUP15_PU25+FS_PREMIXUP15_PU25
+ cmsDriver.py SingleNuE10_cfi  --conditions auto:run2_mc --pileup_input das:/RelValMinBiasFS_13_ForMixing/CMSSW_8_0_19-80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/GEN-SIM-RECO --fast  --era Run2_2016 --eventcontent PREMIX --relval 100000,500 -s GEN,SIM,RECOBEFMIX,DIGIPREMIX,L1,DIGI2RAW --datatier GEN-SIM-DIGI-RAW --pileup AVE_35_BX_25ns --io FS_PREMIXUP15_PU25.io --python FS_PREMIXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 10  --no_exec --fileout file:step1.root  > step1_FS_PREMIXUP15_PU25+FS_PREMIXUP15_PU25.log  2>&1
+ 
+250399.0_FS_PREMIXUP15_PU25+FS_PREMIXUP15_PU25 Step0-PASSED  - time date Mon Sep  5 04:16:15 2016-date Mon Sep  5 04:15:59 2016; exit: 0
+1 tests passed, 0 failed
+
+
+	Found wmclient
+
+inspecting 250399.0_FS_PREMIXUP15_PU25+FS_PREMIXUP15_PU25
+	Fake upload of 250399.0_FS_PREMIXUP15_PU25+FS_PREMIXUP15_PU25/FS_PREMIXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250399.0FS_PREMIXUP15_PU25
+250399.0_FS_PREMIXUP15_PU25+FS_PREMIXUP15_PU25/FS_PREMIXUP15_PU25.py  uploaded to couchDB for 250399.0 with ID 1041
+
+	Found wmcontrol
+
+Only viewing request 250399.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19FS_PREMIXUP15_PU25_PU25ns__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1041,
+           'EventsPerJob': 500,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'MCPileup': u'/RelValMinBiasFS_13_ForMixing/CMSSW_8_0_19-80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/GEN-SIM-RECO',
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValFS_PREMIXUP15_PU25',
+           'ProcessingString': u'PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 100000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'FS_PREMIXUP15_PU25'},
+ 'TaskChain': 1,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None

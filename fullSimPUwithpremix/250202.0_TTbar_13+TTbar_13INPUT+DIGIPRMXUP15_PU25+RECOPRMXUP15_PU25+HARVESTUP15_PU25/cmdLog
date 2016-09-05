@@ -1,0 +1,32 @@
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValTTbar_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix dryRun for 'cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValTTbar_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix dryRun for 'cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix dryRun for 'cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix dryRun for 'cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 

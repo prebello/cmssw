@@ -1,0 +1,28 @@
+L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+entry filelist:step1_dasquery.log
+found files:  ['/store/relval/CMSSW_7_1_20_patch2/RelValNuGun_UP15/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/2684D481-AF81-E511-B02A-00261894396D.root', '/store/relval/CMSSW_7_1_20_patch2/RelValNuGun_UP15/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/7E6D7180-AF81-E511-8B91-002618943807.root']
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: DIGIPREMIX_S2 Spec: ['pdigi_valid']
+Step: DATAMIX Spec: 
+the query is file dataset = /RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW
+DAS succeeded after 1 attempts 0
+found files:  ['/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/00185563-0673-E611-A242-0025905A607E.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/005ED5F9-FE72-E611-AB76-0CC47A7C35A8.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/007F3291-0273-E611-8000-0CC47A78A2EC.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/0207D55B-0673-E611-9486-0CC47A7C3450.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/0226853D-0573-E611-95C6-0CC47A7C34E6.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/023A7B96-0173-E611-8EF0-0CC47A7C345C.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/02441FF3-0073-E611-A071-0CC47A7C347E.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/02BD61DA-0373-E611-9598-0CC47A7C361E.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/0411FD92-0473-E611-965E-0CC47A7C3572.root', '/store/relval/CMSSW_8_0_19/RelValPREMIXUP15_PU25/GEN-SIM-DIGI-RAW/PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/00000/046402FA-FE72-E611-A63E-0CC47A78A2F6.root']
+Step: L1 Spec: 
+L1TCalorimeter Sequence configured for Stage-2 (2016) trigger. 
+L1TMuon Sequence configured for Stage-2 (2016) trigger. 
+L1TGlobal Sequence configured for Stage-2 (2016) trigger. 
+L1TCalorimeter Conditions configured for Stage-2 (2016) trigger. 
+L1TMuon Conditions configured for Stage-2 (2016) trigger. 
+L1TGlobal Conditions configured for Stage-2 (2016) trigger. 
+Step: DIGI2RAW Spec: 
+L1TDigiToRaw Sequence configured for Stage-2 (2016) trigger. 
+Step: HLT Spec: ['@relval2016']
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with customizeHLTforFullSim from HLTrigger/Configuration/customizeHLTforMC
+Config file DIGIPRMXUP15_PU25.py created

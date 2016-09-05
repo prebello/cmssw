@@ -1,0 +1,27 @@
+L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+GEN,SIM,RECOBEFMIX,DIGIPREMIX,L1,DIGI2RAW,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+the query is file dataset = /RelValMinBiasFS_13_ForMixing/CMSSW_8_0_19-80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/GEN-SIM-RECO
+DAS succeeded after 1 attempts 0
+found files:  ['/store/relval/CMSSW_8_0_19/RelValMinBiasFS_13_ForMixing/GEN-SIM-RECO/80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/00000/24E759BD-FF72-E611-89F6-0025905A497A.root', '/store/relval/CMSSW_8_0_19/RelValMinBiasFS_13_ForMixing/GEN-SIM-RECO/80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/00000/326610E5-0273-E611-8055-0025905A60D6.root', '/store/relval/CMSSW_8_0_19/RelValMinBiasFS_13_ForMixing/GEN-SIM-RECO/80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/00000/88925CE4-0273-E611-A6F2-0CC47A7C35F4.root', '/store/relval/CMSSW_8_0_19/RelValMinBiasFS_13_ForMixing/GEN-SIM-RECO/80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim-v1/00000/E6D36FB7-FF72-E611-BB11-0CC47A7C34A6.root']
+Step: GEN Spec: 
+Loading generator fragment from Configuration.Generator.SingleNuE10_cfi
+Step: SIM Spec: 
+Step: RECOBEFMIX Spec: 
+Step: DIGIPREMIX Spec: 
+Step: L1 Spec: 
+L1TCalorimeter Sequence configured for Stage-2 (2016) trigger. 
+L1TMuon Sequence configured for Stage-2 (2016) trigger. 
+L1TGlobal Sequence configured for Stage-2 (2016) trigger. 
+L1TCalorimeter Conditions configured for Stage-2 (2016) trigger. 
+L1TMuon Conditions configured for Stage-2 (2016) trigger. 
+L1TGlobal Conditions configured for Stage-2 (2016) trigger. 
+Step: DIGI2RAW Spec: 
+L1TDigiToRaw Sequence configured for Stage-2 (2016) trigger. 
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+Config file FS_PREMIXUP15_PU25.py created

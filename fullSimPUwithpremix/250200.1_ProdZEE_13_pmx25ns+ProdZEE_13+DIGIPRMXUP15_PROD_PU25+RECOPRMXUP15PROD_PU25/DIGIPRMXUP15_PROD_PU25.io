@@ -1,0 +1,1 @@
+{"pileup": "/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW", "GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "primary": ["file:step1.root"], "PREMIXRAWoutput": "file:step2.root"}

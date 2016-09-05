@@ -1,0 +1,655 @@
+ignoring non-requested file relval_standard
+ignoring non-requested file relval_highstats
+ignoring non-requested file relval_pileup
+ignoring non-requested file relval_generator
+ignoring non-requested file relval_extendedgen
+ignoring non-requested file relval_production
+ignoring non-requested file relval_ged
+ignoring non-requested file relval_upgrade
+ignoring non-requested file relval_2017
+ignoring non-requested file relval_identity
+ignoring non-requested file relval_machine
+ignoring non-requested file relval_unsch
+processing relval_premix
+request for INPUT for  ['all']
+Not running the wf, only creating cfgs and logs
+resetting to default number of threads
+Running in 4 thread(s)
+
+Preparing to run 250200.0 ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValZEE_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 250200.1 ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25
+ cmsDriver.py ZEE_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent FEVTDEBUG --relval 9000,100 -s GEN,SIM --datatier GEN-SIM --beamspot Realistic50ns13TeVCollision --io ProdZEE_13.io --python ProdZEE_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  --nThreads 4 > step1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW -s DIGIPREMIX_S2,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --datatier PREMIXRAW --era Run2_2016 --eventcontent PREMIXRAW --io DIGIPRMXUP15_PROD_PU25.io --python DIGIPRMXUP15_PROD_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1.root  --fileout file:step2.root  --nThreads 4 > step2_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+Preparing to run 250202.0 TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValTTbar_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 250203.0 H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValH125GGgluonfusion_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,DQM:DQMOfflinePOGMC --datatier AODSIM,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent AODSIM,MINIAODSIM,DQMIO --io RECOPRMXUP15PROD_PU25.io --python RECOPRMXUP15PROD_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+Preparing to run 250204.0 QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValQQH1352T_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+Preparing to run 250205.0 ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValZTT_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+Preparing to run 250206.0 ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValZMM_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 250207.0 NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ das_client --limit 0 --query 'file dataset=/RelValNuGun_UP15/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step2  --datamix PreMix --conditions auto:run2_mc -s DIGIPREMIX_S2:pdigi_valid,DATAMIX,L1,DIGI2RAW,HLT:@relval2016 --pileup_input das:/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW --datatier GEN-SIM-DIGI-RAW-HLTDEBUG --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIPRMXUP15_PU25.io --python DIGIPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step3  --conditions auto:run2_mc -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --customise SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput --io RECOPRMXUP15_PU25.io --python RECOPRMXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimPUwithpremix going to execute cd 250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15_PU25.io --python HARVESTUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25.log  2>&1
+ 
+250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Mon Sep  5 05:01:42 2016-date Mon Sep  5 05:00:53 2016; exit: 0 0 0 0
+250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25 Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 05:01:33 2016-date Mon Sep  5 05:00:54 2016; exit: 0 0 0
+250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Mon Sep  5 05:01:45 2016-date Mon Sep  5 05:00:59 2016; exit: 0 0 0 0
+250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Mon Sep  5 05:01:47 2016-date Mon Sep  5 05:01:02 2016; exit: 0 0 0 0
+250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Mon Sep  5 05:02:30 2016-date Mon Sep  5 05:01:43 2016; exit: 0 0 0 0
+250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Mon Sep  5 05:02:30 2016-date Mon Sep  5 05:01:44 2016; exit: 0 0 0 0
+250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Mon Sep  5 05:02:41 2016-date Mon Sep  5 05:01:55 2016; exit: 0 0 0 0
+250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Mon Sep  5 05:02:42 2016-date Mon Sep  5 05:01:57 2016; exit: 0 0 0 0
+8 8 8 7 tests passed, 0 0 0 0 failed
+
+
+	Found wmclient
+
+inspecting 250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25
+inspecting 250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+inspecting 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+inspecting 250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+inspecting 250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+inspecting 250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+inspecting 250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+inspecting 250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25
+	Fake upload of 250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25/ProdZEE_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_250200.1ProdZEE_13
+250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25/ProdZEE_13.py  uploaded to couchDB for 250200.1 with ID 1041
+	Fake upload of 250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25/DIGIPRMXUP15_PROD_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250200.1DIGIPRMXUP15_PROD_PU25
+250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25/DIGIPRMXUP15_PROD_PU25.py  uploaded to couchDB for 250200.1 with ID 1042
+	Fake upload of 250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25/RECOPRMXUP15PROD_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250200.1RECOPRMXUP15PROD_PU25
+250200.1_ProdZEE_13_pmx25ns+ProdZEE_13+DIGIPRMXUP15_PROD_PU25+RECOPRMXUP15PROD_PU25/RECOPRMXUP15PROD_PU25.py  uploaded to couchDB for 250200.1 with ID 1043
+	Fake upload of 250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250200.0DIGIPRMXUP15_PU25
+250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py  uploaded to couchDB for 250200.0 with ID 1044
+	Fake upload of 250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250200.0RECOPRMXUP15_PU25
+250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py  uploaded to couchDB for 250200.0 with ID 1045
+	Fake upload of 250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250200.0harvesting
+250200.0_ZEE_13+ZEE_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py uploaded to couchDB for 250200.0 with ID 1046
+	Fake upload of 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250202.0DIGIPRMXUP15_PU25
+250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py  uploaded to couchDB for 250202.0 with ID 1047
+	Fake upload of 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250202.0RECOPRMXUP15_PU25
+250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py  uploaded to couchDB for 250202.0 with ID 1048
+	Fake upload of 250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250202.0harvesting
+250202.0_TTbar_13+TTbar_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py uploaded to couchDB for 250202.0 with ID 1049
+	Fake upload of 250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250203.0DIGIPRMXUP15_PU25
+250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py  uploaded to couchDB for 250203.0 with ID 1050
+	Fake upload of 250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250203.0RECOPRMXUP15_PU25
+250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py  uploaded to couchDB for 250203.0 with ID 1051
+	Fake upload of 250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250203.0harvesting
+250203.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py uploaded to couchDB for 250203.0 with ID 1052
+	Fake upload of 250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250204.0DIGIPRMXUP15_PU25
+250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py  uploaded to couchDB for 250204.0 with ID 1053
+	Fake upload of 250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250204.0RECOPRMXUP15_PU25
+250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py  uploaded to couchDB for 250204.0 with ID 1054
+	Fake upload of 250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250204.0harvesting
+250204.0_QQH1352T_13+QQH1352T_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py uploaded to couchDB for 250204.0 with ID 1055
+	Fake upload of 250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250205.0DIGIPRMXUP15_PU25
+250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py  uploaded to couchDB for 250205.0 with ID 1056
+	Fake upload of 250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250205.0RECOPRMXUP15_PU25
+250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py  uploaded to couchDB for 250205.0 with ID 1057
+	Fake upload of 250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250205.0harvesting
+250205.0_ZTT_13+ZTT_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py uploaded to couchDB for 250205.0 with ID 1058
+	Fake upload of 250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250206.0DIGIPRMXUP15_PU25
+250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py  uploaded to couchDB for 250206.0 with ID 1059
+	Fake upload of 250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250206.0RECOPRMXUP15_PU25
+250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py  uploaded to couchDB for 250206.0 with ID 1060
+	Fake upload of 250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250206.0harvesting
+250206.0_ZMM_13+ZMM_13INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py uploaded to couchDB for 250206.0 with ID 1061
+	Fake upload of 250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250207.0DIGIPRMXUP15_PU25
+250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/DIGIPRMXUP15_PU25.py  uploaded to couchDB for 250207.0 with ID 1062
+	Fake upload of 250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250207.0RECOPRMXUP15_PU25
+250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/RECOPRMXUP15_PU25.py  uploaded to couchDB for 250207.0 with ID 1063
+	Fake upload of 250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py to couch with label RelValSet_CMSSW_8_0_19_v1_250207.0harvesting
+250207.0_NuGun_UP15+NuGun_UP15INPUT+DIGIPRMXUP15_PU25+RECOPRMXUP15_PU25+HARVESTUP15_PU25/HARVESTUP15_PU25.py uploaded to couchDB for 250207.0 with ID 1064
+
+	Found wmcontrol
+
+Only viewing request 250200.1
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ProdZEE_13_pmx25ns_PUpmx25ns__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1041,
+           'EventsPerJob': 100,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 7500,
+           'Multicore': 4,
+           'PrimaryDataset': 'RelValProdZEE_13_pmx25ns',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'RequestNumEvents': 9000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'ProdZEE_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1042,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGoutput',
+           'InputTask': 'ProdZEE_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'MCPileup': u'/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW',
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIPRMXUP15_PROD_PU25'},
+ 'Task3': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1043,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'PREMIXRAWoutput',
+           'InputTask': 'DIGIPRMXUP15_PROD_PU25',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOPRMXUP15PROD_PU25'},
+ 'TaskChain': 3,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 250200.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1046,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZEE_13_PUpmx25ns__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1044,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZEE_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'MCPileup': u'/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW',
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIPRMXUP15_PU25'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1045,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIPRMXUP15_PU25',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOPRMXUP15_PU25'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 250202.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1049,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19TTbar_13_PUpmx25ns__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1047,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValTTbar_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'MCPileup': u'/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW',
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIPRMXUP15_PU25'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1048,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIPRMXUP15_PU25',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOPRMXUP15_PU25'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 250203.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1052,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19H125GGgluonfusion_13_PUpmx25ns__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1050,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValH125GGgluonfusion_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'MCPileup': u'/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW',
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIPRMXUP15_PU25'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1051,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIPRMXUP15_PU25',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOPRMXUP15_PU25'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 250204.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1055,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19QQH1352T_13_PUpmx25ns__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1053,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValQQH1352T_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'MCPileup': u'/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW',
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIPRMXUP15_PU25'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1054,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIPRMXUP15_PU25',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOPRMXUP15_PU25'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 250205.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1058,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZTT_13_PUpmx25ns__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1056,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZTT_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'MCPileup': u'/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW',
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIPRMXUP15_PU25'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1057,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIPRMXUP15_PU25',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOPRMXUP15_PU25'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 250206.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1061,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZMM_13_PUpmx25ns__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1059,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZMM_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'MCPileup': u'/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW',
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIPRMXUP15_PU25'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1060,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIPRMXUP15_PU25',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOPRMXUP15_PU25'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 250207.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1064,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19NuGun_UP15_PUpmx25ns__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1062,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValNuGun_UP15/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'MCPileup': u'/RelValPREMIXUP15_PU25/CMSSW_8_0_19-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2-v1/GEN-SIM-DIGI-RAW',
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIPRMXUP15_PU25'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1063,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIPRMXUP15_PU25',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'PUpmx25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOPRMXUP15_PU25'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
