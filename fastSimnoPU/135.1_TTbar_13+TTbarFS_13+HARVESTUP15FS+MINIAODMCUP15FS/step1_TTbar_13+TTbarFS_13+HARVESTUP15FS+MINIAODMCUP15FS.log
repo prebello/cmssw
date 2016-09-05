@@ -1,0 +1,31 @@
+L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: GEN Spec: 
+Loading generator fragment from Configuration.Generator.TTbar_13TeV_TuneCUETP8M1_cfi
+Step: SIM Spec: 
+Step: RECOBEFMIX Spec: 
+Step: DIGI Spec: ['pdigi_valid']
+Step: L1 Spec: 
+L1TCalorimeter Sequence configured for Stage-2 (2016) trigger. 
+L1TMuon Sequence configured for Stage-2 (2016) trigger. 
+L1TGlobal Sequence configured for Stage-2 (2016) trigger. 
+L1TCalorimeter Conditions configured for Stage-2 (2016) trigger. 
+L1TMuon Conditions configured for Stage-2 (2016) trigger. 
+L1TGlobal Conditions configured for Stage-2 (2016) trigger. 
+Step: DIGI2RAW Spec: 
+L1TDigiToRaw Sequence configured for Stage-2 (2016) trigger. 
+Step: L1Reco Spec: 
+Step: RECO Spec: 
+Step: EI Spec: 
+Step: HLT Spec: ['@relval2016']
+Step: VALIDATION Spec: ['@standardValidation']
+@standardValidation in preparing validation
+Step: DQM Spec: ['@standardDQM']
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with customizeHLTforFastSim from HLTrigger/Configuration/customizeHLTforMC
+Config file TTbarFS_13.py created

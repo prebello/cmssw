@@ -1,0 +1,1 @@
+{"ALCARECOStreamMuAlBeamHalo": "MuAlBeamHalo.root", "ALCARECOStreamMuAlBeamHaloOverlaps": "MuAlBeamHaloOverlaps.root", "GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "primary": ["file:step3.root"], "ALCARECOStreamTkAlBeamHalo": "TkAlBeamHalo.root"}

@@ -1,0 +1,1 @@
+{"PREMIXoutput": "file:step1.root", "pileup": "/RelValMinBias_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM", "GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "filter": "generator"}

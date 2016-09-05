@@ -1,0 +1,24 @@
+L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+entry filelist:step1_dasquery.log
+found files:  ['/store/relval/CMSSW_7_1_20_patch2/RelValRSKKGluon_m3000GeV_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/28BF4DA5-E981-E511-B6A8-0025905B85F6.root', '/store/relval/CMSSW_7_1_20_patch2/RelValRSKKGluon_m3000GeV_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/648368B1-E581-E511-BE12-0025905B8576.root', '/store/relval/CMSSW_7_1_20_patch2/RelValRSKKGluon_m3000GeV_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/6AA5B0A6-E981-E511-95E9-003048FFD736.root', '/store/relval/CMSSW_7_1_20_patch2/RelValRSKKGluon_m3000GeV_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/DC8317C7-E481-E511-8FB3-002618943870.root', '/store/relval/CMSSW_7_1_20_patch2/RelValRSKKGluon_m3000GeV_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/EC44CA3B-E781-E511-90C7-003048FFD736.root']
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: DIGI Spec: ['pdigi_valid']
+Step: L1 Spec: 
+L1TCalorimeter Sequence configured for Stage-2 (2016) trigger. 
+L1TMuon Sequence configured for Stage-2 (2016) trigger. 
+L1TGlobal Sequence configured for Stage-2 (2016) trigger. 
+L1TCalorimeter Conditions configured for Stage-2 (2016) trigger. 
+L1TMuon Conditions configured for Stage-2 (2016) trigger. 
+L1TGlobal Conditions configured for Stage-2 (2016) trigger. 
+Step: DIGI2RAW Spec: 
+L1TDigiToRaw Sequence configured for Stage-2 (2016) trigger. 
+Step: HLT Spec: ['@relval2016']
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with customizeHLTforFullSim from HLTrigger/Configuration/customizeHLTforMC
+Config file DIGIUP15.py created

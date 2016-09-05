@@ -1,0 +1,40 @@
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ das_client --limit 0 --query 'file dataset=/RelValBeamHalo_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --scenario cosmics --datatier GEN-SIM-DIGI-RAW -n 10 --era Run2_2016 --eventcontent FEVTDEBUG --io DIGIHAL.io --python DIGIHAL.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ cmsDriver.py step3  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,ALCA:MuAlCalIsolatedMu,DQM --scenario cosmics --datatier GEN-SIM-RECO,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,DQM --io RECOHAL.io --python RECOHAL.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ cmsDriver.py step4  --conditions auto:run2_mc -s ALCA:TkAlBeamHalo+MuAlBeamHaloOverlaps+MuAlBeamHalo --datatier ALCARECO -n 1000 --era Run2_2016 --eventcontent ALCARECO --io ALCAHAL.io --python ALCAHAL.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step3.root  --fileout file:step4.root  --nThreads 4 > step4_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ cmsDriver.py step5  --conditions auto:run2_mc --filein file:step3_inDQM.root -s HARVESTING:dqmHarvesting --filetype DQM --scenario cosmics --era Run2_2016 --mc  --io HARVESTHAL.io --python HARVESTHAL.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --fileout file:step5.root  > step5_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ das_client --limit 0 --query 'file dataset=/RelValBeamHalo_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --scenario cosmics --datatier GEN-SIM-DIGI-RAW -n 10 --era Run2_2016 --eventcontent FEVTDEBUG --io DIGIHAL.io --python DIGIHAL.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ cmsDriver.py step3  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,ALCA:MuAlCalIsolatedMu,DQM --scenario cosmics --datatier GEN-SIM-RECO,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,DQM --io RECOHAL.io --python RECOHAL.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ cmsDriver.py step4  --conditions auto:run2_mc -s ALCA:TkAlBeamHalo+MuAlBeamHaloOverlaps+MuAlBeamHalo --datatier ALCARECO -n 1000 --era Run2_2016 --eventcontent ALCARECO --io ALCAHAL.io --python ALCAHAL.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step3.root  --fileout file:step4.root  --nThreads 4 > step4_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1308.0_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL
+ cmsDriver.py step5  --conditions auto:run2_mc --filein file:step3_inDQM.root -s HARVESTING:dqmHarvesting --filetype DQM --scenario cosmics --era Run2_2016 --mc  --io HARVESTHAL.io --python HARVESTHAL.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --fileout file:step5.root  > step5_BeamHalo_13+BeamHalo_13INPUT+DIGIHAL+RECOHAL+ALCAHAL+HARVESTHAL.log  2>&1
+ 

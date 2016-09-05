@@ -1,0 +1,1 @@
+{"FASTPUoutput": "file:step1.root", "filter": "ProductionFilterSequence", "GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2"}

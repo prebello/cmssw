@@ -1,0 +1,40 @@
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ das_client --limit 0 --query 'file dataset=/RelValCosmicsSPLoose_UP15/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ cmsDriver.py step2  --conditions auto:run2_mc_cosmics -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --scenario cosmics --datatier GEN-SIM-DIGI-RAW -n 10 --era Run2_2016 --eventcontent FEVTDEBUG --io DIGICOS_UP15.io --python DIGICOS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ cmsDriver.py step3  --conditions auto:run2_mc_cosmics -s RAW2DIGI,L1Reco,RECO,ALCA:MuAlCalIsolatedMu,DQM --scenario cosmics --datatier GEN-SIM-RECO,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,DQM --io RECOCOS_UP15.io --python RECOCOS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ cmsDriver.py step4  --conditions auto:run2_mc_cosmics -s ALCA:TkAlBeamHalo+MuAlBeamHaloOverlaps+MuAlBeamHalo --datatier ALCARECO -n 1000 --era Run2_2016 --eventcontent ALCARECO --io ALCACOS_UP15.io --python ALCACOS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step3.root  --fileout file:step4.root  --nThreads 4 > step4_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ cmsDriver.py step5  --conditions auto:run2_mc_cosmics --filein file:step3_inDQM.root -s HARVESTING:dqmHarvesting --filetype DQM --scenario cosmics --era Run2_2016 --mc  --io HARVESTCOS_UP15.io --python HARVESTCOS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --fileout file:step5.root  > step5_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ das_client --limit 0 --query 'file dataset=/RelValCosmicsSPLoose_UP15/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ cmsDriver.py step2  --conditions auto:run2_mc_cosmics -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --scenario cosmics --datatier GEN-SIM-DIGI-RAW -n 10 --era Run2_2016 --eventcontent FEVTDEBUG --io DIGICOS_UP15.io --python DIGICOS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ cmsDriver.py step3  --conditions auto:run2_mc_cosmics -s RAW2DIGI,L1Reco,RECO,ALCA:MuAlCalIsolatedMu,DQM --scenario cosmics --datatier GEN-SIM-RECO,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,DQM --io RECOCOS_UP15.io --python RECOCOS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ cmsDriver.py step4  --conditions auto:run2_mc_cosmics -s ALCA:TkAlBeamHalo+MuAlBeamHaloOverlaps+MuAlBeamHalo --datatier ALCARECO -n 1000 --era Run2_2016 --eventcontent ALCARECO --io ALCACOS_UP15.io --python ALCACOS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step3.root  --fileout file:step4.root  --nThreads 4 > step4_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1307.0_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15
+ cmsDriver.py step5  --conditions auto:run2_mc_cosmics --filein file:step3_inDQM.root -s HARVESTING:dqmHarvesting --filetype DQM --scenario cosmics --era Run2_2016 --mc  --io HARVESTCOS_UP15.io --python HARVESTCOS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --fileout file:step5.root  > step5_CosmicsSPLoose_UP15+CosmicsSPLoose_UP15INPUT+DIGICOS_UP15+RECOCOS_UP15+ALCACOS_UP15+HARVESTCOS_UP15.log  2>&1
+ 

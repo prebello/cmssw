@@ -1,0 +1,12 @@
+GEN,SIM,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: GEN Spec: 
+Loading generator fragment from Configuration.Generator.QCD_Pt_3000_3500_13TeV_TuneCUETP8M1_cfi
+Step: SIM Spec: 
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+Config file ProdQCD_Pt_3000_3500_13.py created

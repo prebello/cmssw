@@ -1,0 +1,13 @@
+ALCA:TkAlBeamHalo+MuAlBeamHaloOverlaps+MuAlBeamHalo,ENDJOB
+We have determined that this is real data (if not, rerun cmsDriver.py with --mc)
+entry file:step3.root
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: ALCA Spec: ['TkAlBeamHalo', 'MuAlBeamHaloOverlaps', 'MuAlBeamHalo']
+DL enriching full TkAlBeamHalo+MuAlBeamHaloOverlaps+MuAlBeamHalo
+L1TRawToDigi Sequence configured for Stage-2 (2016) trigger. 
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+Config file ALCAHAL.py created

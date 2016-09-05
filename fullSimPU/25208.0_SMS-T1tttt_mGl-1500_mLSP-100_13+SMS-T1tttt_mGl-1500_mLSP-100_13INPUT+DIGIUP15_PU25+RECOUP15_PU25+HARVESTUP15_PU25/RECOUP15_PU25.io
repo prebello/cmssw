@@ -1,0 +1,1 @@
+{"GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "RECOSIMoutput": "file:step3.root", "primary": ["file:step2.root"], "DQMoutput": "file:step3_inDQM.root", "pileup": "/RelValMinBias_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM", "MINIAODSIMoutput": "file:step3_inMINIAODSIM.root"}

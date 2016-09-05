@@ -1,0 +1,1960 @@
+This is an expert setting, you'd better know what you're doing
+processing relval_standard
+request for INPUT for  ['all']
+ignoring non-requested file relval_highstats
+ignoring non-requested file relval_pileup
+ignoring non-requested file relval_generator
+ignoring non-requested file relval_extendedgen
+ignoring non-requested file relval_production
+ignoring non-requested file relval_ged
+ignoring non-requested file relval_upgrade
+ignoring non-requested file relval_2017
+ignoring non-requested file relval_identity
+ignoring non-requested file relval_machine
+ignoring non-requested file relval_unsch
+ignoring non-requested file relval_premix
+Running in 4 thread(s)
+
+Preparing to run 1329.0 ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+Preparing to run 1330.0 ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValZEE_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1331.0 ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValZMM_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValZTT_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+Preparing to run 1332.0 H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValH125GGgluonfusion_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+Preparing to run 1333.0 PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+Preparing to run 1334.0 QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValPhotonJets_Pt_10_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1335.0 Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValQQH1352T_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1336.0 Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValWjet_Pt_80_120_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValWjet_Pt_3000_3500_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+ ---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+ ------
+ 
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+ 
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+ 
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+Preparing to run 1337.0 SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValSMS-T1tttt_mGl-1500_mLSP-100_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1338.0 QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValQCD_FlatPt_15_3000HS_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1339.0 QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+Preparing to run 1340.0 PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValQCD_Pt_600_800_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValPhiToMuMu_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+Preparing to run 1341.0 RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+Preparing to run 1343.0 ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValRSKKGluon_m3000GeV_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValZpMM_2250_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+Preparing to run 1344.0 ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+
+Preparing to run 1345.0 ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValZpEE_2250_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValZpTT_1500_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+ ---
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+ 
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+Preparing to run 1347.0 Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValUpsilon1SToMuMu_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1348.0 EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+Preparing to run 1350.0 JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValEtaBToJpsiJpsi_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValJpsiMuMu_Pt-15/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1352.0 HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValHSCPstop_M_200_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+ ---
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+Preparing to run 1353.0 RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+Preparing to run 1354.0 WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValRSGravitonToGaGa_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1355.0 DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValWpToENu_M-2000_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ das_client --limit 0 --query 'file dataset=/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOUP15.io --python RECOUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set2 dryRun for 'cd 1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+ cmsDriver.py step4  --filetype DQM --conditions auto:run2_mc --mc  -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2016 --io HARVESTUP15.io --python HARVESTUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15.log  2>&1
+ 
+1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:00 2016-date Sun Sep  4 23:51:00 2016; exit: 0 0 0 0
+1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:00 2016-date Sun Sep  4 23:51:00 2016; exit: 0 0 0 0
+1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:00 2016-date Sun Sep  4 23:51:00 2016; exit: 0 0 0 0
+1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:00 2016-date Sun Sep  4 23:51:00 2016; exit: 0 0 0 0
+1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:10 2016-date Sun Sep  4 23:51:10 2016; exit: 0 0 0 0
+1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:10 2016-date Sun Sep  4 23:51:10 2016; exit: 0 0 0 0
+1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:10 2016-date Sun Sep  4 23:51:10 2016; exit: 0 0 0 0
+1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:10 2016-date Sun Sep  4 23:51:10 2016; exit: 0 0 0 0
+1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:20 2016-date Sun Sep  4 23:51:20 2016; exit: 0 0 0 0
+1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:20 2016-date Sun Sep  4 23:51:20 2016; exit: 0 0 0 0
+1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:20 2016-date Sun Sep  4 23:51:20 2016; exit: 0 0 0 0
+1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:20 2016-date Sun Sep  4 23:51:20 2016; exit: 0 0 0 0
+1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:30 2016-date Sun Sep  4 23:51:30 2016; exit: 0 0 0 0
+1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:30 2016-date Sun Sep  4 23:51:30 2016; exit: 0 0 0 0
+1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:30 2016-date Sun Sep  4 23:51:30 2016; exit: 0 0 0 0
+1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:30 2016-date Sun Sep  4 23:51:30 2016; exit: 0 0 0 0
+1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:40 2016-date Sun Sep  4 23:51:40 2016; exit: 0 0 0 0
+1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:40 2016-date Sun Sep  4 23:51:40 2016; exit: 0 0 0 0
+1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:40 2016-date Sun Sep  4 23:51:40 2016; exit: 0 0 0 0
+1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:40 2016-date Sun Sep  4 23:51:40 2016; exit: 0 0 0 0
+1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:50 2016-date Sun Sep  4 23:51:50 2016; exit: 0 0 0 0
+1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:50 2016-date Sun Sep  4 23:51:50 2016; exit: 0 0 0 0
+1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED  - time date Sun Sep  4 23:51:50 2016-date Sun Sep  4 23:51:50 2016; exit: 0 0 0 0
+23 23 23 23 tests passed, 0 0 0 0 failed
+
+
+	Found wmclient
+
+inspecting 1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+inspecting 1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15
+Loading 1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1329.0DIGIUP15
+Importing the config, this may take a while...L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1329.0 with ID e6b5c21008d487ac2500385174892fa1
+Loading 1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1329.0RECOUP15
+Importing the config, this may take a while...Added 'egmPhotonIDs' to process definition (MiniAOD format)!
+1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1329.0 with ID e6b5c21008d487ac2500385174893e7f
+Loading 1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1329.0harvesting
+Importing the config, this may take a while...  ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+WARNING:  L1Trigger/L1TCommon/python/caloStage1LegacyFormatDigis_cfi.py has been deprecated...
+WARNING:  please use L1Trigger/L1TCalorimeter/python/caloStage1LegacyFormatDigis_cfi.py
+['HLT_Photon90_CaloIdL_PFHT500', 'HLT_HT430to450', 'DST_HT250_CaloScouting', 'HLT_L2Mu40_NoVertex_3Sta_NoBPTX3BX', 'HLT_MET200', 'HLT_PFMET170_NotCleaned', 'HLT_JetE30_NoBPTX3BX', 'HLT_PFMET170_JetIdCleaned', 'HLT_PFHT550_4JetPt50', 'HLT_Mu27_TkMu8', 'HLT_HT250_DisplacedDijet40_DisplacedTrack', 'HLT_Mu55', 'HLT_Mu50', 'HLT_MonoCentralPFJet80_PFMETNoMu100_PFMHTNoMu100_IDTight', 'HLT_DiCentralPFJet330_CFMax0p5', 'HLT_Photon90_CaloIdL_PFHT600HLT_HT650', 'HLT_PFHT650', 'DST_L1DoubleMu_CaloScouting_PFScouting', 'DST_HT450_PFReco_PFBTagCSVReco_PFScouting', 'HLT_TrkMu15_DoubleTrkMu5NoFiltersNoVtx', 'HLT_Photon42_R9Id85_OR_CaloId24b40e_Iso50T80L_Photon25_AND_HE10_R9Id65_Eta2_Mass15', 'HLT_HT410to430', 'HLT_PFHT750_4JetPt70', 'HLT_HT350_DisplacedDijet40_Inclusive', 'DST_DoubleMu3_Mass10_BTagScouting', 'HLT_HT200_DisplacedDijet40_DisplacedTrack', 'HLT_HT350_DisplacedDijet40_DisplacedTrack', 'HLT_DoublePhoton40', 'DST_L1DoubleMu_BTagScouting', 'HLT_Mu23NoFiltersNoVtx_Photon23_CaloIdL', 'DST_ZeroBias_CaloScouting_PFScouting', 'HLT_HT275', 'HLT_DoubleEle25_CaloIdL_GsfTrkIdVL', 'HLT_PFMETNoMu110_PFMHTNoMu110_IDTight', 'HLT_HT470to500', 'HLT_HT575', 'HLT_Ele105_CaloIdVT_GsfTrkIdT', 'HLT_VBF_DisplacedJet40_VTightID_Hadronic', 'HLT_PFMET170_NoiseCleaned', 'HLT_DoubleMu18NoFiltersNoVtx', 'HLT_MET200_JetIdCleaned', 'HLT_PFHT850_4JetPt50', 'HLT_PFHT550_4Jet', 'HLT_HT550_DisplacedDijet40_Inclusive', 'HLT_PFMET170', 'HLT_MET100', 'HLT_MonoCentralPFJet80_PFMETNoMu110_PFMHTNoMu110_IDTight', 'HLT_Mu38NoFiltersNoVtxDisplaced_DisplacedJet60_Tight', 'HLT_MonoCentralPFJet80_PFMETNoMu120_JetIdCleaned_PFMHTNoMu120_IDTight', 'HLT_DoublePhoton50', 'HLT_Photon36_R9Id85_OR_CaloId24b40e_Iso50T80L_Photon31_AND_HE10_R9Id65_Mass10', 'HLT_TrkMu17_DoubleTrkMu8NoFiltersNoVtx', 'HLT_MET60_IsoTrk35_Loose', 'HLT_VBF_DisplacedJet40_DisplacedTrack', 'HLT_Photon26_R9Id85_OR_CaloId24b40e_Iso50T80L_Photon16_AND_HE10_R9Id65_Mass60', 'HLT_HT450to470', 'DST_HT250_CaloBTagScouting', 'HLT_HT350_DisplacedDijet80_DisplacedTrack', 'DST_CaloJet40_PFReco_PFBTagCSVReco_PFScouting', 'HLT_SingleCentralPFJet170_CFMax0p1', 'HLT_DoubleMu23NoFiltersNoVtxDisplaced', 'HLT_Photon175', 'HLT_PFMETNoMu90_PFMHTNoMu90_IDTight', 'HLT_Ele115_CaloIdVT_GsfTrkIdT', 'DST_HT450_PFScouting', 'HLT_DiCentralPFJet170_CFMax0p1', 'HLT_ECALHT800', 'HLT_JetE70_NoBPTX3BX', 'HLT_Photon26_R9Id85_OR_CaloId24b40e_Iso50T80L_Photon16_AND_HE10_R9Id65_Eta2_Mass60', 'HLT_DoubleEle33_CaloIdL', 'DST_CaloJet40_CaloScouting', 'HLT_HT500to550', 'HLT_PFHT650_4JetPt50', 'HLT_Mu17_Mu8_DZ', 'HLT_Mu28NoFiltersNoVtx_CentralCaloJet40', 'HLT_PFMETNoMu100_PFMHTNoMu100_IDTight', 'HLT_Mu30_TkMu11', 'HLT_Mu38NoFiltersNoVtx_DisplacedJet60_Loose', 'HLT_MonoCentralPFJet80_PFMETNoMu120_PFMHTNoMu120_IDTight', 'HLT_VBF_DisplacedJet40_VTightID_DisplacedTrack', 'HLT_VBF_DisplacedJet40_DisplacedTrack_2TrackIP2DSig5', 'HLT_PFMET170_HBHECleaned', 'DST_ZeroBias_BTagScouting', 'HLT_L2Mu10_NoVertex_NoBPTX', 'HLT_DoubleMu28NoFiltersNoVtxDisplaced', 'HLT_JetE30_NoBPTX', 'HLT_CaloJet500_NoJetID', 'DST_L1HTT_BTagScouting', 'HLT_VBF_DisplacedJet40_Hadronic', 'HLT_DoubleEle33_CaloIdL_GsfTrkIdVL', 'HLT_L2DoubleMu28_NoVertex_2Cha_Angle2p5_Mass10', 'HLT_PFHT750_4JetPt80', 'HLT_DiCentralPFJet170', 'HLT_HT550to650', 'HLT_MonoCentralPFJet80_PFMETNoMu90_PFMHTNoMu90_IDTight', 'HLT_DoubleMu33NoFiltersNoVtx', 'HLT_HT750_DisplacedDijet80_Inclusive', 'HLT_HT350_DisplacedDijet80_Tight_DisplacedTrack', 'HLT_Mu28NoFiltersNoVtxDisplaced_Photon28_CaloIdL', 'HLT_PFMETNoMu120_PFMHTNoMu120_IDTight', 'HLT_Photon150', 'HLT_HT200', 'HLT_Dimuon0_Jpsi_Muon', 'HLT_L2DoubleMu38_NoVertex_2Cha_Angle2p5_Mass10', 'HLT_DoubleEle33_1329.0_ZEE_13+ZEE_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1329.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1330.0DIGIUP15
+1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1330.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1330.0RECOUP15
+1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1330.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1330.0harvesting
+1330.0_ZMM_13+ZMM_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1330.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1331.0DIGIUP15
+1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1331.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1331.0RECOUP15
+1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1331.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1331.0harvesting
+1331.0_ZTT_13+ZTT_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1331.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1332.0DIGIUP15
+1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1332.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1332.0RECOUP15
+1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1332.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1332.0harvesting
+1332.0_H125GGgluonfusion_13+H125GGgluonfusion_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1332.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1333.0DIGIUP15
+1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1333.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1333.0RECOUP15
+1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1333.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1333.0harvesting
+1333.0_PhotonJets_Pt_10_13+PhotonJets_Pt_10_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1333.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1334.0DIGIUP15
+1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1334.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1334.0RECOUP15
+1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1334.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1334.0harvesting
+1334.0_QQH1352T_13+QQH1352T_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1334.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1335.0DIGIUP15
+1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1335.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1335.0RECOUP15
+1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1335.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1335.0harvesting
+1335.0_Wjet_Pt_80_120_13+Wjet_Pt_80_120_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1335.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1336.0DIGIUP15
+1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1336.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1336.0RECOUP15
+1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1336.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1336.0harvesting
+1336.0_Wjet_Pt_3000_3500_13+Wjet_Pt_3000_3500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1336.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1337.0DIGIUP15
+1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1337.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1337.0RECOUP15
+1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1337.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1337.0harvesting
+1337.0_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1337.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1338.0DIGIUP15
+1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1338.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1338.0RECOUP15
+1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1338.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1338.0harvesting
+1338.0_QCD_FlatPt_15_3000HS_13+QCD_FlatPt_15_3000HS_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1338.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1339.0DIGIUP15
+1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1339.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1339.0RECOUP15
+1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1339.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1339.0harvesting
+1339.0_QCD_Pt_600_800_13+QCD_Pt_600_800_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1339.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1340.0DIGIUP15
+1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1340.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1340.0RECOUP15
+1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1340.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1340.0harvesting
+1340.0_PhiToMuMu_13+PhiToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1340.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1341.0DIGIUP15
+1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1341.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1341.0RECOUP15
+1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1341.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1341.0harvesting
+1341.0_RSKKGluon_m3000GeV_13+RSKKGluon_m3000GeV_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1341.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1343.0DIGIUP15
+1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1343.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1343.0RECOUP15
+1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1343.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1343.0harvesting
+1343.0_ZpMM_2250_13+ZpMM_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1343.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1344.0DIGIUP15
+1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1344.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1344.0RECOUP15
+1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1344.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1344.0harvesting
+1344.0_ZpEE_2250_13+ZpEE_2250_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1344.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1345.0DIGIUP15
+1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1345.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1345.0RECOUP15
+1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1345.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1345.0harvesting
+1345.0_ZpTT_1500_13+ZpTT_1500_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1345.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1347.0DIGIUP15
+1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1347.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1347.0RECOUP15
+1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1347.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1347.0harvesting
+1347.0_Upsilon1SToMuMu_13+Upsilon1SToMuMu_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1347.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1348.0DIGIUP15
+1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1348.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1348.0RECOUP15
+1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1348.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1348.0harvesting
+1348.0_EtaBToJpsiJpsi_13+EtaBToJpsiJpsi_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1348.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1350.0DIGIUP15
+1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1350.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1350.0RECOUP15
+1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1350.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1350.0harvesting
+1350.0_JpsiMuMu_Pt-15+JpsiMuMu_Pt-15INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1350.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1352.0DIGIUP15
+1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1352.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1352.0RECOUP15
+1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1352.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1352.0harvesting
+1352.0_HSCPstop_M_200_13+HSCPstop_M_200_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1352.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1353.0DIGIUP15
+1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1353.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1353.0RECOUP15
+1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1353.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1353.0harvesting
+1353.0_RSGravitonToGaGa_13+RSGravitonToGaGa_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1353.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1354.0DIGIUP15
+1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1354.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1354.0RECOUP15
+1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1354.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1354.0harvesting
+1354.0_WpToENu_M-2000_13+WpToENu_M-2000_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1354.0 with ID e6b5c21008d487ac2500385174893ecd
+Not re-uploading 1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py to https://cmsweb.cern.ch/couchdb for 1355.0DIGIUP15
+1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/DIGIUP15.py  uploaded to couchDB for 1355.0 with ID e6b5c21008d487ac2500385174892fa1
+Not re-uploading 1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py to https://cmsweb.cern.ch/couchdb for 1355.0RECOUP15
+1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/RECOUP15.py  uploaded to couchDB for 1355.0 with ID e6b5c21008d487ac2500385174893e7f
+Not re-uploading 1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py to https://cmsweb.cern.ch/couchdb for 1355.0harvesting
+1355.0_DisplacedSUSY_stopToBottom_M_300_1000mm_13+DisplacedSUSY_stopToBottom_M_300_1000mm_13INPUT+DIGIUP15+RECOUP15+HARVESTUP15/HARVESTUP15.py uploaded to couchDB for 1355.0 with ID e6b5c21008d487ac2500385174893ecd
+
+	Found wmcontrol
+
+For eyes before submitting 1329.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZEE_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZEE_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1329.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19ZEE_13__Tr4GT_v2_160904_235244_3365
+Approved workflow: prebello_RVCMSSW_8_0_19ZEE_13__Tr4GT_v2_160904_235244_3365
+........... 1329.0 submitted
+For eyes before submitting 1330.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZMM_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZMM_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1330.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19ZMM_13__Tr4GT_v2_160904_235252_7372
+Approved workflow: prebello_RVCMSSW_8_0_19ZMM_13__Tr4GT_v2_160904_235252_7372
+........... 1330.0 submitted
+For eyes before submitting 1331.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZTT_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZTT_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1331.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19ZTT_13__Tr4GT_v2_160904_235301_77
+Approved workflow: prebello_RVCMSSW_8_0_19ZTT_13__Tr4GT_v2_160904_235301_77
+........... 1331.0 submitted
+For eyes before submitting 1332.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19H125GGgluonfusion_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValH125GGgluonfusion_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1332.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19H125GGgluonfusion_13__Tr4GT_v2_160904_235308_6171
+Approved workflow: prebello_RVCMSSW_8_0_19H125GGgluonfusion_13__Tr4GT_v2_160904_235308_6171
+........... 1332.0 submitted
+For eyes before submitting 1333.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19PhotonJets_Pt_10_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValPhotonJets_Pt_10_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1333.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19PhotonJets_Pt_10_13__Tr4GT_v2_160904_235317_346
+Approved workflow: prebello_RVCMSSW_8_0_19PhotonJets_Pt_10_13__Tr4GT_v2_160904_235317_346
+........... 1333.0 submitted
+For eyes before submitting 1334.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19QQH1352T_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValQQH1352T_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1334.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19QQH1352T_13__Tr4GT_v2_160904_235325_5480
+Approved workflow: prebello_RVCMSSW_8_0_19QQH1352T_13__Tr4GT_v2_160904_235325_5480
+........... 1334.0 submitted
+For eyes before submitting 1335.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19Wjet_Pt_80_120_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValWjet_Pt_80_120_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1335.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19Wjet_Pt_80_120_13__Tr4GT_v2_160904_235333_9883
+Approved workflow: prebello_RVCMSSW_8_0_19Wjet_Pt_80_120_13__Tr4GT_v2_160904_235333_9883
+........... 1335.0 submitted
+For eyes before submitting 1336.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19Wjet_Pt_3000_3500_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValWjet_Pt_3000_3500_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1336.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19Wjet_Pt_3000_3500_13__Tr4GT_v2_160904_235342_3115
+Approved workflow: prebello_RVCMSSW_8_0_19Wjet_Pt_3000_3500_13__Tr4GT_v2_160904_235342_3115
+........... 1336.0 submitted
+For eyes before submitting 1337.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19SMS-T1tttt_mGl-1500_mLSP-100_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValSMS-T1tttt_mGl-1500_mLSP-100_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1337.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19SMS-T1tttt_mGl-1500_mLSP-100_13__Tr4GT_v2_160904_235351_7549
+Approved workflow: prebello_RVCMSSW_8_0_19SMS-T1tttt_mGl-1500_mLSP-100_13__Tr4GT_v2_160904_235351_7549
+........... 1337.0 submitted
+For eyes before submitting 1338.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19QCD_FlatPt_15_3000HS_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValQCD_FlatPt_15_3000HS_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1338.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19QCD_FlatPt_15_3000HS_13__Tr4GT_v2_160904_235359_6252
+Approved workflow: prebello_RVCMSSW_8_0_19QCD_FlatPt_15_3000HS_13__Tr4GT_v2_160904_235359_6252
+........... 1338.0 submitted
+For eyes before submitting 1339.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19QCD_Pt_600_800_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValQCD_Pt_600_800_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1339.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19QCD_Pt_600_800_13__Tr4GT_v2_160904_235408_1146
+Approved workflow: prebello_RVCMSSW_8_0_19QCD_Pt_600_800_13__Tr4GT_v2_160904_235408_1146
+........... 1339.0 submitted
+For eyes before submitting 1340.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19PhiToMuMu_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValPhiToMuMu_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1340.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19PhiToMuMu_13__Tr4GT_v2_160904_235416_7624
+Approved workflow: prebello_RVCMSSW_8_0_19PhiToMuMu_13__Tr4GT_v2_160904_235416_7624
+........... 1340.0 submitted
+For eyes before submitting 1341.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19RSKKGluon_m3000GeV_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValRSKKGluon_m3000GeV_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1341.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19RSKKGluon_m3000GeV_13__Tr4GT_v2_160904_235424_9492
+Approved workflow: prebello_RVCMSSW_8_0_19RSKKGluon_m3000GeV_13__Tr4GT_v2_160904_235424_9492
+........... 1341.0 submitted
+For eyes before submitting 1343.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZpMM_2250_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZpMM_2250_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1343.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19ZpMM_2250_13__Tr4GT_v2_160904_235433_5617
+Approved workflow: prebello_RVCMSSW_8_0_19ZpMM_2250_13__Tr4GT_v2_160904_235433_5617
+........... 1343.0 submitted
+For eyes before submitting 1344.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZpEE_2250_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZpEE_2250_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1344.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19ZpEE_2250_13__Tr4GT_v2_160904_235441_7970
+Approved workflow: prebello_RVCMSSW_8_0_19ZpEE_2250_13__Tr4GT_v2_160904_235441_7970
+........... 1344.0 submitted
+For eyes before submitting 1345.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZpTT_1500_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValZpTT_1500_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1345.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19ZpTT_1500_13__Tr4GT_v2_160904_235451_5184
+Approved workflow: prebello_RVCMSSW_8_0_19ZpTT_1500_13__Tr4GT_v2_160904_235451_5184
+........... 1345.0 submitted
+For eyes before submitting 1347.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19Upsilon1SToMuMu_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValUpsilon1SToMuMu_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1347.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19Upsilon1SToMuMu_13__Tr4GT_v2_160904_235500_1374
+Approved workflow: prebello_RVCMSSW_8_0_19Upsilon1SToMuMu_13__Tr4GT_v2_160904_235500_1374
+........... 1347.0 submitted
+For eyes before submitting 1348.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19EtaBToJpsiJpsi_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValEtaBToJpsiJpsi_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1348.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19EtaBToJpsiJpsi_13__Tr4GT_v2_160904_235508_3767
+Approved workflow: prebello_RVCMSSW_8_0_19EtaBToJpsiJpsi_13__Tr4GT_v2_160904_235508_3767
+........... 1348.0 submitted
+For eyes before submitting 1350.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19JpsiMuMu_Pt-15__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValJpsiMuMu_Pt-15/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1350.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19JpsiMuMu_Pt-15__Tr4GT_v2_160904_235516_2697
+Approved workflow: prebello_RVCMSSW_8_0_19JpsiMuMu_Pt-15__Tr4GT_v2_160904_235516_2697
+........... 1350.0 submitted
+For eyes before submitting 1352.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19HSCPstop_M_200_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValHSCPstop_M_200_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1352.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19HSCPstop_M_200_13__Tr4GT_v2_160904_235524_6828
+Approved workflow: prebello_RVCMSSW_8_0_19HSCPstop_M_200_13__Tr4GT_v2_160904_235524_6828
+........... 1352.0 submitted
+For eyes before submitting 1353.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19RSGravitonToGaGa_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValRSGravitonToGaGa_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1353.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19RSGravitonToGaGa_13__Tr4GT_v2_160904_235533_6438
+Approved workflow: prebello_RVCMSSW_8_0_19RSGravitonToGaGa_13__Tr4GT_v2_160904_235533_6438
+........... 1353.0 submitted
+For eyes before submitting 1354.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19WpToENu_M-2000_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValWpToENu_M-2000_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1354.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19WpToENu_M-2000_13__Tr4GT_v2_160904_235541_5170
+Approved workflow: prebello_RVCMSSW_8_0_19WpToENu_M-2000_13__Tr4GT_v2_160904_235541_5170
+........... 1354.0 submitted
+For eyes before submitting 1355.0
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 'e6b5c21008d487ac2500385174893ecd',
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19DisplacedSUSY_stopToBottom_M_300_1000mm_13__Tr4GT_v2',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174892fa1',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputDataset': '/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DIGIUP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 'e6b5c21008d487ac2500385174893e7f',
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DIGIUP15',
+           'KeepOutput': True,
+           'LumisPerJob': 5,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RECOUP15'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Submitting 1355.0 ...........
+It seemslike the name of the GT '80X_mcRun2_asymptotic_2016_TrancheIV_v2' has a typo in it, missing the final ::All which will crash your job. If insted you're using CondDBv2, you're fine.
+Will do POST request to:cmsweb.cern.ch/reqmgr2/data/request
+Injected workflow: prebello_RVCMSSW_8_0_19DisplacedSUSY_stopToBottom_M_300_1000mm_13__Tr4GT_v2_160904_235549_1029
+Approved workflow: prebello_RVCMSSW_8_0_19DisplacedSUSY_stopToBottom_M_300_1000mm_13__Tr4GT_v2_160904_235549_1029
+........... 1355.0 submitted
+CaloIdL_GsfTrkIdVL_MW', 'HLT_Photon165_HE10', 'HLT_PFHT650_WideJetMJJ900DEtaJJ1p5', 'HLT_DiCentralPFJet430', 'HLT_Mu33NoFiltersNoVtxDisplaced_Photon33_CaloIdL', 'HLT_L2DoubleMu23_NoVertex', 'DST_L1HTT_CaloScouting_PFScouting', 'HLT_HT325', 'HLT_Photon135_PFMET100', 'DST_HT410_PFScouting', 'DST_CaloJet40_CaloBTagScouting', 'HLT_PFHT750_4Jet', 'HLT_HT650_DisplacedDijet80_Inclusive', 'HLT_VBF_DisplacedJet40_VVTightID_DisplacedTrack', 'HLT_PFHT650_WideJetMJJ950DEtaJJ1p5', 'HLT_Photon125', 'HLT_PFMETNoMu120_JetIdCleaned_PFMHTNoMu120_IDTight', 'HLT_L2Mu10_NoVertex_NoBPTX3BX', 'HLT_Photon36_R9Id85_OR_CaloId24b40e_Iso50T80L_Photon22_AND_HE10_R9Id65_Eta2_Mass15', 'HLT_Mu50_eta2p1', 'DST_L1HTT_CaloBTagScouting', 'HLT_Mu42NoFiltersNoVtx_Photon42_CaloIdL', 'HLT_HT550_DisplacedDijet80_Inclusive', 'HLT_HT500_DisplacedDijet40_Inclusive', 'HLT_DoubleMu38NoFiltersNoVtx', 'HLT_MET150', 'HLT_MET75_IsoTrk50', 'HLT_MET100_JetIdCleaned', 'HLT_Mu28NoFiltersNoVtx_DisplacedJet40_Loose', 'HLT_Mu33NoFiltersNoVtx_Photon33_CaloIdL_R9Id65_HE10', 'HLT_DiCentralPFJet220_CFMax0p3', 'HLT_PFMETNoMu90_JetIdCleaned_PFMHTNoMu90_IDTight', 'HLT_MET90_IsoTrk50', 'HLT_HT425', 'HLT_Mu38NoFiltersNoVtxDisplaced_DisplacedJet60_Loose', 'DST_HT450_BTagScouting', 'HLT_VBF_DisplacedJet40_Hadronic_2PromptTrack', 'HLT_Mu45_eta2p1', 'HLT_Mu40_TkMu11', 'DST_L1HTT125ORHTT150ORHTT175_CaloScouting', 'HLT_PFHT750_4JetPt50', 'HLT_DoublePhoton85', 'HLT_Mu38NoFiltersNoVtx_Photon38_CaloIdL', 'HLT_Mu30_Ele30_CaloIdL_GsfTrkIdVL', 'HLT_JetE50_NoBPTX3BX', 'HLT_Photon135_PFMET100_JetIdCleaned', 'HLT_HT900', 'HLT_PFHT800', 'HLT_Mu17_TkMu8_DZ', 'HLT_MET150_JetIdCleaned', 'HLT_HT400_DisplacedDijet40_Inclusive', 'HLT_DoublePhoton60', 'HLT_HT300', 'HLT_PFHT650_4Jet', 'HLT_DoubleMu3_Mass10', 'HLT_PFHT800_4JetPt50', 'DST_HT410_BTagScouting', 'HLT_VBF_DisplacedJet40_VVTightID_Hadronic', 'HLT_VBF_DisplacedJet40_TightID_Hadronic', 'DST_CaloJet40_CaloScouting_PFScouting', 'HLT_L2Mu45_NoVertex_3Sta_NoBPTX3BX', 'HLT_VBF_DisplacedJet40_TightID_DisplacedTrack', 'DST_L1HTT125ORHTT150ORHTT175_PFReco_PFBTagCSVReco_PFScouting', 'DST_DoubleMu3_Mass10_CaloScouting_PFScouting', 'HLT_DoubleEle33_CaloIdL_MW', 'DST_CaloJet40_BTagScouting', 'HLT_MonoCentralPFJet80_PFMETNoMu90_JetIdCleaned_PFMHTNoMu90_IDTight', 'HLT_Mu17_Mu8', 'HLT_TkMu50']
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+done.
+Added file to the config cache:
+  DocID:    e6b5c21008d487ac2500385174893ecd
+  Revision: 3-2e924f1a5d58d23d46cb5a85b2a5fc2a
+  ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+L1TRawToDigi Sequence configured for Stage-2 (2016) trigger. 
+L1TReco Sequence configured for Stage-2 (2016) trigger. 
+WARNING:  L1Trigger/L1TCommon/python/caloStage1LegacyFormatDigis_cfi.py has been deprecated...
+WARNING:  please use L1Trigger/L1TCalorimeter/python/caloStage1LegacyFormatDigis_cfi.py
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+done.
+Added file to the config cache:
+  DocID:    e6b5c21008d487ac2500385174893e7f
+  Revision: 3-5c767358e03b6890f85772ce87264908

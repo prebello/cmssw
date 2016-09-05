@@ -1,0 +1,40 @@
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ das_client --limit 0 --query 'file dataset=/RelValMinBias_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,ALCA:SiStripCalZeroBias+SiStripCalMinBias,VALIDATION,DQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOMINUP15.io --python RECOMINUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ cmsDriver.py step4  --filetype DQM --mc  --conditions auto:run2_mc --era Run2_2016 -s HARVESTING:validationHarvesting+dqmHarvesting --io HARVESTMINUP15.io --python HARVESTMINUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step3_inDQM.root --fileout file:step4.root  > step4_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 going to execute cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ cmsDriver.py step5  --conditions auto:run2_mc --filein file:step3.root -s ALCA:TkAlMinBias --datatier ALCARECO -n 1000 --era Run2_2016 --eventcontent ALCARECO --io ALCAMINUP15.io --python ALCAMINUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step5.root  --nThreads 4 > step5_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ das_client --limit 0 --query 'file dataset=/RelValMinBias_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW-HLTDEBUG -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT --io DIGIUP15.io --python DIGIUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ cmsDriver.py step3  --runUnscheduled  --conditions auto:run2_mc -s RAW2DIGI,L1Reco,RECO,EI,ALCA:SiStripCalZeroBias+SiStripCalMinBias,VALIDATION,DQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO -n 10 --era Run2_2016 --eventcontent RECOSIM,MINIAODSIM,DQM --io RECOMINUP15.io --python RECOMINUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ cmsDriver.py step4  --filetype DQM --mc  --conditions auto:run2_mc --era Run2_2016 -s HARVESTING:validationHarvesting+dqmHarvesting --io HARVESTMINUP15.io --python HARVESTMINUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --filein file:step3_inDQM.root --fileout file:step4.root  > step4_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullsimnoPU/set1 dryRun for 'cd 1311.0_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15
+ cmsDriver.py step5  --conditions auto:run2_mc --filein file:step3.root -s ALCA:TkAlMinBias --datatier ALCARECO -n 1000 --era Run2_2016 --eventcontent ALCARECO --io ALCAMINUP15.io --python ALCAMINUP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --fileout file:step5.root  --nThreads 4 > step5_MinBias_13+MinBias_13INPUT+DIGIUP15+RECOMINUP15+HARVESTMINUP15+ALCAMINUP15.log  2>&1
+ 

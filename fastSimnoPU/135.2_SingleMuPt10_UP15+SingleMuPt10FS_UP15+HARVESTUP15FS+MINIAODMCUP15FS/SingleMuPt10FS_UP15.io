@@ -1,0 +1,1 @@
+{"filter": "generator", "GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "FEVTDEBUGHLToutput": "file:step1.root", "DQMoutput": "file:step1_inDQM.root"}

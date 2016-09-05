@@ -1,0 +1,13 @@
+GEN,SIM,RECOBEFMIX,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: GEN Spec: 
+Loading generator fragment from Configuration.Generator.MinBias_13TeV_pythia8_TuneCUETP8M1_cfi
+Step: SIM Spec: 
+Step: RECOBEFMIX Spec: 
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+Config file MinBiasFS_13_ForMixing.py created

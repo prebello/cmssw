@@ -1,0 +1,26 @@
+L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+GEN,SIM,DIGIPREMIX:pdigi_valid,L1,DIGI2RAW,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+the query is file dataset = /RelValMinBias_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM
+DAS succeeded after 1 attempts 0
+found files:  ['/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/02A753B5-AD81-E511-B976-002618943915.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/102620B1-AD81-E511-94EA-0026189438B0.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/28160373-B581-E511-A005-0025905A60D2.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/2A7CD5CA-AF81-E511-9736-00261894393B.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/34B23D7D-AF81-E511-A9CC-00261894396D.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/5EB6574D-B581-E511-9C97-0025905A60D2.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/A2049BB6-B281-E511-A0F9-0025905B8576.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/F08E84FB-AB81-E511-8E87-002590596468.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/F4C45783-B281-E511-AF12-002618943932.root', '/store/relval/CMSSW_7_1_20_patch2/RelValMinBias_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/F623580F-AC81-E511-B6E2-0026189438B0.root']
+Step: GEN Spec: 
+Loading generator fragment from Configuration.Generator.SingleNuE10_cfi
+Step: SIM Spec: 
+Step: DIGIPREMIX Spec: ['pdigi_valid']
+Step: L1 Spec: 
+L1TCalorimeter Sequence configured for Stage-2 (2016) trigger. 
+L1TMuon Sequence configured for Stage-2 (2016) trigger. 
+L1TGlobal Sequence configured for Stage-2 (2016) trigger. 
+L1TCalorimeter Conditions configured for Stage-2 (2016) trigger. 
+L1TMuon Conditions configured for Stage-2 (2016) trigger. 
+L1TGlobal Conditions configured for Stage-2 (2016) trigger. 
+Step: DIGI2RAW Spec: 
+L1TDigiToRaw Sequence configured for Stage-2 (2016) trigger. 
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+Config file PREMIXUP15_PU25.py created

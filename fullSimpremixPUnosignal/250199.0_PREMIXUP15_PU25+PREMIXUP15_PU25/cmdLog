@@ -1,0 +1,8 @@
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimpremixPUnosignal going to execute cd 250199.0_PREMIXUP15_PU25+PREMIXUP15_PU25
+ cmsDriver.py step1  --conditions auto:run2_mc --pileup_input das:/RelValMinBias_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM -n 10 --era Run2_2016 --eventcontent PREMIX --relval 100000,100 -s GEN,SIM,DIGIPREMIX:pdigi_valid,L1,DIGI2RAW --datatier GEN-SIM-DIGI-RAW --pileup AVE_35_BX_25ns --evt_type SingleNuE10_cfi --io PREMIXUP15_PU25.io --python PREMIXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  --nThreads 4 > step1_PREMIXUP15_PU25+PREMIXUP15_PU25.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fullSimpremixPUnosignal dryRun for 'cd 250199.0_PREMIXUP15_PU25+PREMIXUP15_PU25
+ cmsDriver.py step1  --conditions auto:run2_mc --pileup_input das:/RelValMinBias_13/CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1/GEN-SIM -n 10 --era Run2_2016 --eventcontent PREMIX --relval 100000,100 -s GEN,SIM,DIGIPREMIX:pdigi_valid,L1,DIGI2RAW --datatier GEN-SIM-DIGI-RAW --pileup AVE_35_BX_25ns --evt_type SingleNuE10_cfi --io PREMIXUP15_PU25.io --python PREMIXUP15_PU25.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --fileout file:step1.root  --nThreads 4 > step1_PREMIXUP15_PU25+PREMIXUP15_PU25.log  2>&1
+ 

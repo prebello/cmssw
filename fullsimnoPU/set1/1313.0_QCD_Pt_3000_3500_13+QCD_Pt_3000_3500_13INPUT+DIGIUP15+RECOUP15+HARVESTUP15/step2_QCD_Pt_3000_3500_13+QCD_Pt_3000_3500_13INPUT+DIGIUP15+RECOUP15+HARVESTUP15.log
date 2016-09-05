@@ -1,0 +1,24 @@
+L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+entry filelist:step1_dasquery.log
+found files:  ['/store/relval/CMSSW_7_1_20_patch2/RelValQCD_Pt_3000_3500_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/54A7FBF3-D881-E511-9C6B-0026189438DB.root', '/store/relval/CMSSW_7_1_20_patch2/RelValQCD_Pt_3000_3500_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/78FCA301-D781-E511-BCC9-0025905B8582.root', '/store/relval/CMSSW_7_1_20_patch2/RelValQCD_Pt_3000_3500_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/B6C5EAE9-DC81-E511-AB23-00261894384F.root', '/store/relval/CMSSW_7_1_20_patch2/RelValQCD_Pt_3000_3500_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/C4A91336-DA81-E511-B70F-0025905A6094.root', '/store/relval/CMSSW_7_1_20_patch2/RelValQCD_Pt_3000_3500_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/D6C28F00-D781-E511-B422-0025905A6070.root', '/store/relval/CMSSW_7_1_20_patch2/RelValQCD_Pt_3000_3500_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/E23114E2-DC81-E511-BC39-00261894386C.root']
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: DIGI Spec: ['pdigi_valid']
+Step: L1 Spec: 
+L1TCalorimeter Sequence configured for Stage-2 (2016) trigger. 
+L1TMuon Sequence configured for Stage-2 (2016) trigger. 
+L1TGlobal Sequence configured for Stage-2 (2016) trigger. 
+L1TCalorimeter Conditions configured for Stage-2 (2016) trigger. 
+L1TMuon Conditions configured for Stage-2 (2016) trigger. 
+L1TGlobal Conditions configured for Stage-2 (2016) trigger. 
+Step: DIGI2RAW Spec: 
+L1TDigiToRaw Sequence configured for Stage-2 (2016) trigger. 
+Step: HLT Spec: ['@relval2016']
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with customizeHLTforFullSim from HLTrigger/Configuration/customizeHLTforMC
+Config file DIGIUP15.py created

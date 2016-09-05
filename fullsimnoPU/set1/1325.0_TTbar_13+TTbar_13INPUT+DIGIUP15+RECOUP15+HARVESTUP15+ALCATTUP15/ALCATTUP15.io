@@ -1,0 +1,1 @@
+{"ALCARECOStreamTkAlMinBias": "TkAlMinBias.root", "GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "ALCARECOStreamEcalESAlign": "EcalESAlign.root", "ALCARECOStreamTkAlMuonIsolated": "TkAlMuonIsolated.root", "primary": ["file:step3.root"], "ALCARECOStreamEcalTrg": "EcalTrg.root", "ALCARECOStreamMuAlOverlaps": "MuAlOverlaps.root"}

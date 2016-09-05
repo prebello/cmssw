@@ -1,0 +1,13 @@
+Added 'egmPhotonIDs' to process definition (MiniAOD format)!
+PAT,ENDJOB
+entry file:step1.root
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: PAT Spec: 
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with miniAOD_customizeAllMC from PhysicsTools/PatAlgos/slimming/miniAOD_tools
+customising the process with miniAOD_customizeMETFiltersFastSim from PhysicsTools/PatAlgos/slimming/metFilterPaths_cff
+Config file MINIAODMCUP15FS.py created

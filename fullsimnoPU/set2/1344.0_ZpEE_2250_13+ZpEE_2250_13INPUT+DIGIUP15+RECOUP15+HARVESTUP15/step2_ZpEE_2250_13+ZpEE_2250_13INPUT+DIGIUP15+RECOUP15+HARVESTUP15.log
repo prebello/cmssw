@@ -1,0 +1,24 @@
+L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+entry filelist:step1_dasquery.log
+found files:  ['/store/relval/CMSSW_7_1_20_patch2/RelValZpEE_2250_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/82C6801C-E881-E511-9A03-0025905A60B2.root', '/store/relval/CMSSW_7_1_20_patch2/RelValZpEE_2250_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/AE6FDD21-E881-E511-96AB-00261894393B.root', '/store/relval/CMSSW_7_1_20_patch2/RelValZpEE_2250_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/D4DC4EF2-E581-E511-93DD-0025905A60FE.root', '/store/relval/CMSSW_7_1_20_patch2/RelValZpEE_2250_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/ECD7419F-E281-E511-B925-0026189437F8.root']
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: DIGI Spec: ['pdigi_valid']
+Step: L1 Spec: 
+L1TCalorimeter Sequence configured for Stage-2 (2016) trigger. 
+L1TMuon Sequence configured for Stage-2 (2016) trigger. 
+L1TGlobal Sequence configured for Stage-2 (2016) trigger. 
+L1TCalorimeter Conditions configured for Stage-2 (2016) trigger. 
+L1TMuon Conditions configured for Stage-2 (2016) trigger. 
+L1TGlobal Conditions configured for Stage-2 (2016) trigger. 
+Step: DIGI2RAW Spec: 
+L1TDigiToRaw Sequence configured for Stage-2 (2016) trigger. 
+Step: HLT Spec: ['@relval2016']
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with customizeHLTforFullSim from HLTrigger/Configuration/customizeHLTforMC
+Config file DIGIUP15.py created

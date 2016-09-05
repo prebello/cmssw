@@ -1,0 +1,764 @@
+processing relval_standard
+ignoring non-requested file relval_highstats
+ignoring non-requested file relval_pileup
+ignoring non-requested file relval_generator
+ignoring non-requested file relval_extendedgen
+ignoring non-requested file relval_production
+ignoring non-requested file relval_ged
+ignoring non-requested file relval_upgrade
+ignoring non-requested file relval_2017
+ignoring non-requested file relval_identity
+ignoring non-requested file relval_machine
+ignoring non-requested file relval_unsch
+ignoring non-requested file relval_premix
+Not running the wf, only creating cfgs and logs
+resetting to default number of threads
+Running in 4 thread(s)
+
+Preparing to run 135.1 TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py TTbar_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,1000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io TTbarFS_13.io --python TTbarFS_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.11 SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py SMS-T1tttt_mGl-1500_mLSP-100_13TeV-pythia8_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,1000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io SMS-T1tttt_mGl-1500_mLSP-100FS_13.io --python SMS-T1tttt_mGl-1500_mLSP-100FS_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.12 QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py QCD_Pt_80_120_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,500 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io QCD_Pt_80_120FS_13.io --python QCD_Pt_80_120FS_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.2 SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py SingleMuPt10_pythia8_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 27000,3000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io SingleMuPt10FS_UP15.io --python SingleMuPt10FS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.3 SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py SingleMuPt100_pythia8_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 27000,3000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io SingleMuPt100FS_UP15.io --python SingleMuPt100FS_UP15.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.4 ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py ZEE_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,2000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io ZEEFS_13.io --python ZEEFS_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.5 ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py ZTT_All_hadronic_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,2000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io ZTTFS_13.io --python ZTTFS_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.6 QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py QCDForPF_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 27000,2000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io QCDFlatPt153000FS_13.io --python QCDFlatPt153000FS_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.7 H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py H125GGgluonfusion_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 27000,3000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io H125GGgluonfusionFS_13.io --python H125GGgluonfusionFS_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+Preparing to run 135.9 ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py ZMM_13TeV_TuneCUETP8M1_cfi  --conditions auto:run2_mc --fast  -n 10 --era Run2_2016 --eventcontent FEVTDEBUGHLT,DQM --relval 100000,2000 -s GEN,SIM,RECOBEFMIX,DIGI:pdigi_valid,L1,DIGI2RAW,L1Reco,RECO,EI,HLT:@relval2016,VALIDATION:@standardValidation,DQM:@standardDQM --datatier GEN-SIM-DIGI-RECO,DQMIO --beamspot Realistic50ns13TeVCollision --io ZMMFS_13.io --python ZMMFS_13.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step1.root  > step1_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step2  --conditions auto:run2_mc -s HARVESTING:validationHarvesting --era Run2_2016 --scenario pp --filetype DQM --mc  --io HARVESTUP15FS.io --python HARVESTUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 -n 100  --no_exec --filein file:step1_inDQM.root --fileout file:step2.root  > step2_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/TranchIVversion2/CMSSW_8_0_19/src/fastSimnoPU going to execute cd 135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+ cmsDriver.py step3  --conditions auto:run2_mc --fast  -n 100 --era Run2_2016 --eventcontent MINIAODSIM --runUnscheduled  --filein file:step1.root -s PAT --datatier MINIAODSIM --mc  --io MINIAODMCUP15FS.io --python MINIAODMCUP15FS.py  --conditions 80X_mcRun2_asymptotic_2016_TrancheIV_v2 --no_exec --fileout file:step3.root  > step3_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS.log  2>&1
+ 
+135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:11:10 2016-date Mon Sep  5 00:08:14 2016; exit: 0 0 0
+135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:11:08 2016-date Mon Sep  5 00:08:19 2016; exit: 0 0 0
+135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:11:09 2016-date Mon Sep  5 00:08:22 2016; exit: 0 0 0
+135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:11:13 2016-date Mon Sep  5 00:08:26 2016; exit: 0 0 0
+135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:14:00 2016-date Mon Sep  5 00:11:17 2016; exit: 0 0 0
+135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:14:01 2016-date Mon Sep  5 00:11:21 2016; exit: 0 0 0
+135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:14:03 2016-date Mon Sep  5 00:11:23 2016; exit: 0 0 0
+135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:14:08 2016-date Mon Sep  5 00:11:25 2016; exit: 0 0 0
+135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:16:42 2016-date Mon Sep  5 00:14:06 2016; exit: 0 0 0
+135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS Step0-PASSED Step1-PASSED Step2-PASSED  - time date Mon Sep  5 00:16:46 2016-date Mon Sep  5 00:14:11 2016; exit: 0 0 0
+10 10 10 tests passed, 0 0 0 failed
+
+
+	Found wmclient
+
+inspecting 135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS
+inspecting 135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS
+	Fake upload of 135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS/ZTTFS_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.5ZTTFS_13
+135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS/ZTTFS_13.py  uploaded to couchDB for 135.5 with ID 1041
+	Fake upload of 135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.5MINIAODMCUP15FS
+135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.5 with ID 1042
+	Fake upload of 135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.5harvesting
+135.5_ZTT_13+ZTTFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.5 with ID 1043
+	Fake upload of 135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS/ZEEFS_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.4ZEEFS_13
+135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS/ZEEFS_13.py  uploaded to couchDB for 135.4 with ID 1044
+	Fake upload of 135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.4MINIAODMCUP15FS
+135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.4 with ID 1045
+	Fake upload of 135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.4harvesting
+135.4_ZEE_13+ZEEFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.4 with ID 1046
+	Fake upload of 135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/SingleMuPt100FS_UP15.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.3SingleMuPt100FS_UP15
+135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/SingleMuPt100FS_UP15.py  uploaded to couchDB for 135.3 with ID 1047
+	Fake upload of 135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.3MINIAODMCUP15FS
+135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.3 with ID 1048
+	Fake upload of 135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.3harvesting
+135.3_SingleMuPt100_UP15+SingleMuPt100FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.3 with ID 1049
+	Fake upload of 135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS/QCD_Pt_80_120FS_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.12QCD_Pt_80_120FS_13
+135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS/QCD_Pt_80_120FS_13.py  uploaded to couchDB for 135.12 with ID 1050
+	Fake upload of 135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.12MINIAODMCUP15FS
+135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.12 with ID 1051
+	Fake upload of 135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.12harvesting
+135.12_QCD_Pt_80_120_13+QCD_Pt_80_120FS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.12 with ID 1052
+	Fake upload of 135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS/TTbarFS_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.1TTbarFS_13
+135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS/TTbarFS_13.py  uploaded to couchDB for 135.1 with ID 1053
+	Fake upload of 135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.1MINIAODMCUP15FS
+135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.1 with ID 1054
+	Fake upload of 135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.1harvesting
+135.1_TTbar_13+TTbarFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.1 with ID 1055
+	Fake upload of 135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS/QCDFlatPt153000FS_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.6QCDFlatPt153000FS_13
+135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS/QCDFlatPt153000FS_13.py  uploaded to couchDB for 135.6 with ID 1056
+	Fake upload of 135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.6MINIAODMCUP15FS
+135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.6 with ID 1057
+	Fake upload of 135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.6harvesting
+135.6_QCD_FlatPt_15_3000_13+QCDFlatPt153000FS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.6 with ID 1058
+	Fake upload of 135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS/ZMMFS_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.9ZMMFS_13
+135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS/ZMMFS_13.py  uploaded to couchDB for 135.9 with ID 1059
+	Fake upload of 135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.9MINIAODMCUP15FS
+135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.9 with ID 1060
+	Fake upload of 135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.9harvesting
+135.9_ZMM_13+ZMMFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.9 with ID 1061
+	Fake upload of 135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/SingleMuPt10FS_UP15.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.2SingleMuPt10FS_UP15
+135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/SingleMuPt10FS_UP15.py  uploaded to couchDB for 135.2 with ID 1062
+	Fake upload of 135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.2MINIAODMCUP15FS
+135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.2 with ID 1063
+	Fake upload of 135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.2harvesting
+135.2_SingleMuPt10_UP15+SingleMuPt10FS_UP15+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.2 with ID 1064
+	Fake upload of 135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS/H125GGgluonfusionFS_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.7H125GGgluonfusionFS_13
+135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS/H125GGgluonfusionFS_13.py  uploaded to couchDB for 135.7 with ID 1065
+	Fake upload of 135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.7MINIAODMCUP15FS
+135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.7 with ID 1066
+	Fake upload of 135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.7harvesting
+135.7_H125GGgluonfusion_13+H125GGgluonfusionFS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.7 with ID 1067
+	Fake upload of 135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS/SMS-T1tttt_mGl-1500_mLSP-100FS_13.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.11SMS-T1tttt_mGl-1500_mLSP-100FS_13
+135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS/SMS-T1tttt_mGl-1500_mLSP-100FS_13.py  uploaded to couchDB for 135.11 with ID 1068
+	Fake upload of 135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.11MINIAODMCUP15FS
+135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS/MINIAODMCUP15FS.py  uploaded to couchDB for 135.11 with ID 1069
+	Fake upload of 135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py to couch with label RelValSet_CMSSW_8_0_19_v1_135.11harvesting
+135.11_SMS-T1tttt_mGl-1500_mLSP-100_13+SMS-T1tttt_mGl-1500_mLSP-100FS_13+HARVESTUP15FS+MINIAODMCUP15FS/HARVESTUP15FS.py uploaded to couchDB for 135.11 with ID 1070
+
+	Found wmcontrol
+
+Only viewing request 135.5
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1043,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZTT_13__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1041,
+           'EventsPerJob': 2000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValZTT_13',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 100000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'ZTTFS_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1042,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'ZTTFS_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.4
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1046,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZEE_13__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1044,
+           'EventsPerJob': 2000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValZEE_13',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 100000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'ZEEFS_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1045,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'ZEEFS_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.3
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1049,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19SingleMuPt100_UP15__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1047,
+           'EventsPerJob': 3000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValSingleMuPt100_UP15',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 27000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'SingleMuPt100FS_UP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1048,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'SingleMuPt100FS_UP15',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.12
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1052,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19QCD_Pt_80_120_13__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1050,
+           'EventsPerJob': 500,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValQCD_Pt_80_120_13',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 100000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'QCD_Pt_80_120FS_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1051,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'QCD_Pt_80_120FS_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.1
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1055,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19TTbar_13__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1053,
+           'EventsPerJob': 1000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValTTbar_13',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 100000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'TTbarFS_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1054,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'TTbarFS_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.6
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1058,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19QCD_FlatPt_15_3000_13__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1056,
+           'EventsPerJob': 2000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValQCD_FlatPt_15_3000_13',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 27000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'QCDFlatPt153000FS_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1057,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'QCDFlatPt153000FS_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.9
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1061,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19ZMM_13__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1059,
+           'EventsPerJob': 2000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValZMM_13',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 100000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'ZMMFS_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1060,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'ZMMFS_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.2
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1064,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19SingleMuPt10_UP15__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1062,
+           'EventsPerJob': 3000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValSingleMuPt10_UP15',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 27000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'SingleMuPt10FS_UP15'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1063,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'SingleMuPt10FS_UP15',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.7
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1067,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19H125GGgluonfusion_13__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1065,
+           'EventsPerJob': 3000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValH125GGgluonfusion_13',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 27000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'H125GGgluonfusionFS_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1066,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'H125GGgluonfusionFS_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None
+Only viewing request 135.11
+{'CMSSWVersion': 'CMSSW_8_0_19',
+ 'Campaign': 'CMSSW_8_0_19',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1070,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_8_0_19SMS-T1tttt_mGl-1500_mLSP-100_13__Tr4GT_v2_FastSim',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1068,
+           'EventsPerJob': 1000,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'KeepOutput': True,
+           'Memory': 3000,
+           'Multicore': 1,
+           'PrimaryDataset': 'RelValSMS-T1tttt_mGl-1500_mLSP-100_13',
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'RequestNumEvents': 100000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'SMS-T1tttt_mGl-1500_mLSP-100FS_13'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_8_0_19',
+           'ConfigCacheID': 1069,
+           'GlobalTag': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'SMS-T1tttt_mGl-1500_mLSP-100FS_13',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 3000,
+           'Multicore': 1,
+           'ProcessingString': u'80X_mcRun2_asymptotic_2016_TrancheIV_v2_Tr4GT_v2_FastSim',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'MINIAODMCUP15FS'},
+ 'TaskChain': 2,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None

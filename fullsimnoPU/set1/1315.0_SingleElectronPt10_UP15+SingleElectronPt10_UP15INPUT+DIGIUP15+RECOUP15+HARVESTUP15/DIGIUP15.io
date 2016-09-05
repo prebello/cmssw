@@ -1,0 +1,1 @@
+{"GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "FEVTDEBUGHLToutput": "file:step2.root", "primary": ["/store/relval/CMSSW_7_1_20_patch2/RelValSingleElectronPt10_UP15/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/3831F72D-CC81-E511-A879-0025905964B6.root"]}

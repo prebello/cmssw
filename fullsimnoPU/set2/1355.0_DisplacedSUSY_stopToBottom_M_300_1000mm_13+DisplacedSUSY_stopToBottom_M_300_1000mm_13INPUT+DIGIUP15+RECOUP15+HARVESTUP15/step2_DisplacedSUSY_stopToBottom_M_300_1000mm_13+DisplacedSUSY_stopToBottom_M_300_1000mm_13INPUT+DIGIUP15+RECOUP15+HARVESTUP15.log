@@ -1,0 +1,24 @@
+L1Trigger/L1TGlobal/python/StableParameters_cff.py is deprecated, please use GlobalParameters_cff.py instead.
+DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016,ENDJOB
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+entry filelist:step1_dasquery.log
+found files:  ['/store/relval/CMSSW_7_1_20_patch2/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/42905A42-C381-E511-9975-0025905A6090.root', '/store/relval/CMSSW_7_1_20_patch2/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/945F2CA5-C281-E511-B9BB-0025905A6090.root', '/store/relval/CMSSW_7_1_20_patch2/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/9CEC7C46-C381-E511-B041-0026189438DD.root', '/store/relval/CMSSW_7_1_20_patch2/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/BEB24709-C181-E511-B7F5-0025905A6090.root', '/store/relval/CMSSW_7_1_20_patch2/RelValDisplacedSUSY_stopToBottom_M_300_1000mm_13/GEN-SIM/MCRUN2_71_V1_GsRealBS-v1/00000/E24C334C-C081-E511-B2B1-0025905A60E0.root']
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: DIGI Spec: ['pdigi_valid']
+Step: L1 Spec: 
+L1TCalorimeter Sequence configured for Stage-2 (2016) trigger. 
+L1TMuon Sequence configured for Stage-2 (2016) trigger. 
+L1TGlobal Sequence configured for Stage-2 (2016) trigger. 
+L1TCalorimeter Conditions configured for Stage-2 (2016) trigger. 
+L1TMuon Conditions configured for Stage-2 (2016) trigger. 
+L1TGlobal Conditions configured for Stage-2 (2016) trigger. 
+Step: DIGI2RAW Spec: 
+L1TDigiToRaw Sequence configured for Stage-2 (2016) trigger. 
+Step: HLT Spec: ['@relval2016']
+Step: ENDJOB Spec: 
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with customizeHLTforFullSim from HLTrigger/Configuration/customizeHLTforMC
+Config file DIGIUP15.py created
