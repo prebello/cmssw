@@ -1,0 +1,1 @@
+{"GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "DQMoutput": "file:step5_inDQM.root", "primary": ["file:step4.root"], "MINIAODSIMoutput": "file:step5.root"}

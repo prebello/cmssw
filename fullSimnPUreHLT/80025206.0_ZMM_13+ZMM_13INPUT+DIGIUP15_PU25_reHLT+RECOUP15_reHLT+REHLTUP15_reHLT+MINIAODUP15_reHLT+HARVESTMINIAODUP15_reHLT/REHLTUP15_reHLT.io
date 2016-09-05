@@ -1,0 +1,1 @@
+{"AODSIMoutput": "file:step4.root", "GT": "80X_mcRun2_asymptotic_2016_TrancheIV_v2", "primary": ["file:step3.root"]}

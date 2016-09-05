@@ -1,0 +1,16 @@
+Added 'egmPhotonIDs' to process definition (MiniAOD format)!
+PAT,DQM:@miniAODDQM,VALIDATION:@miniAODValidation
+entry file:step4.root
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+Step: PAT Spec: 
+Step: DQM Spec: ['@miniAODDQM']
+WARNING:  L1Trigger/L1TCommon/python/caloStage1LegacyFormatDigis_cfi.py has been deprecated...
+WARNING:  please use L1Trigger/L1TCalorimeter/python/caloStage1LegacyFormatDigis_cfi.py
+Step: VALIDATION Spec: ['@miniAODValidation']
+@miniAODValidation in preparing validation
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with miniAOD_customizeAllMC from PhysicsTools/PatAlgos/slimming/miniAOD_tools
+Config file MINIAODUP15_reHLT.py created
