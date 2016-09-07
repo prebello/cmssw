@@ -326,12 +326,18 @@ baseDataSetRelease=[
     'CMSSW_7_6_0-76X_mcRun2_asymptotic_v11-v1',                    # 10 - 13 TeV High Stats GEN-SIM
     'CMSSW_7_6_0_pre7-76X_mcRun2_asymptotic_v9_realBS-v1',         # 11 - 13 TeV High Stats MiniBias for mixing GEN-SIM
     'CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1',                # 12 - MiniBias GENSIM input for PU25 (separated from item 3)
-    'CMSSW_8_0_16-80X_mcRun2_asymptotic_v16_reHLT-v1',             # 13 - RAWAODSIM input for reHLT (noPU)
+#    'CMSSW_8_0_16-80X_mcRun2_asymptotic_v16_reHLT-v1',             # 13 - RAWAODSIM input for reHLT (noPU)
 #    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_v16_reHLT-v1',             # 13 - RAWAODSIM input for reHLT (PU25)
 #    'CMSSW_8_0_16-80X_mcRun2_asymptotic_v16_reHLT_HS-v1',             # 13 - RAWAODSIM input for reHLT (noPU HS)
 #    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_v16_reHLT_HS-v1',             # 13 - RAWAODSIM input for reHLT (PU25 HS)
 #    'CMSSW_8_0_16-80X_mcRun2_asymptotic_v16_reHLT_HSLHE-v1',             # 13 - RAWAODSIM input for reHLT (LHE noPU)
 #    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_v16_reHLT_LHE_HS-v1',             # 13 - RAWAODSIM input for reHLT (LHE PU)
+    'CMSSW_8_0_16-80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLT_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (noPU)                     
+#    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLT_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (PU25)              
+#    'CMSSW_8_0_16-80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLTHS_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (noPU HS)               
+#    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLTHS_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (PU25 HS)        
+#    'CMSSW_8_0_16-80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLTLHEHS_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (LHE noPU)           
+#    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_LHEHS_4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (LHE PU)
     ]
 
 # note: INPUT commands to be added once GEN-SIM w/ 13TeV+PostLS1Geo will be available 
