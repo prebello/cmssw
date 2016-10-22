@@ -192,7 +192,6 @@ class MatrixInjector(object):
             wmsplit['RECODR2_2016reHLT_skimDoubleEG']=5
             wmsplit['RECODR2_2016reHLT_skimMuonEG']=5
             wmsplit['RECODR2_2016reHLT_skimJetHT']=5
-            wmsplit['RECODR2_2016reHLT_skimSinglePh']=5
             wmsplit['RECODR2_2016reHLT_skimMuOnia']=5
             wmsplit['HLTDR2_50ns']=1
             wmsplit['HLTDR2_25ns']=1
@@ -202,7 +201,11 @@ class MatrixInjector(object):
             wmsplit['RECOUP15']=5
             wmsplit['RECOAODUP15']=5
             wmsplit['DBLMINIAODMCUP15NODQM']=5
-
+            wmsplit['DIGIUP15_reHLT']=1
+            wmsplit['RECOUP15_reHLT']=1
+            wmsplit['REHLTUP15_reHLT']=1
+            wmsplit['MINIAODUP15_reHLT']=1
+            wmsplit['DIGIUP15_PU25_reHLT']=1
                                     
             #import pprint
             #pprint.pprint(wmsplit)            
