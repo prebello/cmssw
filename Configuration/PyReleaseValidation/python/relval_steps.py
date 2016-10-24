@@ -314,8 +314,8 @@ baseDataSetRelease=[
 #    'CMSSW_7_1_0_pre5-START71_V1-v2',                      # 3 8 TeV , for the one sample which is part of the routine relval production (RelValZmumuJets_Pt_20_300, because of -v2)
                                                             # THIS ABOVE IS NOT USED, AT THE MOMENT
 #    'CMSSW_7_6_0_pre7-76X_mcRun2_asymptotic_v9_realBS-v1',         # 3 - 13 TeV samples with GEN-SIM from 750_p4; also GEN-SIM-DIGI-RAW-HLTDEBUG for id tests
-    'CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1',        # 3 - 13 TeV samples with GEN-SIM from 7120p2; also GEN-SIM-DIGI-RAW-HLTDEBUG for id tests
-#    'CMSSW_8_0_7-80X_mcRun2_asymptotic_v12-v1',        # 3 - 13 TeV samples with GENSIM from 807 for some LHE-based workflows
+#    'CMSSW_7_1_20_patch2-MCRUN2_71_V1_GsRealBS-v1',        # 3 - 13 TeV samples with GEN-SIM from 7120p2; also GEN-SIM-DIGI-RAW-HLTDEBUG for id tests
+    'CMSSW_8_0_7-80X_mcRun2_asymptotic_v12-v1',        # 3 - 13 TeV samples with GENSIM from 807 for some LHE-based workflows
 #    'CMSSW_8_0_10-80X_mcRun2_asymptotic_v14_HighStat-v1',        # 3 - 13 TeV samples with GENSIM from 8010 for 30k high stats workflows for HLT validation
     'CMSSW_7_3_0_pre1-PRE_LS172_V15_FastSim-v1',                   # 4 - fast sim GEN-SIM-DIGI-RAW-HLTDEBUG for id tests
     'CMSSW_8_0_0-PU25ns_80X_mcRun2_asymptotic_v4-v1',      # 5 - fullSim PU 25ns premix for 800pre6
@@ -333,12 +333,12 @@ baseDataSetRelease=[
 #    'CMSSW_8_0_16-80X_mcRun2_asymptotic_v16_reHLT_HSLHE-v1',             # 13 - RAWAODSIM input for reHLT (LHE noPU)
 #    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_v16_reHLT_LHE_HS-v1',             # 13 - RAWAODSIM input for reHLT (LHE PU)
 
-    'CMSSW_8_0_16-80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLT_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (noPU)                     
+#    'CMSSW_8_0_16-80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLT_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (noPU)                     
 #    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLT_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (PU25)              
 #    'CMSSW_8_0_16-80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLTHS_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (noPU HS)               
 #    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLTHS_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (PU25 HS)        
 #    'CMSSW_8_0_16-80X_mcRun2_asymptotic_2016_TrancheIV_v2_reHLTLHEHS_Tr4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (LHE noPU)           
-#    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_LHEHS_4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (LHE PU)
+    'CMSSW_8_0_16-PU25ns_80X_mcRun2_asymptotic_2016_TrancheIV_v2_LHEHS_4GTv2-v1',             # 13 - RAWAODSIM input for reHLT (LHE PU)
     ]
 
 # note: INPUT commands to be added once GEN-SIM w/ 13TeV+PostLS1Geo will be available 
@@ -496,7 +496,8 @@ steps['JpsiMuMu_Pt-15']=gen2015('JpsiMuMu_Pt-15_forSTEAM_13TeV_cfi',Kby(11000,12
 steps['WE_13']=gen2015('WE_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['WM_13']=gen2015('WM_13TeV_TuneCUETP8M1_cfi',Kby(9,200))
 steps['WpM_13']=gen2015('WpM_13TeV_TuneCUETP8M1_cfi',Kby(9,200))
-steps['ZMM_13']=gen2015('ZMM_13TeV_TuneCUETP8M1_cfi',Kby(18,100))
+#steps['ZMM_13']=gen2015('ZMM_13TeV_TuneCUETP8M1_cfi',Kby(18,100))
+steps['ZMM_13']=gen2015('ZMM_13TeV_TuneCUETP8M1_cfi',Kby(65,200))
 steps['ZEEMM_13']=gen2015('ZEEMM_13TeV_TuneCUETP8M1_cfi',Kby(18,300))
 steps['ZpMM_13']=gen2015('ZpMM_13TeV_TuneCUETP8M1_cfi',Kby(9,200))
 
