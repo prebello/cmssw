@@ -1,0 +1,36 @@
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/HI8023relval/CMSSW_8_0_23_patch2/src/HInew going to execute cd 140.54_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData
+ echo '{
+"211313":[[1,268435455]]
+}' > step1_lumiRanges.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/HI8023relval/CMSSW_8_0_23_patch2/src/HInew going to execute cd 140.54_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData
+ (das_client --limit 0 --query 'file dataset=/PAMinBiasUPC/HIRun2013-v1/RAW run=211313 site=T2_CH_CERN') | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/HI8023relval/CMSSW_8_0_23_patch2/src/HInew going to execute cd 140.54_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData
+ cmsDriver.py step2  --conditions auto:run1_data -s RAW2DIGI,L1Reco,RECO,ALCA:TkAlMinBias+TkAlMuonIsolatedPA+TkAlUpsilonMuMuPA+TkAlZMuMuPA,SKIM:PAZMM+PAZEE+PAMinBias,EI,DQM --process reRECO --data  --era Run1_pA --eventcontent AOD,DQM --runUnscheduled  --scenario pp --datatier AOD,DQMIO --io RECO_PPbData.io --python RECO_PPbData.py -n 100  --no_exec --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root  --nThreads 4 > step2_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/HI8023relval/CMSSW_8_0_23_patch2/src/HInew going to execute cd 140.54_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData
+ cmsDriver.py step3  --conditions auto:run1_data -s HARVESTING:dqmHarvesting --scenario pp --filetype DQM --data  --era Run1_pA --io HARVEST_PPbData.io --python HARVEST_PPbData.py -n 100  --no_exec --filein file:step2_inDQM.root --fileout file:step3.root  > step3_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/HI8023relval/CMSSW_8_0_23_patch2/src/HInew dryRun for 'cd 140.54_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData
+ echo '{
+"211313":[[1,268435455]]
+}' > step1_lumiRanges.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/HI8023relval/CMSSW_8_0_23_patch2/src/HInew dryRun for 'cd 140.54_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData
+ (das_client --limit 0 --query 'file dataset=/PAMinBiasUPC/HIRun2013-v1/RAW run=211313 site=T2_CH_CERN') | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/HI8023relval/CMSSW_8_0_23_patch2/src/HInew dryRun for 'cd 140.54_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData
+ cmsDriver.py step2  --conditions auto:run1_data -s RAW2DIGI,L1Reco,RECO,ALCA:TkAlMinBias+TkAlMuonIsolatedPA+TkAlUpsilonMuMuPA+TkAlZMuMuPA,SKIM:PAZMM+PAZEE+PAMinBias,EI,DQM --process reRECO --data  --era Run1_pA --eventcontent AOD,DQM --runUnscheduled  --scenario pp --datatier AOD,DQMIO --io RECO_PPbData.io --python RECO_PPbData.py -n 100  --filein filelist:step1_dasquery.log --lumiToProcess step1_lumiRanges.log --fileout file:step2.root  --nThreads 4 > step2_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/HI8023relval/CMSSW_8_0_23_patch2/src/HInew dryRun for 'cd 140.54_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData
+ cmsDriver.py step3  --conditions auto:run1_data -s HARVESTING:dqmHarvesting --scenario pp --filetype DQM --data  --era Run1_pA --io HARVEST_PPbData.io --python HARVEST_PPbData.py -n 100  --filein file:step2_inDQM.root --fileout file:step3.root  > step3_RunPA2013+RunPA2013+RECO_PPbData+HARVEST_PPbData.log  2>&1
+ 

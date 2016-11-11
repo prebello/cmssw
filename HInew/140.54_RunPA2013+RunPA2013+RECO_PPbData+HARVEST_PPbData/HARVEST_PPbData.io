@@ -1,0 +1,1 @@
+{"GT": "80X_dataRun2_Candidate_2016_09_02_10_26_48", "primary": ["file:step2_inDQM.root"]}

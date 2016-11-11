@@ -1,0 +1,22 @@
+RAW2DIGI,L1Reco,RECO,ALCA:TkAlMinBias+TkAlMuonIsolatedPA+TkAlUpsilonMuMuPA+TkAlZMuMuPA,SKIM:PAZMM+PAZEE+PAMinBias,EI,DQM
+magnetic field option forced to: AutoFromDBCurrent
+entry filelist:step1_dasquery.log
+found files:  ['/store/hidata/HIRun2013/PAMinBiasUPC/RAW/v1/000/211/313/00000/2CD4EFBC-6F6D-E211-9AF6-001D09F241F0.root', '/store/hidata/HIRun2013/PAMinBiasUPC/RAW/v1/000/211/313/00000/6E6000BA-706D-E211-B87E-001D09F2924F.root', '/store/hidata/HIRun2013/PAMinBiasUPC/RAW/v1/000/211/313/00000/78C280CB-7C6D-E211-9C8F-0019B9F72CE5.root']
+Step: RAW2DIGI Spec: 
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+L1TRawToDigi Sequence configured for Run1 (Legacy) trigger. 
+Step: L1Reco Spec: 
+L1TReco Sequence configured for Run1 (Legacy) trigger. 
+Step: RECO Spec: 
+Step: ALCA Spec: ['TkAlMinBias', 'TkAlMuonIsolatedPA', 'TkAlUpsilonMuMuPA', 'TkAlZMuMuPA']
+DL enriching full TkAlMinBias+TkAlMuonIsolatedPA+TkAlUpsilonMuMuPA+TkAlZMuMuPA
+Step: SKIM Spec: ['PAZMM', 'PAZEE', 'PAMinBias']
+Step: EI Spec: 
+Step: DQM Spec: 
+WARNING:  L1Trigger/L1TCommon/python/caloStage1LegacyFormatDigis_cfi.py has been deprecated...
+WARNING:  please use L1Trigger/L1TCalorimeter/python/caloStage1LegacyFormatDigis_cfi.py
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+Config file RECO_PPbData.py created
