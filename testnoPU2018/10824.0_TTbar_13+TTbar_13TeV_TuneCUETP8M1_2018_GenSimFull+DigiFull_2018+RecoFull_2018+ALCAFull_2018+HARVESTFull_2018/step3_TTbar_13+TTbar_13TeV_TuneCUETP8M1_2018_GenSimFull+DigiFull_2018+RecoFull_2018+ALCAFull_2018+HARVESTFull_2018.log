@@ -1,0 +1,24 @@
+Added 'egmPhotonIDs' to process definition (MiniAOD format)!
+RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM
+We have determined that this is simulation (if not, rerun cmsDriver.py with --data)
+with DB:
+entry file:step2.root
+Step: RAW2DIGI Spec: 
+L1TRawToDigi Sequence configured for Stage-2 (2016) trigger. 
+Step: L1Reco Spec: 
+Step: RECO Spec: 
+Step: EI Spec: 
+Step: PAT Spec: 
+Step: VALIDATION Spec: ['@standardValidation', '@miniAODValidation']
+@standardValidation+@miniAODValidation in preparing validation
+Step: DQM Spec: ['@standardDQM', '@miniAODDQM']
+WARNING:  L1Trigger/L1TCommon/python/caloStage1LegacyFormatDigis_cfi.py has been deprecated...
+WARNING:  please use L1Trigger/L1TCalorimeter/python/caloStage1LegacyFormatDigis_cfi.py
+customising the process with setCrossingFrameOn from SimGeneral/MixingModule/fullMixCustomize_cff
+customising the process with miniAOD_customizeAllMC from PhysicsTools/PatAlgos/slimming/miniAOD_tools
+**************************************************************
+b tagging needs to be run on uncorrected jets. Hence, the JECs
+will first be undone for 'updatedPatJetsBTAG' and then applied to
+'updatedPatJetsTransientCorrectedBTAG'.
+**************************************************************
+Config file RecoFull_2018.py created

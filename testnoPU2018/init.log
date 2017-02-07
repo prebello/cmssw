@@ -1,0 +1,137 @@
+ignoring non-requested file relval_standard
+ignoring non-requested file relval_highstats
+ignoring non-requested file relval_pileup
+ignoring non-requested file relval_generator
+ignoring non-requested file relval_extendedgen
+ignoring non-requested file relval_production
+ignoring non-requested file relval_ged
+processing relval_upgrade
+ignoring non-requested file relval_2017
+ignoring non-requested file relval_2023
+ignoring non-requested file relval_identity
+ignoring non-requested file relval_machine
+ignoring non-requested file relval_unsch
+ignoring non-requested file relval_premix
+Not running the wf, only creating cfgs and logs
+resetting to default number of threads
+Running in 4 thread(s)
+
+Preparing to run 10824.0 TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/900pre4Upgrade/CMSSW_9_0_0_pre4/src/testnoPU2018 going to execute cd 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018
+ cmsDriver.py TTbar_13TeV_TuneCUETP8M1_cfi  --conditions auto:phase1_2018_realistic -n 10 --era Run2_2018 --eventcontent FEVTDEBUG --relval 9000,50 -s GEN,SIM --datatier GEN-SIM --beamspot Realistic50ns13TeVCollision --geometry DB:Extended --io TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull.io --python TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull.py --no_exec --fileout file:step1.root  --nThreads 4 > step1_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/900pre4Upgrade/CMSSW_9_0_0_pre4/src/testnoPU2018 going to execute cd 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018
+ cmsDriver.py step2  --conditions auto:phase1_2018_realistic -s DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2016 --datatier GEN-SIM-DIGI-RAW -n 10 --geometry DB:Extended --era Run2_2018 --eventcontent FEVTDEBUGHLT --io DigiFull_2018.io --python DigiFull_2018.py --no_exec --filein file:step1.root  --fileout file:step2.root  --nThreads 4 > step2_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/900pre4Upgrade/CMSSW_9_0_0_pre4/src/testnoPU2018 going to execute cd 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018
+ cmsDriver.py step3  --conditions auto:phase1_2018_realistic -n 10 --era Run2_2018 --eventcontent RECOSIM,MINIAODSIM,DQM --runUnscheduled  -s RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@miniAODDQM --datatier GEN-SIM-RECO,MINIAODSIM,DQMIO --geometry DB:Extended --io RecoFull_2018.io --python RecoFull_2018.py --no_exec --filein file:step2.root  --fileout file:step3.root  --nThreads 4 > step3_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/900pre4Upgrade/CMSSW_9_0_0_pre4/src/testnoPU2018 going to execute cd 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018
+ cmsDriver.py step4  --conditions auto:phase1_2018_realistic -s ALCA:TkAlMuonIsolated+TkAlMinBias+MuAlOverlaps+EcalESAlign+TkAlZMuMu --datatier ALCARECO -n 10 --geometry DB:Extended --era Run2_2018 --eventcontent ALCARECO --io ALCAFull_2018.io --python ALCAFull_2018.py --no_exec --filein file:step3.root  --fileout file:step4.root  --nThreads 4 > step4_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/private/PAGValidation/900pre4Upgrade/CMSSW_9_0_0_pre4/src/testnoPU2018 going to execute cd 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018
+ cmsDriver.py step5  --conditions auto:phase1_2018_realistic -s HARVESTING:@standardValidation+@standardDQM+@miniAODValidation+@miniAODDQM --era Run2_2018 --filein file:step3_inDQM.root --scenario pp --filetype DQM --geometry DB:Extended --mc  --io HARVESTFull_2018.io --python HARVESTFull_2018.py -n 100  --no_exec --fileout file:step5.root  > step5_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018.log  2>&1
+ 
+10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018 Step0-PASSED Step1-PASSED Step2-PASSED Step3-PASSED Step4-PASSED  - time date Mon Feb  6 17:41:51 2017-date Mon Feb  6 17:40:17 2017; exit: 0 0 0 0 0
+1 1 1 1 1 tests passed, 0 0 0 0 0 failed
+
+
+	Found wmclient
+
+inspecting 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018
+	Fake upload of 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull.py to couch with label RelValSet_CMSSW_9_0_0_pre4_v1_10824.0TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull
+10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull.py  uploaded to couchDB for 10824.0 with ID 1041
+	Fake upload of 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/DigiFull_2018.py to couch with label RelValSet_CMSSW_9_0_0_pre4_v1_10824.0DigiFull_2018
+10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/DigiFull_2018.py  uploaded to couchDB for 10824.0 with ID 1042
+	Fake upload of 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/ALCAFull_2018.py to couch with label RelValSet_CMSSW_9_0_0_pre4_v1_10824.0ALCAFull_2018
+10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/ALCAFull_2018.py  uploaded to couchDB for 10824.0 with ID 1043
+	Fake upload of 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/RecoFull_2018.py to couch with label RelValSet_CMSSW_9_0_0_pre4_v1_10824.0RecoFull_2018
+10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/RecoFull_2018.py  uploaded to couchDB for 10824.0 with ID 1044
+	Fake upload of 10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/HARVESTFull_2018.py to couch with label RelValSet_CMSSW_9_0_0_pre4_v1_10824.0harvesting
+10824.0_TTbar_13+TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull+DigiFull_2018+RecoFull_2018+ALCAFull_2018+HARVESTFull_2018/HARVESTFull_2018.py uploaded to couchDB for 10824.0 with ID 1045
+
+	Found wmcontrol
+
+Only viewing request 10824.0
+{'AcquisitionEra': 'CMSSW_9_0_0_pre4',
+ 'CMSSWVersion': 'CMSSW_9_0_0_pre4',
+ 'Campaign': 'CMSSW_9_0_0_pre4',
+ 'ConfigCacheURL': 'https://cmsweb.cern.ch/couchdb',
+ 'CouchURL': 'https://cmsweb.cern.ch/couchdb',
+ 'DQMConfigCacheID': 1045,
+ 'DQMUploadUrl': 'https://cmsweb.cern.ch/dqm/relval',
+ 'DbsUrl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader',
+ 'EnableHarvesting': 'True',
+ 'GlobalTag': u'90X_upgrade2018_realistic_v4',
+ 'Group': 'ppd',
+ 'Memory': 3000,
+ 'Multicore': 1,
+ 'ProcessingString': u'90X_upgrade2018_realistic_v4',
+ 'ProcessingVersion': 1,
+ 'RequestPriority': 500000,
+ 'RequestString': 'RVCMSSW_9_0_0_pre4TTbar_13',
+ 'RequestType': 'TaskChain',
+ 'Requestor': 'prebello',
+ 'ScramArch': 'slc6_amd64_gcc530',
+ 'SizePerEvent': 1234,
+ 'SubRequestType': 'RelVal',
+ 'Task1': {'AcquisitionEra': 'CMSSW_9_0_0_pre4',
+           'ConfigCacheID': 1041,
+           'EventsPerJob': 50,
+           'GlobalTag': u'90X_upgrade2018_realistic_v4',
+           'KeepOutput': True,
+           'Memory': 7500,
+           'Multicore': 4,
+           'PrimaryDataset': 'RelValTTbar_13',
+           'ProcessingString': u'90X_upgrade2018_realistic_v4',
+           'RequestNumEvents': 9000,
+           'Seeding': 'AutomaticSeeding',
+           'SplittingAlgo': 'EventBased',
+           'TaskName': 'TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull'},
+ 'Task2': {'AcquisitionEra': 'CMSSW_9_0_0_pre4',
+           'ConfigCacheID': 1042,
+           'GlobalTag': u'90X_upgrade2018_realistic_v4',
+           'InputFromOutputModule': u'FEVTDEBUGoutput',
+           'InputTask': 'TTbar_13TeV_TuneCUETP8M1_2018_GenSimFull',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'90X_upgrade2018_realistic_v4',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'DigiFull_2018'},
+ 'Task3': {'AcquisitionEra': 'CMSSW_9_0_0_pre4',
+           'ConfigCacheID': 1044,
+           'GlobalTag': u'90X_upgrade2018_realistic_v4',
+           'InputFromOutputModule': u'FEVTDEBUGHLToutput',
+           'InputTask': 'DigiFull_2018',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'90X_upgrade2018_realistic_v4',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'RecoFull_2018'},
+ 'Task4': {'AcquisitionEra': 'CMSSW_9_0_0_pre4',
+           'ConfigCacheID': 1043,
+           'GlobalTag': u'90X_upgrade2018_realistic_v4',
+           'InputFromOutputModule': u'RECOSIMoutput',
+           'InputTask': 'RecoFull_2018',
+           'KeepOutput': True,
+           'LumisPerJob': 10,
+           'Memory': 7500,
+           'Multicore': 4,
+           'ProcessingString': u'90X_upgrade2018_realistic_v4',
+           'SplittingAlgo': 'LumiBased',
+           'TaskName': 'ALCAFull_2018'},
+ 'TaskChain': 4,
+ 'TimePerEvent': 0.1,
+ 'dashboardActivity': 'relval',
+ 'mergedLFNBase': '/store/relval',
+ 'unmergedLFNBase': '/store/unmerged'}
+None

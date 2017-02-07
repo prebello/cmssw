@@ -1,0 +1,1 @@
+{"ALCARECOStreamTkAlMinBias": "TkAlMinBias.root", "GT": "90X_upgrade2018_realistic_v4", "ALCARECOStreamEcalESAlign": "EcalESAlign.root", "ALCARECOStreamTkAlZMuMu": "TkAlZMuMu.root", "ALCARECOStreamTkAlMuonIsolated": "TkAlMuonIsolated.root", "primary": ["file:step3.root"], "ALCARECOStreamMuAlOverlaps": "MuAlOverlaps.root"}

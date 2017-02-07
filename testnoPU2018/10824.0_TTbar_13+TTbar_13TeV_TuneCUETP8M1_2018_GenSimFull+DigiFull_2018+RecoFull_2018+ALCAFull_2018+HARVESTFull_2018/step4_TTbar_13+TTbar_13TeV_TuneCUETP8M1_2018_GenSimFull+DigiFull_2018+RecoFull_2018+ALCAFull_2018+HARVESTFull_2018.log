@@ -1,0 +1,8 @@
+ALCA:TkAlMuonIsolated+TkAlMinBias+MuAlOverlaps+EcalESAlign+TkAlZMuMu,ENDJOB
+We have determined that this is real data (if not, rerun cmsDriver.py with --mc)
+with DB:
+entry file:step3.root
+Step: ALCA Spec: ['TkAlMuonIsolated', 'TkAlMinBias', 'MuAlOverlaps', 'EcalESAlign', 'TkAlZMuMu']
+L1TRawToDigi Sequence configured for Stage-2 (2016) trigger. 
+Step: ENDJOB Spec: 
+Config file ALCAFull_2018.py created
