@@ -217,7 +217,8 @@ class MatrixInjector(object):
             wmsplit['RecoFull']=5
             wmsplit['DigiFullPU']=1
             wmsplit['RecoFullPU']=1
-
+            wmsplit['DIGIPRMXUP15']=1
+            wmsplit['RECOPRMXUP15']=1
                                     
             #import pprint
             #pprint.pprint(wmsplit)            
@@ -288,8 +289,13 @@ class MatrixInjector(object):
                                 chainDict['nowmTasklist'][-1]['InputDataset']=nextHasDSInput.dataSet
                                 splitForThisWf=nextHasDSInput.split
                                 chainDict['nowmTasklist'][-1]['LumisPerJob']=splitForThisWf
-                                if step in wmsplit:
-                                    chainDict['nowmTasklist'][-1]['LumisPerJob']=wmsplit[step]
+                                #if step in wmsplit:
+                                 #   chainDict['nowmTasklist'][-1]['LumisPerJob']=wmsplit[step]
+                                temp_LumisPerJob=[]
+                                temp_LumisPerJob.append(chainDict['nowmTasklist'][-1]['LumisPerJob'])
+                                for key in wmsplit.keys(): 
+                                    if key in step: temp_LumisPerJob.append(wmsplit[key])
+                                chainDict['nowmTasklist'][-1]['LumisPerJob']=min(temp_LumisPerJob)
                                 # get the run numbers or #events
                                 if len(nextHasDSInput.run):
                                     chainDict['nowmTasklist'][-1]['RunWhitelist']=nextHasDSInput.run
@@ -315,8 +321,13 @@ class MatrixInjector(object):
                                     return -15
                                 if splitForThisWf:
                                     chainDict['nowmTasklist'][-1]['LumisPerJob']=splitForThisWf
-                                if step in wmsplit:
-                                    chainDict['nowmTasklist'][-1]['LumisPerJob']=wmsplit[step]
+                               # if step in wmsplit:
+                                    #chainDict['nowmTasklist'][-1]['LumisPerJob']=wmsplit[step]
+                                    temp_LumisPerJob=[]
+                                    temp_LumisPerJob.append(chainDict['nowmTasklist'][-1]['LumisPerJob'])
+                                    for key in wmsplit.keys():
+                                        if key in step: temp_LumisPerJob.append(wmsplit[key])
+                                    chainDict['nowmTasklist'][-1]['LumisPerJob']=min(temp_LumisPerJob)
 
                             # change LumisPerJob for Hadronizer steps. 
                             if 'Hadronizer' in step: 
