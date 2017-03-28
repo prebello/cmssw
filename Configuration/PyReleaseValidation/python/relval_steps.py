@@ -377,7 +377,7 @@ baseDataSetRelease=[
     'CMSSW_9_0_0-PU25ns_90X_mcRun2_asymptotic_v5-v1',    # 5 - fullSim PU 25ns premix 
     'CMSSW_8_1_0_pre15-PU50ns_81X_mcRun2_startup_v12-v1',        # 6 - fullSim PU 50ns premix 
     'CMSSW_9_0_0-90X_mcRun2_asymptotic_v5_FastSim-v1',    # 7 - fastSim MinBias for mixing 
-    'CMSSW_9_0_0_pre4-PU25ns_90X_mcRun2_asymptotic_v1_FastSim-v1',# 8 - fastSim premixed MinBias 
+    'CMSSW_9_0_0-PU25ns_90X_mcRun2_asymptotic_v5_FastSim-v1',# 8 - fastSim premixed MinBias 
     'CMSSW_7_6_0_pre6-76X_mcRun2_HeavyIon_v4-v1', 	           # 9 - Run2 HI GEN-SIM
     'CMSSW_7_6_0-76X_mcRun2_asymptotic_v11-v1',                    # 10 - 13 TeV High Stats GEN-SIM
     'CMSSW_7_6_0_pre7-76X_mcRun2_asymptotic_v9_realBS-v1',         # 11 - 13 TeV High Stats MiniBias for mixing GEN-SIM
@@ -1727,7 +1727,8 @@ for key in keys:
   defaultDataSets[key+'PU']=defaultDataSets[key]
   
 # sometimes v1 won't be used - override it here - the dictionary key is gen fragment + '_' + geometry
-versionOverrides={}
+versionOverrides={'SingleNuE10_cf_2017':'2',
+                  'SingleNuE10_cf_2017PU':'2'}
 
 baseDataSetReleaseBetter={}
 for gen in upgradeFragments:
