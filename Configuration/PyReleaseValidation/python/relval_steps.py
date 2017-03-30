@@ -374,14 +374,14 @@ baseDataSetRelease=[
                                                             # THIS ABOVE IS NOT USED, AT THE MOMENT
     'CMSSW_9_0_0_pre4-90X_mcRun2_asymptotic_v1-v1',     # 3 - 13 TeV samples with GEN-SIM from 810_p9 G4 10.2; also GEN-SIM-DIGI-RAW-HLTDEBUG for id tests
     'CMSSW_7_3_0_pre1-PRE_LS172_V15_FastSim-v1',                   # 4 - fast sim GEN-SIM-DIGI-RAW-HLTDEBUG for id tests
-    'CMSSW_9_0_0_pre4-PU25ns_90X_mcRun2_asymptotic_v1-v1',    # 5 - fullSim PU 25ns premix 
+    'CMSSW_9_0_0-PU25ns_90X_mcRun2_asymptotic_v5-v1',    # 5 - fullSim PU 25ns premix 
     'CMSSW_8_1_0_pre15-PU50ns_81X_mcRun2_startup_v12-v1',        # 6 - fullSim PU 50ns premix 
-    'CMSSW_9_0_0_pre4-90X_mcRun2_asymptotic_v1_FastSim-v1',    # 7 - fastSim MinBias for mixing 
-    'CMSSW_9_0_0_pre4-PU25ns_90X_mcRun2_asymptotic_v1_FastSim-v1',# 8 - fastSim premixed MinBias 
+    'CMSSW_9_0_0-90X_mcRun2_asymptotic_v5_FastSim-v1',    # 7 - fastSim MinBias for mixing 
+    'CMSSW_9_0_0-PU25ns_90X_mcRun2_asymptotic_v5_FastSim-v1',# 8 - fastSim premixed MinBias 
     'CMSSW_7_6_0_pre6-76X_mcRun2_HeavyIon_v4-v1', 	           # 9 - Run2 HI GEN-SIM
     'CMSSW_7_6_0-76X_mcRun2_asymptotic_v11-v1',                    # 10 - 13 TeV High Stats GEN-SIM
     'CMSSW_7_6_0_pre7-76X_mcRun2_asymptotic_v9_realBS-v1',         # 11 - 13 TeV High Stats MiniBias for mixing GEN-SIM
-    'CMSSW_8_1_0_pre9_Geant4102-81X_mcRun2cosmics_startup_peak_v2-v1', # 12 - GEN-SIM input for 1307 cosmics wf from 810_p2
+    'CMSSW_9_0_0_pre4-90X_mcRun2cosmics_startup_peak_v1-v1', # 12 - GEN-SIM input for 1307 cosmics wf from 810_p2
     ]
 
 
@@ -1708,9 +1708,9 @@ steps['DBLMINIAODMCUP15NODQM'] = merge([{'--conditions':'auto:run2_mc',
 from  Configuration.PyReleaseValidation.upgradeWorkflowComponents import *
 
 defaultDataSets={}
-defaultDataSets['2017']='CMSSW_9_0_0_pre5-90X_upgrade2017_realistic_v15-v'
-defaultDataSets['2017Design']='CMSSW_9_0_0_pre5-90X_upgrade2017_design_IdealBS_v15-v'
-#defaultDataSets['2018']='CMSSW_8_1_0_pre16-81X_upgrade2017_realistic_v22-v'
+defaultDataSets['2017']='CMSSW_9_0_0-90X_upgrade2017_realistic_v20_resub-v'
+defaultDataSets['2017Design']='CMSSW_9_0_0-90X_upgrade2017_design_IdealBS_v19_resub-v'
+defaultDataSets['2018']='CMSSW_9_0_0-90X_upgrade2018_realistic_v17_resub-v'
 #defaultDataSets['2018Design']='CMSSW_8_1_0_pre16-81X_upgrade2017_design_IdealBS_v6-v'
 defaultDataSets['2023D7']=''
 defaultDataSets['2023D10']=''
@@ -1727,7 +1727,8 @@ for key in keys:
   defaultDataSets[key+'PU']=defaultDataSets[key]
   
 # sometimes v1 won't be used - override it here - the dictionary key is gen fragment + '_' + geometry
-versionOverrides={}
+versionOverrides={'SingleNuE10_cf_2017':'2',
+                  'SingleNuE10_cf_2017PU':'2'}
 
 baseDataSetReleaseBetter={}
 for gen in upgradeFragments:
@@ -1744,9 +1745,10 @@ for ds in defaultDataSets:
     name=baseDataSetReleaseBetter[key]
     if '2017' in name or '2018' in name:
     	PUDataSets[ds]={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
+        #PUDataSets[ds]={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
     else:
     	PUDataSets[ds]={'-n':10,'--pileup':'AVE_35_BX_25ns','--pileup_input':'das:/RelValMinBias_14TeV/%s/GEN-SIM'%(name,)}
-    
+        #PUDataSets[ds]={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
     #PUDataSets[ds]={'-n':10,'--pileup':'AVE_50_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
     #PUDataSets[ds]={'-n':10,'--pileup':'AVE_70_BX_25ns','--pileup_input':'das:/RelValMinBias_13/%s/GEN-SIM'%(name,)}
 
