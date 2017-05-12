@@ -1777,8 +1777,8 @@ for year,k in [(year,k) for year in upgradeKeys for k in upgradeKeys[year]]:
                                        '--beamspot' : 'Realistic50ns13TeVCollision',
                                        '--datatier' : 'GEN-SIM',
                                        '--eventcontent': 'FEVTDEBUG',
-                                       '--geometry' : geom,
-                                       '--customise_commands' : '"process.generator.PythiaParameters.processParameters = cms.vstring(\'Charmonium:all = on\' , \'443:onMode = off\' , \'443:onIfAny = 13 -13\' , \'PhaseSpace:pTHatMin = 20.0\')"'
+                                       '--geometry' : geom
+#                                       '--customise_commands' : '"process.generator.PythiaParameters.processParameters = cms.vstring(\'Charmonium:all = on\' , \'443:onMode = off\' , \'443:onIfMatch = 13 -13\' , \'PhaseSpace:pTHatMin = 20.0\')"'
                                        }
     if cust!=None : upgradeStepDict['GenSimFull'][k]['--customise']=cust
     if era is not None: upgradeStepDict['GenSimFull'][k]['--era']=era
