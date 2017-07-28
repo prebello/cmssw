@@ -1,0 +1,474 @@
+Added 'egmPhotonIDs' to process definition (MiniAOD format)!
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+L1TRawToDigi Sequence configured for Stage-2 (2016) trigger. 
+L1TReco Sequence configured for Stage-2 (2016) trigger. 
+WARNING:  L1Trigger/L1TCommon/python/caloStage1LegacyFormatDigis_cfi.py has been deprecated...
+WARNING:  please use L1Trigger/L1TCalorimeter/python/caloStage1LegacyFormatDigis_cfi.py
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+**************************************************************
+b tagging needs to be run on uncorrected jets. Hence, the JECs
+will first be undone for 'updatedPatJetsBTAG' and then applied to
+'updatedPatJetsTransientCorrectedBTAG'.
+**************************************************************
+skipping pfDeepCSVJetTagsPuppi as it has already been loaded in the process
+skipping pfDeepCSVJetTagsPuppi as it has already been loaded in the process
+skipping pfDeepCSVJetTagsPuppi as it has already been loaded in the process
+skipping pfDeepCSVJetTagsPuppi as it has already been loaded in the process
+******************* RunOnData *******************
+************** MC dependence removal ************
+removing MC dependencies for photons
+removing MC dependencies for electrons
+removing MC dependencies for muons
+removing MC dependencies for taus
+removing MC dependencies for taus boosted 
+removing MC dependencies for jets
+adding L2L3Residual JEC for: patJetCorrFactorsTransientCorrectedBTAG
+adding L2L3Residual JEC for: patJetCorrFactorsAK8Puppi
+adding L2L3Residual JEC for: patJetCorrFactorsAK8PFCHSSoftDropSubjets
+adding L2L3Residual JEC for: patJetCorrFactorsAK8
+adding L2L3Residual JEC for: patJetCorrFactorsPuppi
+adding L2L3Residual JEC for: patJetCorrFactorsAK8PFCHSSoftDrop
+adding L2L3Residual JEC for: patJetCorrFactorsAK8PFPuppiSoftDropSubjets
+adding L2L3Residual JEC for: patJetCorrFactors
+adding L2L3Residual JEC for: patJetCorrFactorsAK8PFPuppiSoftDrop
+adding L2L3Residual JEC for: patJetCorrFactorsNoHF
+%MSG-i ThreadSetup:  (NoModuleName) 28-Jul-2017 22:59:41 CEST pre-events
+setting # threads 4
+%MSG
+28-Jul-2017 23:00:05 CEST  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/data/Run2016H/JetHT/RAW/v1/000/281/010/00000/22FCEBCD-707E-E611-954B-FA163E0B3058.root
+28-Jul-2017 23:00:11 CEST  Successfully opened file root://eoscms.cern.ch//eos/cms/store/data/Run2016H/JetHT/RAW/v1/000/281/010/00000/22FCEBCD-707E-E611-954B-FA163E0B3058.root
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:25 CEST Run: 281010 Lumi: 1
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:26 CEST Run: 281010 Lumi: 2
+No event read! No Fitting!
+%MSG
+Begin processing the 1st record. Run 281010, Event 44870, LumiSection 3 at 28-Jul-2017 23:03:26.157 CEST
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:42 CEST Run: 281010 Event: 44870
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:42 CEST Run: 281010 Event: 44870
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:42 CEST Run: 281010 Event: 44870
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:42 CEST Run: 281010 Event: 44870
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w L1GtHwValidation:  L1GtHwValidation:l1Stage1GtHwValidation  28-Jul-2017 23:03:44 CEST Run: 281010 Event: 44870
+
+ No valid product found: EVM L1GlobalTriggerEvmReadoutRecord
+     Data validity [1 = true; 0 = false]: 0
+     Emulator validity: [1 = true; 0 = false]: 1
+ EVM histograms will not be filled.
+
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:44 CEST Run: 281010 Event: 44870
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:44 CEST Run: 281010 Event: 44870
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:44 CEST Run: 281010 Event: 44870
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:44 CEST Run: 281010 Event: 44870
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w BeamSpotFromDB:  BeamSpotOnlineProducer:scalerBeamSpot  28-Jul-2017 23:03:44 CEST Run: 281010 Event: 44870
+Online Beam Spot producer falls back to DB value because the scaler values are zero 
+%MSG
+%MSG-w rpcrechitprobability:  RPCRecHitProbability:rpcrechitprobability  28-Jul-2017 23:03:44 CEST Run: 281010 Event: 44870
+[RPCRecHitProbability]: DCS bit OFF
+%MSG
+%MSG-w L3Absolute not found:  PATJetUpdater:updatedPatJetsBTAG  28-Jul-2017 23:03:46 CEST Run: 281010 Event: 44870
+L2L3Residual and L3Absolute are not part of the jetCorrFactors
+of module patJetCorrFactorsBTAG. Jets will remain uncorrected.
+%MSG
+Begin processing the 2nd record. Run 281010, Event 66191, LumiSection 4 at 28-Jul-2017 23:03:47.403 CEST
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w L1GtHwValidation:  L1GtHwValidation:l1Stage1GtHwValidation  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+
+ No valid product found: EVM L1GlobalTriggerEvmReadoutRecord
+     Data validity [1 = true; 0 = false]: 0
+     Emulator validity: [1 = true; 0 = false]: 1
+ EVM histograms will not be filled.
+
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w BeamSpotFromDB:  BeamSpotOnlineProducer:scalerBeamSpot  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+Online Beam Spot producer falls back to DB value because the scaler values are zero 
+%MSG
+%MSG-w rpcrechitprobability:  RPCRecHitProbability:rpcrechitprobability  28-Jul-2017 23:03:47 CEST Run: 281010 Event: 66191
+[RPCRecHitProbability]: DCS bit OFF
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:48 CEST Run: 281010 Lumi: 5
+No event read! No Fitting!
+%MSG
+Begin processing the 3rd record. Run 281010, Event 97468, LumiSection 6 at 28-Jul-2017 23:03:48.169 CEST
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w L1GtHwValidation:  L1GtHwValidation:l1Stage1GtHwValidation  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+
+ No valid product found: EVM L1GlobalTriggerEvmReadoutRecord
+     Data validity [1 = true; 0 = false]: 0
+     Emulator validity: [1 = true; 0 = false]: 1
+ EVM histograms will not be filled.
+
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w BeamSpotFromDB:  BeamSpotOnlineProducer:scalerBeamSpot  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+Online Beam Spot producer falls back to DB value because the scaler values are zero 
+%MSG
+%MSG-w rpcrechitprobability:  RPCRecHitProbability:rpcrechitprobability  28-Jul-2017 23:03:48 CEST Run: 281010 Event: 97468
+[RPCRecHitProbability]: DCS bit OFF
+%MSG
+Begin processing the 4th record. Run 281010, Event 115190, LumiSection 7 at 28-Jul-2017 23:03:49.395 CEST
+%MSG-w PulseChiSqSNNLS::Minimize:   EcalUncalibRecHitProducer:ecalMultiFitUncalibRecHit 28-Jul-2017 23:03:49 CEST  Run: 281010 Event: 115190
+Max Iterations reached at iter 50
+%MSG
+%MSG-w PulseChiSqSNNLS::Minimize:   EcalUncalibRecHitProducer:ecalMultiFitUncalibRecHit 28-Jul-2017 23:03:49 CEST  Run: 281010 Event: 115190
+Max Iterations reached at iter 50
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w L1GtHwValidation:  L1GtHwValidation:l1Stage1GtHwValidation  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+
+ No valid product found: EVM L1GlobalTriggerEvmReadoutRecord
+     Data validity [1 = true; 0 = false]: 0
+     Emulator validity: [1 = true; 0 = false]: 1
+ EVM histograms will not be filled.
+
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w BeamSpotFromDB:  BeamSpotOnlineProducer:scalerBeamSpot  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+Online Beam Spot producer falls back to DB value because the scaler values are zero 
+%MSG
+%MSG-w rpcrechitprobability:  RPCRecHitProbability:rpcrechitprobability  28-Jul-2017 23:03:49 CEST Run: 281010 Event: 115190
+[RPCRecHitProbability]: DCS bit OFF
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:50 CEST Run: 281010 Lumi: 8
+No event read! No Fitting!
+%MSG
+Begin processing the 5th record. Run 281010, Event 144394, LumiSection 9 at 28-Jul-2017 23:03:50.231 CEST
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w L1GtHwValidation:  L1GtHwValidation:l1Stage1GtHwValidation  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+
+ No valid product found: EVM L1GlobalTriggerEvmReadoutRecord
+     Data validity [1 = true; 0 = false]: 0
+     Emulator validity: [1 = true; 0 = false]: 1
+ EVM histograms will not be filled.
+
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w BeamSpotFromDB:  BeamSpotOnlineProducer:scalerBeamSpot  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+Online Beam Spot producer falls back to DB value because the scaler values are zero 
+%MSG
+%MSG-w rpcrechitprobability:  RPCRecHitProbability:rpcrechitprobability  28-Jul-2017 23:03:50 CEST Run: 281010 Event: 144394
+[RPCRecHitProbability]: DCS bit OFF
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:50 CEST Run: 281010 Lumi: 10
+No event read! No Fitting!
+%MSG
+Begin processing the 6th record. Run 281010, Event 172775, LumiSection 11 at 28-Jul-2017 23:03:51.115 CEST
+Begin processing the 7th record. Run 281010, Event 170431, LumiSection 11 at 28-Jul-2017 23:03:51.118 CEST
+%MSG-w PulseChiSqSNNLS::Minimize:   EcalUncalibRecHitProducer:ecalMultiFitUncalibRecHit 28-Jul-2017 23:03:51 CEST  Run: 281010 Event: 170431
+Max Iterations reached at iter 50
+%MSG
+%MSG-w PulseChiSqSNNLS::Minimize:   EcalUncalibRecHitProducer:ecalMultiFitUncalibRecHit 28-Jul-2017 23:03:51 CEST  Run: 281010 Event: 170431
+Max Iterations reached at iter 50
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w L1GtHwValidation:  L1GtHwValidation:l1Stage1GtHwValidation  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+
+ No valid product found: EVM L1GlobalTriggerEvmReadoutRecord
+     Data validity [1 = true; 0 = false]: 0
+     Emulator validity: [1 = true; 0 = false]: 1
+ EVM histograms will not be filled.
+
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w BeamSpotFromDB:  BeamSpotOnlineProducer:scalerBeamSpot  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+Online Beam Spot producer falls back to DB value because the scaler values are zero 
+%MSG
+%MSG-w rpcrechitprobability:  RPCRecHitProbability:rpcrechitprobability  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 172775
+[RPCRecHitProbability]: DCS bit OFF
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w L1GtHwValidation:  L1GtHwValidation:l1Stage1GtHwValidation  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+
+ No valid product found: EVM L1GlobalTriggerEvmReadoutRecord
+     Data validity [1 = true; 0 = false]: 0
+     Emulator validity: [1 = true; 0 = false]: 1
+ EVM histograms will not be filled.
+
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w BeamSpotFromDB:  BeamSpotOnlineProducer:scalerBeamSpot  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+Online Beam Spot producer falls back to DB value because the scaler values are zero 
+%MSG
+%MSG-w rpcrechitprobability:  RPCRecHitProbability:rpcrechitprobability  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+[RPCRecHitProbability]: DCS bit OFF
+%MSG
+%MSG-w L3Absolute not found:  PATJetUpdater:updatedPatJetsBTAG  28-Jul-2017 23:03:51 CEST Run: 281010 Event: 170431
+L2L3Residual and L3Absolute are not part of the jetCorrFactors
+of module patJetCorrFactorsBTAG. Jets will remain uncorrected.
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 12
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 13
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 14
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 15
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 16
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 17
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 18
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 19
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 20
+No event read! No Fitting!
+%MSG
+%MSG-w BeamFitter:  AlcaBeamMonitor:AlcaBeamMonitor@endLumi  28-Jul-2017 23:03:52 CEST Run: 281010 Lumi: 21
+No event read! No Fitting!
+%MSG
+Begin processing the 8th record. Run 281010, Event 362177, LumiSection 22 at 28-Jul-2017 23:03:53.019 CEST
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:  ByClusterSummaryMultiplicityPairEventFilter:manystripclus53X  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+No information for requested module 5. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w NoModule:   ByClusterSummaryMultiplicityPairEventFilter:toomanystripclus53X  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+No information for requested module 0. Please check in the Provinence Infomation for proper modules.
+%MSG
+%MSG-w L1GtHwValidation:  L1GtHwValidation:l1Stage1GtHwValidation  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+
+ No valid product found: EVM L1GlobalTriggerEvmReadoutRecord
+     Data validity [1 = true; 0 = false]: 0
+     Emulator validity: [1 = true; 0 = false]: 1
+ EVM histograms will not be filled.
+
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_PFTaus  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+HLTTauDQML1Plotter::analyze: unable to read L1 tau collection hltCaloStage2Digis:Tau
+%MSG
+%MSG-w HLTTauDQMOffline:  HLTTauDQMOfflineSource:hltTauOfflineMonitor_Inclusive  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+HLTTauDQML1Plotter::analyze: unable to read L1 met collection hltCaloStage2Digis:EtSum
+%MSG
+%MSG-w BeamSpotFromDB:  BeamSpotOnlineProducer:scalerBeamSpot  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+Online Beam Spot producer falls back to DB value because the scaler values are zero 
+%MSG
+%MSG-w rpcrechitprobability:  RPCRecHitProbability:rpcrechitprobability  28-Jul-2017 23:03:53 CEST Run: 281010 Event: 362177
+[RPCRecHitProbability]: DCS bit OFF
+%MSG
+28-Jul-2017 23:03:56 CEST  Closed file root://eoscms.cern.ch//eos/cms/store/data/Run2016H/JetHT/RAW/v1/000/281/010/00000/22FCEBCD-707E-E611-954B-FA163E0B3058.root
+TimeReport> Time report complete in 189.433 seconds
+ Time Summary: 
+ - Min event:   0.402899
+ - Max event:   21.1218
+ - Avg event:   3.19475
+ - Total loop:  142.315
+ - Total job:   189.433
+ Event Throughput: 0.0562134 ev/s
+ CPU Summary: 
+ - Total loop:  133.098
+ - Total job:   179.832
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 BeamFitter           -w AlcaBeamMonitor:                      15       15
+    2 BeamSpotFromDB       -w BeamSpotOnlinePr                       8        8
+    3 HLTTauDQMOffline     -w HLTTauDQMOffline                      16       16
+    4 HLTTauDQMOffline     -w HLTTauDQMOffline                      16       16
+    5 L1GtHwValidation     -w L1GtHwValidation                       8        8
+    6 L3Absolute not found -w PATJetUpdater:up                       2        2
+    7 NoModule             -w ByClusterSummary                      16       16
+    8 NoModule             -w ByClusterSummary                      16       16
+    9 PulseChiSqSNNLS::Min -w EcalUncalibRecHi                       4        4
+   10 rpcrechitprobability -w RPCRecHitProbabi                       8        8
+   11 TimeReport           -e AfterModEndJob                         1        1
+   12 fileAction           -s file_close                             1        1
+   13 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 BeamFitter           Run: 281010 Lumi Run: 281010 Lumi Run: 281010 Lumi
+    2 BeamSpotFromDB       281010/44870     281010/66191     281010/362177
+    3 HLTTauDQMOffline     281010/44870     281010/44870     281010/362177
+    4 HLTTauDQMOffline     281010/44870     281010/44870     281010/362177
+    5 L1GtHwValidation     281010/44870     281010/66191     281010/362177
+    6 L3Absolute not found 281010/44870     281010/170431    
+    7 NoModule             281010/44870     281010/44870     281010/362177
+    8 NoModule             281010/44870     281010/44870     281010/362177
+    9 PulseChiSqSNNLS::Minimize 281010/115190    281010/115190    281010/170431
+   10 rpcrechitprobability 281010/44870     281010/66191     281010/362177
+   11 TimeReport           PostEndRun                        
+   12 fileAction           PostEndRun                        
+   13 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning               109                 109
+Error                   1                   1
+System                  3                   3

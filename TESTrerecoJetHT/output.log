@@ -1,0 +1,53 @@
+Added 'egmPhotonIDs' to process definition (MiniAOD format)!
+RAW2DIGI,L1Reco,RECO,SKIM:JetHTJetPlusHOFilter,ALCA:HcalCalDijets+HcalCalIsoTrkFilter+HcalCalIsolatedBunchFilter,EI,PAT,DQM:@allForPrompt
+magnetic field option forced to: AutoFromDBCurrent
+entry /store/data/Run2016H/JetHT/RAW/v1/000/281/010/00000/22FCEBCD-707E-E611-954B-FA163E0B3058.root
+Step: RAW2DIGI Spec: 
+ ################################################################### 
+ # WARNING: this module is deprecated.                             # 
+ # Please use CondCore.CondDB.CondDB_cfi.py                        # 
+ ################################################################### 
+L1TRawToDigi Sequence configured for Stage-2 (2016) trigger. 
+Step: L1Reco Spec: 
+L1TReco Sequence configured for Stage-2 (2016) trigger. 
+Step: RECO Spec: 
+Step: SKIM Spec: ['JetHTJetPlusHOFilter']
+Step: ALCA Spec: ['HcalCalDijets', 'HcalCalIsoTrkFilter', 'HcalCalIsolatedBunchFilter']
+DL enriching full HcalCalDijets+HcalCalIsoTrkFilter+HcalCalIsolatedBunchFilter
+Step: EI Spec: 
+Step: PAT Spec: 
+Step: DQM Spec: ['@allForPrompt']
+WARNING:  L1Trigger/L1TCommon/python/caloStage1LegacyFormatDigis_cfi.py has been deprecated...
+WARNING:  please use L1Trigger/L1TCalorimeter/python/caloStage1LegacyFormatDigis_cfi.py
+# Conditions read from  CMS_CONDITIONS  via FrontierProd 
+customising the process with customisePostEra_Run2_2016 from Configuration/DataProcessing/RecoTLR
+customising the process with addMonitoring from Configuration/DataProcessing/Utils
+customising the process with miniAOD_customizeAllData from PhysicsTools/PatAlgos/slimming/miniAOD_tools
+**************************************************************
+b tagging needs to be run on uncorrected jets. Hence, the JECs
+will first be undone for 'updatedPatJetsBTAG' and then applied to
+'updatedPatJetsTransientCorrectedBTAG'.
+**************************************************************
+skipping pfDeepCSVJetTagsPuppi as it has already been loaded in the process
+skipping pfDeepCSVJetTagsPuppi as it has already been loaded in the process
+skipping pfDeepCSVJetTagsPuppi as it has already been loaded in the process
+skipping pfDeepCSVJetTagsPuppi as it has already been loaded in the process
+******************* RunOnData *******************
+************** MC dependence removal ************
+removing MC dependencies for photons
+removing MC dependencies for electrons
+removing MC dependencies for muons
+removing MC dependencies for taus
+removing MC dependencies for taus boosted 
+removing MC dependencies for jets
+adding L2L3Residual JEC for: patJetCorrFactorsTransientCorrectedBTAG
+adding L2L3Residual JEC for: patJetCorrFactorsAK8Puppi
+adding L2L3Residual JEC for: patJetCorrFactorsAK8PFCHSSoftDropSubjets
+adding L2L3Residual JEC for: patJetCorrFactorsAK8
+adding L2L3Residual JEC for: patJetCorrFactorsPuppi
+adding L2L3Residual JEC for: patJetCorrFactorsAK8PFCHSSoftDrop
+adding L2L3Residual JEC for: patJetCorrFactorsAK8PFPuppiSoftDropSubjets
+adding L2L3Residual JEC for: patJetCorrFactors
+adding L2L3Residual JEC for: patJetCorrFactorsAK8PFPuppiSoftDrop
+adding L2L3Residual JEC for: patJetCorrFactorsNoHF
+Config file recoskim_Run2016H_JetHT.py created
