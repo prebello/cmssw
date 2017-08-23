@@ -418,7 +418,7 @@ baseDataSetRelease=[
     'CMSSW_7_6_0_pre7-76X_mcRun2_asymptotic_v9_realBS-v1',         # 11 - 13 TeV High Stats MiniBias for mixing GEN-SIM
     'CMSSW_8_1_0_pre9_Geant4102-81X_mcRun2cosmics_startup_peak_v2-v1', # 12 - GEN-SIM input for 1307 cosmics wf from 810_p2
     'CMSSW_9_3_0_pre4-93X_mc2017_realistic_v1-v1',     # 13 - 13 TeV samples with GEN-SIM from PhaseI upgrade
-    'CMSSW_9_2_3-PU25ns_92X_upgrade2017_realistic_v2_earlyBS2017-v1',     # 14 - fullSim PU 25ns UP17 premix
+    'CMSSW_9_3_0_pre4-PU25ns_93X_mc2017_realistic_v1-v1',     # 14 - fullSim PU 25ns UP17 premix
     ]
 
 
