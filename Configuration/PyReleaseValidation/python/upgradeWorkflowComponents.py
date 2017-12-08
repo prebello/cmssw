@@ -12,7 +12,7 @@ upgradeKeys[2017] = [
     '2018',
     '2018PU',
     '2018Design',
-#    '2018DesignPU',
+    '2018DesignPU',
     '2019',
 #    '2019PU',
     '2019Design',
