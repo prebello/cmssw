@@ -490,7 +490,7 @@ steps['TTbar_13_ID']=identitySim(steps['TTbar_13'])
 
 baseDataSetRelease=[
     'CMSSW_9_2_4-91X_mcRun1_realistic_v2-v1',               # 0 run1 samples; note TTbar GENSIM has v2 (see TTbarINPUT below)
-    'CMSSW_10_0_0_pre2-PU_100X_mc2017_realistic_v1-v1',          # 1 GEN-SIM for HI RunII, 2018
+    'CMSSW_10_0_0_pre2-100X_mc2017_realistic_v1-v1',          # 1 GEN-SIM for HI RunII, 2018
     'CMSSW_6_2_0_pre8-PRE_ST62_V8_FastSim-v1',              # 2 for fastsim id test
 #    'CMSSW_7_1_0_pre5-START71_V1-v2',                      # 3 8 TeV , for the one sample which is part of the routine relval production (RelValZmumuJets_Pt_20_300, because of -v2)
                                                             # THIS ABOVE IS NOT USED, AT THE MOMENT
@@ -500,7 +500,7 @@ baseDataSetRelease=[
     'CMSSW_8_1_0_pre15-PU50ns_81X_mcRun2_startup_v12-v1',        # 6 - fullSim PU 50ns premix
     'CMSSW_10_0_0_pre2-100X_mcRun2_asymptotic_v2_FastSim-v1',    # 7 - fastSim MinBias for mixing
     'CMSSW_10_0_0_pre2-PU25ns_100X_mcRun2_asymptotic_v2_FastSim-v1',# 8 - fastSim premixed MinBias
-    'CMSSW_10_0_0_pre2-PU_100X_mc2017_realistic_v1-v1',        # 9 - Run2 HI GEN-SIM for mixing
+    'CMSSW_10_0_0_pre2-100X_mc2017_realistic_v1-v1',        # 9 - Run2 HI GEN-SIM for mixing
     'CMSSW_7_6_0-76X_mcRun2_asymptotic_v11-v1',                    # 10 - 13 TeV High Stats GEN-SIM
     'CMSSW_7_6_0_pre7-76X_mcRun2_asymptotic_v9_realBS-v1',         # 11 - 13 TeV High Stats MiniBias for mixing GEN-SIM
     'CMSSW_8_1_0_pre9_Geant4102-81X_mcRun2cosmics_startup_peak_v2-v1', # 12 - GEN-SIM input for 1307 cosmics wf from 810_p2
