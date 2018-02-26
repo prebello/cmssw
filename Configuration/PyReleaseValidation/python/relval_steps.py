@@ -391,11 +391,18 @@ def gen2017(fragment,howMuch):
     global step1Up2017Defaults
     return merge([{'cfg':fragment},howMuch,step1Up2017Defaults])
 
-### Production test: 13 TeV equivalents
+### Production test: 13 TeV equivalents 2016
 steps['ProdMinBias_13']=gen2015('MinBias_13TeV_pythia8_TuneCUETP8M1_cfi',Kby(9,100))
 steps['ProdTTbar_13']=gen2015('TTbar_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
-steps['ProdZEE_13']=gen2015('ZEE_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
 steps['ProdQCD_Pt_3000_3500_13']=gen2015('QCD_Pt_3000_3500_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
+steps['ProdZEE_13']=gen2015('ZEE_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
+
+##production 2017
+steps['ProdTTbar_13UP17']=gen2017('TTbar_13TeV_TuneCUETP8M1_cfi',Kby(9,50))
+steps['ProdMinBias_13UP17']=gen2017('MinBias_13TeV_pythia8_TuneCUETP8M1_cfi',Kby(9,100))
+steps['ProdQCD_Pt_3000_3500_13UP17']=gen2017('QCD_Pt_3000_3500_13TeV_TuneCUETP8M1_cfi',Kby(9,100))
+
+
 
 steps['MinBias']=gen('MinBias_8TeV_pythia8_TuneCUETP8M1_cff',Kby(9,300))
 steps['QCD_Pt_3000_3500']=gen('QCD_Pt_3000_3500_8TeV_TuneCUETP8M1_cfi',Kby(9,25))
@@ -1179,6 +1186,7 @@ step2Upg2018Defaults = {'-s'     :'DIGI:pdigi_valid,L1,DIGI2RAW,HLT:@relval2018'
 
 steps['DIGIUP15']=merge([step2Upg2015Defaults])
 steps['DIGIUP15PROD1']=merge([{'-s':'DIGI,L1,DIGI2RAW,HLT:@relval2016','--eventcontent':'RAWSIM','--datatier':'GEN-SIM-RAW'},step2Upg2015Defaults])
+steps['DIGIUP17PROD1']=merge([{'-s':'DIGI,L1,DIGI2RAW,HLT:@relval2017','--eventcontent':'RAWSIM','--datatier':'GEN-SIM-RAW'},step2Upg2017Defaults])
 steps['DIGIUP15_PU25']=merge([PU25,step2Upg2015Defaults])
 steps['DIGIUP15_PU50']=merge([PU50,step2Upg2015Defaults50ns])
 steps['DIGIUP17']=merge([step2Upg2017Defaults])
@@ -1532,6 +1540,8 @@ step3Up2015Defaults_trackingOnly = merge([step3_trackingOnly, remove(step3Up2015
 #step3DefaultsUnsch = merge([unSchOverrides,step3Defaults])
 
 steps['RECOUP15']=merge([step3Up2015Defaults]) # todo: remove UP from label
+steps['RECOUP15_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},step3Up2015Defaults]) # todo: remove UP from label
+steps['RECOUP15_L1TMuDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'},step3Up2015Defaults]) # todo: remove UP from label
 steps['RECOUP15AlCaCalo']=merge([step3Up2015DefaultsAlCaCalo]) # todo: remove UP from label
 
 steps['RECOUP15_trackingOnly']=merge([step3Up2015Defaults_trackingOnly]) # todo: remove UP from label
@@ -1559,6 +1569,8 @@ steps['RECODreHLTAlCaCalo']=merge([{'--hltProcess':'reHLT','--conditions':'auto:
 steps['RECODR2_25nsreHLT']=merge([{'--hltProcess':'reHLT'},steps['RECODR2_25ns']])
 steps['RECODR2_50nsreHLT']=merge([{'--hltProcess':'reHLT'},steps['RECODR2_50ns']])
 steps['RECODR2_2016reHLT']=merge([{'--hltProcess':'reHLT','--conditions':'auto:run2_data_relval'},steps['RECODR2_2016']])
+steps['RECODR2_2016reHLT_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},steps['RECODR2_2016reHLT']])
+steps['RECODR2_2016reHLT_L1TMuDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'},steps['RECODR2_2016reHLT']])
 steps['RECODR2_2017reHLT']=merge([{'--hltProcess':'reHLT','--conditions':'auto:run2_data_relval'},steps['RECODR2_2017']])
 steps['RECODR2newL1repack_2016reHLT']=merge([{'-s':'L1REPACK:FullSimTP,RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM','--hltProcess':'reHLT'},steps['RECODR2_2016']])
 steps['RECODR2reHLTAlCaEle']=merge([{'--hltProcess':'reHLT','--conditions':'auto:run2_data_relval'},steps['RECODR2AlCaEle']])
@@ -1566,7 +1578,7 @@ steps['RECODR2reHLTAlCaTkCosmics']=merge([{'--hltProcess':'reHLT','--conditions'
 steps['RECODR2_2017reHLTAlCaTkCosmics']=merge([{'--hltProcess':'reHLT','--conditions':'auto:run2_data_relval','-s':'RAW2DIGI,L1Reco,RECO,SKIM:EXONoBPTXSkim,EI,PAT,ALCA:TkAlCosmicsInCollisions,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2017']])
 
 
-steps['RECODR2_2016reHLT_skimSingleMu']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:ZMu+MuTau,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2016reHLT']])
+steps['RECODR2_2016reHLT_skimSingleMu']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:ZMu+MuTau,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'},steps['RECODR2_2016reHLT']])
 steps['RECODR2_2016reHLT_skimDoubleEG']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:ZElectron,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2016reHLT']])
 steps['RECODR2_2016reHLT_skimMuonEG']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:TopMuEG,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2016reHLT']])
 steps['RECODR2_2016reHLT_skimJetHT']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:JetHTJetPlusHOFilter,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2016reHLT']])
@@ -1574,7 +1586,7 @@ steps['RECODR2_2016reHLT_skimMET']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:HighM
 steps['RECODR2_2016reHLT_skimSinglePh']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:SinglePhotonJetPlusHOFilter+EXOMONOPOLE,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2016reHLT']])
 steps['RECODR2_2016reHLT_skimMuOnia']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:BPHSkim,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2016reHLT']])
 
-steps['RECODR2_2017reHLT_skimSingleMu']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:ZMu+MuTau,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2017reHLT']])
+steps['RECODR2_2017reHLT_skimSingleMu']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:ZMu+MuTau,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'},steps['RECODR2_2017reHLT']])
 steps['RECODR2_2017reHLT_skimDoubleEG']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:ZElectron,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2017reHLT']])
 steps['RECODR2_2017reHLT_skimMuonEG']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:TopMuEG,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2017reHLT']])
 steps['RECODR2_2017reHLT_skimJetHT']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:JetHTJetPlusHOFilter,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2017reHLT']])
@@ -1585,6 +1597,7 @@ steps['RECODR2_2017reHLT_skimMuOnia']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:BP
 
 for sname in ['RECODR2_50nsreHLT', 'RECODR2_25nsreHLT',
               'RECODR2_2016reHLT', 'RECODR2newL1repack_2016reHLT',
+              'RECODR2_2016reHLT_L1TEgDQM', 'RECODR2_2016reHLT_L1TMuDQM',
               'RECODR2_2016reHLT_skimDoubleEG', 'RECODR2_2016reHLT_skimJetHT', 'RECODR2_2016reHLT_skimMET',
               'RECODR2_2016reHLT_skimMuonEG', 'RECODR2_2016reHLT_skimSingleMu',
               'RECODR2_2016reHLT_skimSinglePh', 'RECODR2_2016reHLT_skimMuOnia',
@@ -1593,6 +1606,7 @@ for sname in ['RECODR2_50nsreHLT', 'RECODR2_25nsreHLT',
 
 # RECO step with Prompt-like GT
 steps['RECODR2_2016reHLT_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2016reHLT']])
+steps['RECODR2_2016reHLT_Prompt_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},steps['RECODR2_2016reHLT_Prompt']])
 steps['RECODR2_2016reHLT_skimDoubleEG_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2016reHLT_skimDoubleEG']])
 steps['RECODR2_2016reHLT_skimJetHT_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2016reHLT_skimJetHT']])
 steps['RECODR2_2016reHLT_skimMET_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2016reHLT_skimMET']])
@@ -1601,8 +1615,10 @@ steps['RECODR2_2016reHLT_skimSingleMu_Prompt']=merge([{'--conditions':'auto:run2
 steps['RECODR2_2016reHLT_skimSinglePh_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2016reHLT_skimSinglePh']])
 steps['RECODR2_2016reHLT_skimMuOnia_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2016reHLT_skimMuOnia']])
 steps['RECODR2_2016reHLT_Prompt_Lumi']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@lumi'},steps['RECODR2_2016reHLT_Prompt']])
+steps['RECODR2_2016reHLT_Prompt_Lumi_L1TMuDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@lumi+@L1TMuon'},steps['RECODR2_2016reHLT_Prompt']])
 
 steps['RECODR2_2017reHLT_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2017reHLT']])
+steps['RECODR2_2017reHLT_Prompt_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},steps['RECODR2_2017reHLT_Prompt']])
 steps['RECODR2_2017reHLT_skimDoubleEG_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2017reHLT_skimDoubleEG']])
 steps['RECODR2_2017reHLT_skimJetHT_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2017reHLT_skimJetHT']])
 steps['RECODR2_2017reHLT_skimDisplacedJet_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2017reHLT_skimDisplacedJet']])
@@ -1611,7 +1627,7 @@ steps['RECODR2_2017reHLT_skimMuonEG_Prompt']=merge([{'--conditions':'auto:run2_d
 steps['RECODR2_2017reHLT_skimSingleMu_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2017reHLT_skimSingleMu']])
 steps['RECODR2_2017reHLT_skimSinglePh_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2017reHLT_skimSinglePh']])
 steps['RECODR2_2017reHLT_skimMuOnia_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2017reHLT_skimMuOnia']])
-steps['RECODR2_2017reHLT_skimSingleMu_Prompt_Lumi']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:ZMu+MuTau,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@lumi'},steps['RECODR2_2017reHLT_skimSingleMu_Prompt']])
+steps['RECODR2_2017reHLT_skimSingleMu_Prompt_Lumi']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,SKIM:ZMu+MuTau,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@lumi+@L1TMuon'},steps['RECODR2_2017reHLT_skimSingleMu_Prompt']])
 steps['RECODR2_2017reHLTAlCaTkCosmics_Prompt']=merge([{'--conditions':'auto:run2_data_promptlike'},steps['RECODR2_2017reHLTAlCaTkCosmics']])
 
 steps['RECO']=merge([step3Defaults])
@@ -1622,6 +1638,9 @@ steps['RECODBG']=merge([{'--eventcontent':'RECODEBUG,MINIAODSIM,DQM'},steps['REC
 steps['RECOPROD1']=merge([{ '-s' : 'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT', '--datatier' : 'AODSIM,MINIAODSIM', '--eventcontent' : 'AODSIM,MINIAODSIM'},step3Defaults])
 #steps['RECOPRODUP15']=merge([{ '-s':'RAW2DIGI,L1Reco,RECO,EI,DQM:DQMOfflinePOGMC','--datatier':'AODSIM,DQMIO','--eventcontent':'AODSIM,DQM'},step3Up2015Defaults])
 steps['RECOPRODUP15']=merge([{ '-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,DQM:DQMOfflinePOGMC','--datatier':'AODSIM,MINIAODSIM,DQMIO','--eventcontent':'AODSIM,MINIAODSIM,DQM'},step3Up2015Defaults])
+## for 2017 PROD
+steps['RECOPRODUP17']=merge([{ '--era' :'Run2_2017',},steps['RECOPRODUP15']])
+##
 steps['RECOCOS']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,DQM','--scenario':'cosmics','--datatier':'GEN-SIM-RECO,DQMIO','--eventcontent':'RECOSIM,DQM'},stCond,step3Defaults])
 steps['RECOHAL']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,DQM','--scenario':'cosmics'},step3Up2015Hal])
 steps['RECOCOS_UP15']=merge([{'--conditions':'auto:run2_mc_cosmics','-s':'RAW2DIGI,L1Reco,RECO,ALCA:MuAlGlobalCosmics,DQM','--scenario':'cosmics'},step3Up2015Hal])
@@ -1638,7 +1657,11 @@ steps['RECODDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,DQM:@common+@muon+@hcal+
 steps['RECOPU1']=merge([PU,steps['RECO']])
 steps['RECOPU2']=merge([PU2,steps['RECO']])
 steps['RECOUP15_PU25']=merge([PU25,step3Up2015Defaults])
+steps['RECOUP15_PU25_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},steps['RECOUP15_PU25']])
+steps['RECOUP15_PU25_L1TMuDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'},steps['RECOUP15_PU25']])
 steps['RECOUP15_PU50']=merge([PU50,step3Up2015Defaults50ns])
+steps['RECOUP15_PU50_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidationNoHLT+@miniAODValidation,DQM:@standardDQMFakeHLT+@miniAODDQM+@L1TEgamma'},steps['RECOUP15_PU50']])
+steps['RECOUP15_PU50_L1TMuDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,VALIDATION:@standardValidationNoHLT+@miniAODValidation,DQM:@standardDQMFakeHLT+@miniAODDQM+@L1TMuon'},steps['RECOUP15_PU50']])
 
 # for PU25 High stats workflows
 steps['RECOUP15_PU25HS']=merge([PU25HS,step3Up2015Defaults])
@@ -1663,6 +1686,8 @@ steps['RECOPRMXUP17_PU25']=merge([
 steps['RECOPRMXUP18_PU25']=merge([
         {'--conditions':'auto:phase1_2018_realistic','--era':'Run2_2018','--customise':'SimGeneral/DataMixingModule/customiseForPremixingInput.customiseForPreMixingInput'},
         step3Up2015Defaults])
+steps['RECOPRMXUP18_PU25_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},steps['RECOPRMXUP18_PU25']])
+steps['RECOPRMXUP18_PU25_L1TMuDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,RECOSIM,EI,PAT,VALIDATION:@standardValidation+@miniAODValidation,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'},steps['RECOPRMXUP18_PU25']])
 
 recoPremixUp15prod = merge([
         #{'-s':'RAW2DIGI,L1Reco,RECO,EI'}, # tmp
@@ -1854,7 +1879,12 @@ steps['HARVESTDR1']={'-s':'HARVESTING:@standardDQMFakeHLT+@miniAODDQM',
 steps['HARVESTDreHLT'] = merge([ {'--conditions':'auto:run1_data_%s'%menu}, steps['HARVESTD'] ])
 steps['HARVESTDR1reHLT'] = merge([ {'--conditions':'auto:run1_data_%s'%menu}, steps['HARVESTDR1'] ])
 steps['HARVESTDR2'] = merge([ {'--conditions':'auto:run2_data_relval'}, steps['HARVESTD'] ])
+steps['HARVEST2016'] = merge([ {'--era':'Run2_2016'}, steps['HARVESTDR2'] ])
+steps['HARVEST2016_L1TEgDQM'] = merge([ {'-s':'HARVESTING:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'}, steps['HARVEST2016'] ])
+steps['HARVEST2016_L1TMuDQM'] = merge([ {'-s':'HARVESTING:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'}, steps['HARVEST2016'] ])
 steps['HARVEST2017'] = merge([ {'--conditions':'auto:run2_data_relval','--era':'Run2_2017','--conditions':'auto:run2_data_promptlike',}, steps['HARVESTD'] ])
+steps['HARVEST2017_L1TEgDQM'] = merge([ {'-s':'HARVESTING:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'}, steps['HARVEST2017'] ])
+steps['HARVEST2017_L1TMuDQM'] = merge([ {'-s':'HARVESTING:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TMuon'}, steps['HARVEST2017'] ])
 
 steps['DQMHLTonAOD_2017']={
     '-s':'DQM:offlineHLTSourceOnAOD', ### DQM-only workflow on AOD input: for HLT
@@ -1988,21 +2018,30 @@ steps['HARVESTUP15']={
     '--era' : 'Run2_2016',
     '--filetype':'DQM',
     }
-
+steps['HARVESTUP15_L1TEgDQM']=merge([{'-s':'HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@L1TEgamma'},steps['HARVESTUP15']])
+steps['HARVESTUP15_L1TMuDQM']=merge([{'-s':'HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@L1TMuon'},steps['HARVESTUP15']])
 
 steps['HARVESTMINUP15']=merge([{'-s':'HARVESTING:validationHarvesting+dqmHarvesting'},steps['HARVESTUP15']])
 
 steps['HARVESTUP15_PU25']=steps['HARVESTUP15']
+steps['HARVESTUP15_PU25_L1TEgDQM']=steps['HARVESTUP15_L1TEgDQM']
+steps['HARVESTUP15_PU25_L1TMuDQM']=steps['HARVESTUP15_L1TMuDQM']
 
 steps['HARVESTUP15_PU50']=merge([{'-s':'HARVESTING:@standardValidationNoHLT+@standardDQMFakeHLT+@miniAODValidation+@miniAODDQM','--era' : 'Run2_50ns'},steps['HARVESTUP15']])
+steps['HARVESTUP15_PU50_L1TEgDQM']=merge([{'-s':'HARVESTING:@standardValidationNoHLT+@standardDQMFakeHLT+@miniAODValidation+@miniAODDQM+@L1TEgamma'},steps['HARVESTUP15_PU50']])
+steps['HARVESTUP15_PU50_L1TMuDQM']=merge([{'-s':'HARVESTING:@standardValidationNoHLT+@standardDQMFakeHLT+@miniAODValidation+@miniAODDQM+@L1TMuon'},steps['HARVESTUP15_PU50']])
 
 steps['HARVESTUP15_trackingOnly']=merge([{'-s': 'HARVESTING:@trackingOnlyValidation+@trackingOnlyDQM'}, steps['HARVESTUP15']])
 
 steps['HARVESTUP17']=merge([{'--conditions':'auto:phase1_2017_realistic','--era' : 'Run2_2017'},steps['HARVESTUP15']])
 steps['HARVESTUP18']=merge([{'--conditions':'auto:phase1_2018_realistic','--era' : 'Run2_2018'},steps['HARVESTUP15']])
+steps['HARVESTUP18_L1TEgDQM']=merge([{'-s':'HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@L1TEgamma'},steps['HARVESTUP18']])
+steps['HARVESTUP18_L1TMuDQM']=merge([{'-s':'HARVESTING:@standardValidation+@standardDQM+@ExtraHLT+@miniAODValidation+@miniAODDQM+@L1TMuon'},steps['HARVESTUP18']])
 
 steps['HARVESTUP17_PU25']=steps['HARVESTUP17']
 steps['HARVESTUP18_PU25']=steps['HARVESTUP18']
+steps['HARVESTUP18_PU25_L1TEgDQM']=steps['HARVESTUP18_L1TEgDQM']
+steps['HARVESTUP18_PU25_L1TMuDQM']=steps['HARVESTUP18_L1TMuDQM']
 
 steps['HARVESTDR2_REMINIAOD_mc2016']=merge([{'-s':'HARVESTING:@miniAODValidation+@miniAODDQM','--era':'Run2_2016,run2_miniAOD_80XLegacy'},steps['HARVESTUP15']])
 
