@@ -231,8 +231,8 @@ workflows[136.778] = ['',['RunZeroBias2016H','HLTDR2_2016','RECODR2_2016reHLT_Pr
 workflows[136.779] = ['',['RunMuOnia2016H','HLTDR2_2016','RECODR2_2016reHLT_skimMuOnia_Prompt','HARVESTDR2']]
 # reminiAOD wf on 2016H 80X input
 workflows[136.7721] = ['',['RunJetHT2016H_reminiaod','REMINIAOD_data2016','HARVESTDR2_REMINIAOD_data2016']]
-# nanoAOD wf on 2016H 80X input
-workflows[136.7722] = ['',['RunJetHT2016H_nano','NANOEDM2016_80X','HARVESTNANOAOD2016_80X']]
+# nanoAOD wf on 2016H 80X input (NANOEDM2016_80X2 used to drop DQM process name in step2)
+workflows[136.7722] = ['',['RunJetHT2016H_nano','NANOEDM2016_80X2','HARVESTNANOAOD2016_80X']]
 
 ### run 2017B ###
 workflows[136.780] = ['',['RunHLTPhy2017B','HLTDR2_2017','RECODR2_2017reHLT_Prompt','HARVEST2017']]
@@ -341,6 +341,7 @@ workflows[136.8562] = ['',['RunZeroBias1_hBStarRP','HLTDR2_2018_hBStar','RECODR2
 
 ### NANOAOD wf on 2018 prompt reco MINIADD
 workflows[136.8521] = ['',['RunJetHT2018A_nano','NANOEDM2018','HARVESTNANOAOD2018']]
+workflows[136.8812] = ['',['RunJetHT2018D_nano','NANOEDM2018D','HARVESTNANOAOD2018D']]
 
 ### run 2018B ###
 workflows[136.861] = ['',['RunHLTPhy2018B','HLTDR2_2018','RECODR2_2018reHLT_Prompt','HARVEST2018']]

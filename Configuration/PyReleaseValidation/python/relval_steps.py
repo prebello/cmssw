@@ -276,7 +276,7 @@ steps['RunSinglePh2016H']={'INPUT':InputInfo(dataSet='/SinglePhoton/Run2016H-v1/
 steps['RunZeroBias2016H']={'INPUT':InputInfo(dataSet='/ZeroBias/Run2016H-v1/RAW',label='zb2016H',events=100000,location='STD', ls=Run2016H)}
 steps['RunMuOnia2016H']={'INPUT':InputInfo(dataSet='/MuOnia/Run2016H-v1/RAW',label='muOnia2016H',events=100000,location='STD', ls=Run2016H)}
 steps['RunJetHT2016H_reminiaod']={'INPUT':InputInfo(dataSet='/JetHT/Run2016H-18Apr2017-v1/AOD',label='rmaod_jetHT2016H',events=100000,location='STD', ls=Run2016H)}
-steps['RunJetHT2016H_nano']={'INPUT':InputInfo(dataSet='/JetHT/Run2016H-18Apr2017-v1/MINIAOD',label='nano_jetHT2016H',events=100000,location='STD', ls=Run2016H)}
+steps['RunJetHT2016H_nano']={'INPUT':InputInfo(dataSet='/JetHT/Run2016H-17Jul2018-v1/MINIAOD',label='nano_jetHT2016H',events=100000,location='STD', ls=Run2016H)}
 
 #### run2 2017B ####
 Run2017BlowPU={297227: [[1, 45]]}
@@ -372,7 +372,7 @@ steps['RunExpressPhy2017F']={'INPUT':InputInfo(dataSet='/ExpressPhysics/Run2017F
 
 steps['RunJetHT2017F_reminiaod']={'INPUT':InputInfo(dataSet='/JetHT/Run2017F-17Nov2017-v1/AOD',label='rmaod_jetHT2017F',events=100000,location='STD', ls=Run2017F)}
 
-steps['RunJetHT2017C_94Xv2NanoAODINPUT']={'INPUT':InputInfo(dataSet='/JetHT/CMSSW_9_4_5_cand1-94X_dataRun2_relval_v11_RelVal_rmaod_jetHT2017C-v1/MINIAOD',label='nano_jetHT2017C',events=100000,location='STD', ls=Run2017C)}
+steps['RunJetHT2017C_94Xv2NanoAODINPUT']={'INPUT':InputInfo(dataSet='/JetHT/Run2017C-31Mar2018-v1/MINIAOD',label='nano_jetHT2017C',events=100000,location='STD', ls=Run2017C)}
 
 #### run2 2018A ####
 Run2018A={315489: [[1, 100]]} #AVGPU 35
@@ -395,7 +395,10 @@ RunhBStarRP={314276: [[1, 200]]} #for Roman Pot system
 steps['RunZeroBias1_hBStarRP']={'INPUT':InputInfo(dataSet='/ZeroBias1/Commissioning2018-v1/RAW',label='zbhBSRP',events=100000,location='STD', ls=RunhBStarRP)}
 
 #### 2018 NANOAOD from prompt reco  2018 MINIAOD ####
-steps['RunJetHT2018A_nano']={'INPUT':InputInfo(dataSet='/JetHT/Run2018A-PromptReco-v1/MINIAOD',label='nano_jetHT2018A',events=100000,location='STD', ls=Run2018A)}
+steps['RunJetHT2018A_nano']={'INPUT':InputInfo(dataSet='/JetHT/Run2018A-17Sep2018-v1/MINIAOD',label='nano_jetHT2018A',events=100000,location='STD', ls=Run2018A)}
+
+Run2018D={320804: [[46, 150]]}
+steps['RunJetHT2018D_nano']={'INPUT':InputInfo(dataSet='/JetHT/Run2018D-PromptReco-v2/MINIAOD',label='nano_jetHT2018D',events=100000,location='STD', ls=Run2018D)}
 
 #### run2 2018B ####
 Run2018B={317435: [[1, 100]]}
@@ -2550,9 +2553,11 @@ steps['NANOEDMMC2018_PROD'] = merge([{'--conditions': 'auto:phase1_2018_realisti
 
 steps['NANOEDM2017'] = merge([{'--conditions': 'auto:run2_data_relval', '--era': 'Run2_2017'}, stepNanoEDMData ])
 steps['NANOEDM2017_94XMiniAODv1'] = merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv1'}, steps['NANOEDM2017'] ])
-steps['NANOEDM2017_94XMiniAODv2'] = merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv2'}, steps['NANOEDM2017'] ])
-steps['NANOEDM2016_80X'] = merge([{'--era': 'Run2_2016,run2_miniAOD_80XLegacy'}, steps['NANOEDM2017'] ])
-steps['NANOEDM2018'] = merge([ {'--conditions': 'auto:run2_data_promptlike', '--era': 'Run2_2018'}, stepNanoEDMData ])
+steps['NANOEDM2017_94XMiniAODv2'] = merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv2','--conditions': '102X_dataRun2_v8'}, steps['NANOEDM2017'] ])
+steps['NANOEDM2016_80X'] = merge([{'--era': 'Run2_2016,run2_nanoAOD_94X2016','--conditions': '102X_dataRun2_nanoAOD_2016_v1'}, steps['NANOEDM2017'] ])
+steps['NANOEDM2016_80X2'] = merge([{'--era': 'Run2_2016,run2_nanoAOD_94X2016','--conditions': '102X_dataRun2_nanoAOD_2016_v1','--process':'DQM2'}, steps['NANOEDM2017'] ])
+steps['NANOEDM2018'] = merge([ {'--conditions': '102X_dataRun2_v8', '--era': 'Run2_2018,run2_nanoAOD_102Xv1'}, stepNanoEDMData ])
+steps['NANOEDM2018D'] = merge([ {'--conditions': '102X_dataRun2_Prompt_v12', '--era': 'Run2_2018,run2_nanoAOD_102Xv1'}, stepNanoEDMData ])
 
 steps['HARVESTNANOAODMC2017']=merge([{'-s':'HARVESTING:@nanoAODDQM','--conditions': 'auto:phase1_2017_realistic','--era': 'Run2_2017'},steps['HARVESTUP15']])
 steps['HARVESTNANOAODMC2017_94XMiniAODv1']=merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv1'},steps['HARVESTNANOAODMC2017']])
@@ -2561,9 +2566,10 @@ steps['HARVESTNANOAODMC2016_80X']=merge([{'--conditions': 'auto:run2_mc','--era'
 
 steps['HARVESTNANOAOD2017']=merge([{'--data':'','-s':'HARVESTING:@nanoAODDQM','--conditions':'auto:run2_data_relval','--era':'Run2_2017'},steps['HARVESTDR2']])
 steps['HARVESTNANOAOD2017_94XMiniAODv1']=merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv1'},steps['HARVESTNANOAOD2017']])
-steps['HARVESTNANOAOD2017_94XMiniAODv2']=merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv2'},steps['HARVESTNANOAOD2017']])
-steps['HARVESTNANOAOD2016_80X']=merge([{'--era': 'Run2_2016,run2_miniAOD_80XLegacy'},steps['HARVESTNANOAOD2017']])
-steps['HARVESTNANOAOD2018']=merge([{'--conditions': 'auto:run2_data_promptlike', '--era':'Run2_2018'}, steps['HARVESTNANOAOD2017']])
+steps['HARVESTNANOAOD2017_94XMiniAODv2']=merge([{'--era': 'Run2_2017,run2_nanoAOD_94XMiniAODv2','--conditions': '102X_dataRun2_v8'},steps['HARVESTNANOAOD2017']])
+steps['HARVESTNANOAOD2016_80X']=merge([{'--era': 'Run2_2016,run2_nanoAOD_94X2016','--conditions': '102X_dataRun2_nanoAOD_2016_v1'},steps['HARVESTNANOAOD2017']])
+steps['HARVESTNANOAOD2018']=merge([{'--conditions': '102X_dataRun2_v8', '--era':'Run2_2018,run2_nanoAOD_102Xv1'}, steps['HARVESTNANOAOD2017']])
+steps['HARVESTNANOAOD2018D']=merge([{'--conditions': '102X_dataRun2_Prompt_v12', '--era':'Run2_2018,run2_nanoAOD_102Xv1'}, steps['HARVESTNANOAOD2017']])
 
 steps['NANOMERGE'] = { '-s': 'ENDJOB', '-n': 1000 , '--eventcontent' : 'NANOAODSIM','--datatier': 'NANOAODSIM', '--conditions': 'auto:run2_mc' }
 
