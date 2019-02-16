@@ -1,0 +1,56 @@
+%MSG-i ThreadStreamSetup:  (NoModuleName) 16-Feb-2019 15:34:52 CET pre-events
+setting # threads 4
+setting # streams 4
+%MSG
+16-Feb-2019 15:34:58 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/relval/CMSSW_10_5_0_pre1/RelValMinBias_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/4C2DA47A-296A-8143-B45A-E014D929A02F.root
+%MSG-w XrdAdaptorInternal:  file_open 16-Feb-2019 15:35:00 CET pre-events
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/relval/CMSSW_10_5_0_pre1/RelValMinBias_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/4C2DA47A-296A-8143-B45A-E014D929A02F.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 16-Feb-2019 15:35:00 CET pre-events
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/relval/CMSSW_10_5_0_pre1/RelValMinBias_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/4C2DA47A-296A-8143-B45A-E014D929A02F.root?tried=.
+%MSG
+16-Feb-2019 15:35:00 CET  Fallback request to file root://xrootd-cms.infn.it//store/relval/CMSSW_10_5_0_pre1/RelValMinBias_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/4C2DA47A-296A-8143-B45A-E014D929A02F.root
+%MSG-w XrdAdaptorInternal:  file_open 16-Feb-2019 15:38:01 CET pre-events
+Failed to open file at URL root://xrootd-cms.infn.it:1094//store/relval/CMSSW_10_5_0_pre1/RelValMinBias_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/4C2DA47A-296A-8143-B45A-E014D929A02F.root.
+%MSG
+[2019-02-16 15:40:34.224459 +0100][Warning][XRootDTransport   ] [131.225.206.143:23904 #0.0] Logged in, accepting empty login response.
+%MSG-w XrdAdaptor:  file_open 16-Feb-2019 15:40:34 CET pre-events
+Data is served from fnal.gov instead of original site infn.it
+%MSG
+16-Feb-2019 15:40:35 CET  Successfully opened file root://xrootd-cms.infn.it//store/relval/CMSSW_10_5_0_pre1/RelValMinBias_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/4C2DA47A-296A-8143-B45A-E014D929A02F.root
+Begin processing the 1st record. Run 1, Event 42301, LumiSection 142 on stream 2 at 16-Feb-2019 15:40:53.882 CET
+Begin processing the 2nd record. Run 1, Event 42304, LumiSection 142 on stream 0 at 16-Feb-2019 15:40:53.882 CET
+Begin processing the 3rd record. Run 1, Event 42306, LumiSection 142 on stream 1 at 16-Feb-2019 15:40:53.882 CET
+Begin processing the 4th record. Run 1, Event 42302, LumiSection 142 on stream 3 at 16-Feb-2019 15:40:53.883 CET
+Begin processing the 5th record. Run 1, Event 42305, LumiSection 142 on stream 2 at 16-Feb-2019 15:41:08.776 CET
+Begin processing the 6th record. Run 1, Event 42308, LumiSection 142 on stream 1 at 16-Feb-2019 15:41:08.808 CET
+Begin processing the 7th record. Run 1, Event 42307, LumiSection 142 on stream 3 at 16-Feb-2019 15:41:08.938 CET
+Begin processing the 8th record. Run 1, Event 42310, LumiSection 142 on stream 0 at 16-Feb-2019 15:41:09.141 CET
+Begin processing the 9th record. Run 1, Event 42312, LumiSection 142 on stream 1 at 16-Feb-2019 15:41:10.025 CET
+Begin processing the 10th record. Run 1, Event 42309, LumiSection 142 on stream 2 at 16-Feb-2019 15:41:10.161 CET
+16-Feb-2019 15:41:11 CET  Closed file root://xrootd-cms.infn.it//store/relval/CMSSW_10_5_0_pre1/RelValMinBias_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/4C2DA47A-296A-8143-B45A-E014D929A02F.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 XrdAdaptor           -w file_open                              1        1
+    2 XrdAdaptorInternal   -w file_open                              3        3
+    3 fileAction           -s file_close                             1        1
+    4 fileAction           -s file_open                              3        3
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 XrdAdaptor           pre-events                        
+    2 XrdAdaptorInternal   pre-events       pre-events       pre-events
+    3 fileAction           PostGlobalEndRun                  
+    4 fileAction           pre-events       pre-events       pre-events
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 4                   4
+System                  4                   4
+
+dropped waiting message count 0

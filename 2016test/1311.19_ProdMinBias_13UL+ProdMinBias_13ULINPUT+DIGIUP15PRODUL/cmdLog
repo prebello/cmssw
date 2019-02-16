@@ -1,0 +1,16 @@
+
+# in: /afs/cern.ch/work/p/prebello/public/PDMV/HLTforUL_relvals/CMSSW_10_5_0_pre1/src/2016test going to execute cd 1311.19_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL
+ dasgoclient --limit 0 --query 'file dataset=/RelValMinBias_13/CMSSW_10_5_0_pre1-103X_mcRun2_asymptotic_v3-v1/GEN-SIM ' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/public/PDMV/HLTforUL_relvals/CMSSW_10_5_0_pre1/src/2016test going to execute cd 1311.19_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI,L1,DIGI2RAW --datatier GEN-SIM-RAW -n 10 --geometry DB:Extended --era Run2_2016 --eventcontent RAWSIM --io DIGIUP15PRODUL.io --python DIGIUP15PRODUL.py --no_exec --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/public/PDMV/HLTforUL_relvals/CMSSW_10_5_0_pre1/src/2016test dryRun for 'cd 1311.19_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL
+ dasgoclient --limit 0 --query 'file dataset=/RelValMinBias_13/CMSSW_10_5_0_pre1-103X_mcRun2_asymptotic_v3-v1/GEN-SIM ' | sort -u > step1_dasquery.log  2>&1
+ 
+
+# in: /afs/cern.ch/work/p/prebello/public/PDMV/HLTforUL_relvals/CMSSW_10_5_0_pre1/src/2016test dryRun for 'cd 1311.19_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI,L1,DIGI2RAW --datatier GEN-SIM-RAW -n 10 --geometry DB:Extended --era Run2_2016 --eventcontent RAWSIM --io DIGIUP15PRODUL.io --python DIGIUP15PRODUL.py --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL.log  2>&1
+ 

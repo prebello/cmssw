@@ -1,0 +1,42 @@
+processing relval_standard
+request for INPUT for  ['all']
+ignoring non-requested file relval_highstats
+ignoring non-requested file relval_pileup
+ignoring non-requested file relval_generator
+ignoring non-requested file relval_extendedgen
+ignoring non-requested file relval_production
+ignoring non-requested file relval_ged
+ignoring non-requested file relval_upgrade
+ignoring non-requested file relval_2017
+ignoring non-requested file relval_2023
+ignoring non-requested file relval_identity
+ignoring non-requested file relval_machine
+ignoring non-requested file relval_unsch
+ignoring non-requested file relval_premix
+Running in 4 thread(s)
+
+Preparing to run 1311.19 ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL
+
+# in: /afs/cern.ch/work/p/prebello/public/PDMV/HLTforUL_relvals/CMSSW_10_5_0_pre1/src/2016test going to execute cd 1311.19_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL
+ dasgoclient --limit 0 --query 'file dataset=/RelValMinBias_13/CMSSW_10_5_0_pre1-103X_mcRun2_asymptotic_v3-v1/GEN-SIM ' | sort -u > step1_dasquery.log  2>&1
+ 
+
+Preparing to run 1325.19 ProdTTbar_13UL+ProdTTbar_13ULINPUT+DIGIUP15PRODUL
+
+# in: /afs/cern.ch/work/p/prebello/public/PDMV/HLTforUL_relvals/CMSSW_10_5_0_pre1/src/2016test going to execute cd 1325.19_ProdTTbar_13UL+ProdTTbar_13ULINPUT+DIGIUP15PRODUL
+ dasgoclient --limit 0 --query 'file dataset=/RelValTTbar_13/CMSSW_10_5_0_pre1-103X_mcRun2_asymptotic_v3-v1/GEN-SIM ' | sort -u > step1_dasquery.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/public/PDMV/HLTforUL_relvals/CMSSW_10_5_0_pre1/src/2016test going to execute cd 1311.19_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI,L1,DIGI2RAW --datatier GEN-SIM-RAW -n 10 --geometry DB:Extended --era Run2_2016 --eventcontent RAWSIM -n 10 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL.log  2>&1
+ 
+---
+
+# in: /afs/cern.ch/work/p/prebello/public/PDMV/HLTforUL_relvals/CMSSW_10_5_0_pre1/src/2016test going to execute cd 1325.19_ProdTTbar_13UL+ProdTTbar_13ULINPUT+DIGIUP15PRODUL
+ cmsDriver.py step2  --conditions auto:run2_mc -s DIGI,L1,DIGI2RAW --datatier GEN-SIM-RAW -n 10 --geometry DB:Extended --era Run2_2016 --eventcontent RAWSIM -n 10 --filein filelist:step1_dasquery.log --fileout file:step2.root  --nThreads 4 > step2_ProdTTbar_13UL+ProdTTbar_13ULINPUT+DIGIUP15PRODUL.log  2>&1
+ 
+1311.19_ProdMinBias_13UL+ProdMinBias_13ULINPUT+DIGIUP15PRODUL Step0-PASSED Step1-PASSED  - time date Sat Feb 16 15:41:12 2019-date Sat Feb 16 15:34:45 2019; exit: 0 0
+1325.19_ProdTTbar_13UL+ProdTTbar_13ULINPUT+DIGIUP15PRODUL Step0-PASSED Step1-PASSED  - time date Sat Feb 16 15:37:12 2019-date Sat Feb 16 15:34:45 2019; exit: 0 0
+2 2 tests passed, 0 0 failed
+

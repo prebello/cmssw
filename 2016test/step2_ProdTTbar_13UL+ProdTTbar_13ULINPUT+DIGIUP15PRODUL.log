@@ -1,0 +1,53 @@
+%MSG-i ThreadStreamSetup:  (NoModuleName) 16-Feb-2019 15:34:52 CET pre-events
+setting # threads 4
+setting # streams 4
+%MSG
+16-Feb-2019 15:34:58 CET  Initiating request to open file root://eoscms.cern.ch//eos/cms/store/relval/CMSSW_10_5_0_pre1/RelValTTbar_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/53AAD1E8-622B-1649-80C5-9AC903F9C7F8.root
+%MSG-w XrdAdaptorInternal:  file_open 16-Feb-2019 15:35:00 CET pre-events
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/relval/CMSSW_10_5_0_pre1/RelValTTbar_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/53AAD1E8-622B-1649-80C5-9AC903F9C7F8.root.
+%MSG
+%MSG-w XrdAdaptorInternal:  file_open 16-Feb-2019 15:35:00 CET pre-events
+Failed to open file at URL root://eoscms.cern.ch:1094//eos/cms/store/relval/CMSSW_10_5_0_pre1/RelValTTbar_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/53AAD1E8-622B-1649-80C5-9AC903F9C7F8.root?tried=.
+%MSG
+16-Feb-2019 15:35:00 CET  Fallback request to file root://xrootd-cms.infn.it//store/relval/CMSSW_10_5_0_pre1/RelValTTbar_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/53AAD1E8-622B-1649-80C5-9AC903F9C7F8.root
+[2019-02-16 15:36:34.143961 +0100][Warning][XRootDTransport   ] [131.225.206.143:23904 #0.0] Logged in, accepting empty login response.
+%MSG-w XrdAdaptor:  file_open 16-Feb-2019 15:36:34 CET pre-events
+Data is served from fnal.gov instead of original site T2_FR_GRIF_LLR
+%MSG
+16-Feb-2019 15:36:35 CET  Successfully opened file root://xrootd-cms.infn.it//store/relval/CMSSW_10_5_0_pre1/RelValTTbar_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/53AAD1E8-622B-1649-80C5-9AC903F9C7F8.root
+Begin processing the 1st record. Run 1, Event 453, LumiSection 10 on stream 2 at 16-Feb-2019 15:36:51.548 CET
+Begin processing the 2nd record. Run 1, Event 452, LumiSection 10 on stream 1 at 16-Feb-2019 15:36:51.548 CET
+Begin processing the 3rd record. Run 1, Event 451, LumiSection 10 on stream 0 at 16-Feb-2019 15:36:51.548 CET
+Begin processing the 4th record. Run 1, Event 454, LumiSection 10 on stream 3 at 16-Feb-2019 15:36:51.549 CET
+Begin processing the 5th record. Run 1, Event 456, LumiSection 10 on stream 1 at 16-Feb-2019 15:37:07.530 CET
+Begin processing the 6th record. Run 1, Event 458, LumiSection 10 on stream 2 at 16-Feb-2019 15:37:07.692 CET
+Begin processing the 7th record. Run 1, Event 455, LumiSection 10 on stream 0 at 16-Feb-2019 15:37:07.989 CET
+Begin processing the 8th record. Run 1, Event 457, LumiSection 10 on stream 3 at 16-Feb-2019 15:37:08.540 CET
+Begin processing the 9th record. Run 1, Event 459, LumiSection 10 on stream 1 at 16-Feb-2019 15:37:09.254 CET
+Begin processing the 10th record. Run 1, Event 463, LumiSection 10 on stream 2 at 16-Feb-2019 15:37:09.678 CET
+16-Feb-2019 15:37:11 CET  Closed file root://xrootd-cms.infn.it//store/relval/CMSSW_10_5_0_pre1/RelValTTbar_13/GEN-SIM/103X_mcRun2_asymptotic_v3-v1/20000/53AAD1E8-622B-1649-80C5-9AC903F9C7F8.root
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 XrdAdaptor           -w file_open                              1        1
+    2 XrdAdaptorInternal   -w file_open                              2        2
+    3 fileAction           -s file_close                             1        1
+    4 fileAction           -s file_open                              3        3
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 XrdAdaptor           pre-events                        
+    2 XrdAdaptorInternal   pre-events       pre-events       
+    3 fileAction           PostGlobalEndRun                  
+    4 fileAction           pre-events       pre-events       pre-events
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 3                   3
+System                  4                   4
+
+dropped waiting message count 0

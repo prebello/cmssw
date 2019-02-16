@@ -30,6 +30,14 @@ workflows[1302.17] = ['', ['ProdTTbar_13UP17','DIGIUP17PROD1','RECOPRODUP17']]
 workflows[1303.17] = ['', ['ProdQCD_Pt_3000_3500_13UP17','DIGIUP17PROD1','RECOPRODUP17']]
 workflows.addOverride(1303.17,overridesEv5)
 
+#wfs for HLT UL in 2017 
+workflows[10023.19] = ['', ['ProdMinBias_13UP17UL','DIGIUP17PRODUL']]
+workflows[10023.191] = ['', ['ProdMinBias_13UP17UL','RECOUP17PRODUL']]
+workflows[10024.19] = ['', ['ProdTTbar_13UP17UL','DIGIUP17PRODUL']]
+workflows[10024.191] = ['', ['ProdTTbar_13UP17UL','RECOUP17PRODUL']]
+
+
+
 ### data ###
 workflows[4.5]  = ['', ['RunCosmicsA','RECOCOSD','ALCACOSD','HARVESTDC']]
 #workflows[4.6]  = ['', ['MinimumBias2010A','RECODR1','HARVESTDR1']]
@@ -523,7 +531,9 @@ workflows[1335] = ['', ['Wjet_Pt_80_120_13','DIGIUP15','RECOUP15','HARVESTUP15']
 workflows[1336] = ['', ['Wjet_Pt_3000_3500_13','DIGIUP15','RECOUP15','HARVESTUP15']]
 #workflows[1337] = ['', ['LM1_sfts_13','DIGIUP15','RECOUP15','HARVESTUP15']]
 workflows[1337] = ['', ['SMS-T1tttt_mGl-1500_mLSP-100_13','DIGIUP15','RECOUP15','HARVESTUP15']]
+
 workflows[1338] = ['', ['QCD_FlatPt_15_3000HS_13','DIGIUP15','RECOUP15','HARVESTUP15']]
+
 
 workflows[1309]  = ['', ['Higgs200ChargedTaus_13','DIGIUP15','RECOUP15','HARVESTUP15']]
 workflows[1313] = ['', ['QCD_Pt_3000_3500_13','DIGIUP15','RECOUP15','HARVESTUP15']]
@@ -539,6 +549,10 @@ workflows[1365] = ['', ['BuToJpsiK_13','DIGIUP15','RECOUP15','HARVESTUP15']]
 workflows[1366] = ['', ['BsToJpsiPhi_13','DIGIUP15','RECOUP15','HARVESTUP15']]
 
 workflows[1325] = ['', ['TTbar_13','DIGIUP15','RECOUP15','HARVESTUP15','ALCATTUP15']]
+#wf for HLT UL
+workflows[1325.19] = ['', ['ProdTTbar_13UL','DIGIUP15PRODUL']]
+workflows[1325.191] = ['', ['ProdTTbar_13UL','RECOUP15PRODUL']]
+
 # the 3 workflows below are for tracking-specific ib test, not to be run in standard relval set.
 workflows[1325.1] = ['', ['TTbar_13','DIGIUP15','RECOUP15_trackingOnly','HARVESTUP15_trackingOnly']]
 workflows[1325.2] = ['', ['TTbar_13','DIGIUP15','RECOUP15_trackingLowPU','HARVESTUP15']]
@@ -570,6 +584,10 @@ workflows[1334] = ['', ['QQH1352T_13','DIGIUP15','RECOUP15','HARVESTUP15']]
 workflows[1307] = ['', ['CosmicsSPLoose_UP15','DIGICOS_UP15','RECOCOS_UP15','ALCACOS_UP15','HARVESTCOS_UP15']]
 workflows[1308] = ['', ['BeamHalo_13','DIGIHAL','RECOHAL','ALCAHAL','HARVESTHAL']]
 workflows[1311] = ['', ['MinBias_13','DIGIUP15','RECOMINUP15','HARVESTMINUP15','ALCAMINUP15']]
+#wf for HLT UL
+workflows[1311.19] = ['', ['ProdMinBias_13UL','DIGIUP15PRODUL']]
+workflows[1311.191] = ['', ['ProdMinBias_13UL','RECOMINUP15PRODUL']]
+
 workflows[1328] = ['', ['QCD_Pt_80_120_13','DIGIUP15','RECOUP15','HARVESTUP15']]
 workflows[1327] = ['', ['WM_13','DIGIUP15','RECOUP15','HARVESTUP15']]
 workflows[1330] = ['', ['ZMM_13','DIGIUP15','RECOUP15_L1TMuDQM','HARVESTUP15_L1TMuDQM']]
