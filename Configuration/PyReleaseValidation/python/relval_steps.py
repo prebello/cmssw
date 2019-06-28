@@ -2252,7 +2252,7 @@ steps['RECODR2_2017reHLT_Prompt']=merge([{'--conditions':'auto:run2_data'},steps
 steps['RECODR2_UL2017reHLT_DoubleMu_Prompt']=merge([{'--conditions':'106X_dataRun2_v15','-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:TkAlZMuMu+MuAlCalIsolatedMu+MuAlOverlaps+MuAlZMuMu+DtCalib+HcalCalLowPUHBHEMuonFilter,DQM:@rerecoCommon+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2017reHLT']]) #no Skim for DoubleMuon
 
 
-steps['RECODR2_UL2017reHLT_ZeroBias_Prompt']=merge([{'--conditions':'106X_dataRun2_v15','-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+TkAlMinBias+LumiPixelsMinBias+SiStripCalMinBias+AlCaPCCZeroBiasFromRECO,DQM:@rerecoZeroBias+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2017reHLT']])
+steps['RECODR2_UL2017reHLT_ZeroBias_Prompt']=merge([{'--conditions':'106X_dataRun2_v15','--customise_commands':'"process.DQMStore.saveByLumi = cms.untracked.bool(True)"','-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+TkAlMinBias+LumiPixelsMinBias+SiStripCalMinBias+AlCaPCCZeroBiasFromRECO,DQM:@rerecoZeroBias+@ExtraHLT+@miniAODDQM'},steps['RECODR2_2017reHLT']])
 
 
 steps['RECODR2_2017reHLT_Prompt_L1TEgDQM']=merge([{'-s':'RAW2DIGI,L1Reco,RECO,EI,PAT,ALCA:SiStripCalZeroBias+SiStripCalMinBias+TkAlMinBias+EcalESAlign,DQM:@standardDQM+@ExtraHLT+@miniAODDQM+@L1TEgamma'},steps['RECODR2_2017reHLT_Prompt']])
