@@ -347,7 +347,9 @@ steps['RunCharmonium2017C']={'INPUT':InputInfo(dataSet='/Charmonium/Run2017C-v1/
 steps['RunNoBPTX2017C']={'INPUT':InputInfo(dataSet='/NoBPTX/Run2017C-v1/RAW',label='noBptx2017C',events=100000,location='STD', ls=Run2017C)}
 
 
-Run2017C_UL2017={300466: [[36,236]]}
+#Run2017C_UL2017={300466: [[36,236]]}
+#Run2017C_UL2017={299370: [[200,400]]}
+Run2017C_UL2017={301417: [[100,300]]} 
 steps['RunDoubleEG2017C_UL2017']={'INPUT':InputInfo(dataSet='/DoubleEG/Run2017C-v1/RAW',label='2017C',events=100000,location='STD', ls=Run2017C_UL2017)}
 steps['RunDoubleMuon2017C_UL2017']={'INPUT':InputInfo(dataSet='/DoubleMuon/Run2017C-v1/RAW',label='2017C',events=100000,location='STD', ls=Run2017C_UL2017)}
 steps['RunJetHT2017C_UL2017']={'INPUT':InputInfo(dataSet='/JetHT/Run2017C-v1/RAW',label='2017C',events=100000,location='STD', ls=Run2017C_UL2017)}
@@ -417,7 +419,9 @@ steps['RunMuOnia2017E']={'INPUT':InputInfo(dataSet='/MuOnia/Run2017E-v1/RAW',lab
 steps['RunCharmonium2017E']={'INPUT':InputInfo(dataSet='/Charmonium/Run2017E-v1/RAW',label='charm2017E',events=100000,location='STD', ls=Run2017E)}
 steps['RunNoBPTX2017E']={'INPUT':InputInfo(dataSet='/NoBPTX/Run2017E-v1/RAW',label='noBptx2017E',events=100000,location='STD', ls=Run2017E)}
 
-Run2017E_UL2017={304204: [[100, 300]]}
+#Run2017E_UL2017={304204: [[100, 300]]}
+Run2017E_UL2017={304505: [[60,86]]}
+
 steps['RunDoubleEG2017E_UL2017']={'INPUT':InputInfo(dataSet='/DoubleEG/Run2017E-v1/RAW',label='2017E',events=100000,location='STD', ls=Run2017E_UL2017)}
 steps['RunDoubleMuon2017E_UL2017']={'INPUT':InputInfo(dataSet='/DoubleMuon/Run2017E-v1/RAW',label='2017E',events=100000,location='STD', ls=Run2017E_UL2017)}
 steps['RunJetHT2017E_UL2017']={'INPUT':InputInfo(dataSet='/JetHT/Run2017E-v1/RAW',label='2017E',events=100000,location='STD', ls=Run2017E_UL2017)}
@@ -2606,7 +2610,7 @@ steps['HARVEST2017_L1TMuDQM'] = merge([ {'-s':'HARVESTING:@standardDQM+@ExtraHLT
 
 steps['HARVESTUL2017'] = merge([ {'--conditions':'106X_dataRun2_v15','-s':'HARVESTING:@rerecoCommon+@ExtraHLT+@miniAODDQM'}, steps['HARVEST2017'] ])
 steps['HARVESTUL2017_L1TMuDQM'] = merge([ {'--conditions':'106X_dataRun2_v15','-s':'HARVESTING:@rerecoSingleMuon+@ExtraHLT+@miniAODDQM'}, steps['HARVEST2017'] ])
-steps['HARVESTUL2017_ZeroBias'] = merge([ {'--conditions':'106X_dataRun2_v15','-s':'HARVESTING:@rerecoZeroBias+@ExtraHLT+@miniAODDQM'}, steps['HARVEST2017'] ])
+steps['HARVESTUL2017_ZeroBias'] = merge([ {'--conditions':'106X_dataRun2_v15','-s':'HARVESTING:@rerecoZeroBias+@ExtraHLT+@miniAODDQM','--customise_commands':'"process.DQMStore.saveByLumi = cms.untracked.bool(True)"'}, steps['HARVEST2017'] ])
 
 steps['HARVEST2018'] = merge([ {'--conditions':'auto:run2_data_relval','--era':'Run2_2018','--conditions':'auto:run2_data',}, steps['HARVESTD'] ])
 steps['HARVEST2018_Prompt'] = merge([ {'--conditions':'auto:run2_data_relval','--era':'Run2_2018','--conditions':'auto:run2_data_promptlike',}, steps['HARVESTD'] ])
