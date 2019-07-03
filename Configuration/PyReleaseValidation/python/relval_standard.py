@@ -240,6 +240,25 @@ workflows[136.791] = ['',['RunNoBPTX2017B','HLTDR2_2017','RECODR2_2017reHLTAlCaT
 workflows[136.7801] = ['',['RunHLTPhy2017B_AOD','DQMHLTonAOD_2017','HARVESTDQMHLTonAOD_2017']]
 workflows[136.7802] = ['',['RunHLTPhy2017B_AODextra','DQMHLTonAODextra_2017','HARVESTDQMHLTonAOD_2017']]
 
+
+## run2017B for UL2017 final validation
+workflows[136.7811] = ['',['RunDoubleEG2017B_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimDoubleEG_Prompt','HARVESTUL2017']]
+workflows[136.7821] = ['',['RunDoubleMuon2017B_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_DoubleMu_Prompt','HARVESTUL2017']]
+workflows[136.7831] = ['',['RunJetHT2017B_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimJetHT_Prompt','HARVESTUL2017']]
+#workflows[136.7831] = ['',['RunJetHT2017B_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimJetHT_Prompt','HARVEST2017']]               
+#workflows[136.7831] = ['',['RunJetHT2017B_ULTrkDQM','HARVEST2017']]
+workflows[136.7841] = ['',['RunMET2017B_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimMET_Prompt','HARVESTUL2017']]
+workflows[136.7861] = ['',['RunSingleEl2017B_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_Prompt_L1TEgDQM','HARVESTUL2017']]
+workflows[136.7871] = ['',['RunSingleMu2017B_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSingleMu_Prompt_Lumi','HARVESTUL2017_L1TMuDQM']]
+#workflows[136.7871] = ['',['RunSingleMu2017B_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimSingleMu_Prompt_Lumi','HARVEST2017_L1TMuDQM']]   
+#workflows[136.7871] = ['',['RunSingleMu2017B_ULTrkDQM','HARVEST2017_L1TMuDQM']]
+workflows[136.7881] = ['',['RunSinglePh2017B_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSinglePh_Prompt','HARVESTUL2017']]
+workflows[136.7891] = ['',['RunZeroBias2017B_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_ZeroBias_Prompt','HARVESTUL2017_ZeroBias']]
+#workflows[136.7891] = ['',['RunZeroBias2017B_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_Prompt_ULTrk','HARVEST2017_ULTrk']]          
+#workflows[136.7891] = ['',['RunZeroBias2017B_ULTrkDQM','HARVEST2017_ULTrk']]
+
+
+
 ### run 2017C ###
 workflows[136.792] = ['',['RunHLTPhy2017C','HLTDR2_2017','RECODR2_2017reHLT_Prompt','HARVEST2017']]
 workflows[136.793] = ['',['RunDoubleEG2017C','HLTDR2_2017','RECODR2_2017reHLT_skimDoubleEG_Prompt','HARVEST2017']]
@@ -256,6 +275,66 @@ workflows[136.803] = ['',['RunNoBPTX2017C','HLTDR2_2017','RECODR2_2017reHLTAlCaT
 
 # reminiAOD wf on 2017F 94X input
 workflows[136.8311] = ['',['RunJetHT2017F_reminiaod','REMINIAOD_data2017','HARVEST2017_REMINIAOD_data2017']]
+
+
+### run2017C for UL2017 final validation
+
+workflows[136.7931] = ['',['RunDoubleEG2017C_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimDoubleEG_Prompt','HARVESTUL2017']]
+workflows[136.7941] = ['',['RunDoubleMuon2017C_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_DoubleMu_Prompt','HARVESTUL2017']]
+workflows[136.7951] = ['',['RunJetHT2017C_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimJetHT_Prompt','HARVESTUL2017']]
+#workflows[136.7951] = ['',['RunJetHT2017C_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimJetHT_Prompt','HARVEST2017']]                       
+workflows[136.7961] = ['',['RunMET2017C_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimMET_Prompt','HARVESTUL2017']]
+workflows[136.7981] = ['',['RunSingleEl2017C_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_Prompt_L1TEgDQM','HARVESTUL2017']]
+workflows[136.7991] = ['',['RunSingleMu2017C_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSingleMu_Prompt_Lumi','HARVESTUL2017_L1TMuDQM']]
+#workflows[136.7991] = ['',['RunSingleMu2017C_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimSingleMu_Prompt_Lumi','HARVEST2017_L1TMuDQM']]
+workflows[136.8001] = ['',['RunSinglePh2017C_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSinglePh_Prompt','HARVESTUL2017']]
+workflows[136.8011] = ['',['RunZeroBias2017C_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_ZeroBias_Prompt','HARVESTUL2017_ZeroBias']]
+#workflows[136.8011] = ['',['RunZeroBias2017C_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_Prompt_ULTrk','HARVEST2017_ULTrk']]
+
+
+
+
+
+### run 2017D for UL2017 final validation  ###                                                                                                                                 
+workflows[136.8051] = ['',['RunDoubleEG2017D_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimDoubleEG_Prompt','HARVESTUL2017']]
+workflows[136.8061] = ['',['RunDoubleMuon2017D_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_DoubleMu_Prompt','HARVESTUL2017']]
+workflows[136.8071] = ['',['RunJetHT2017D_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimJetHT_Prompt','HARVESTUL2017']]
+#workflows[136.8071] = ['',['RunJetHT2017D_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimJetHT_Prompt','HARVEST2017']]
+workflows[136.8081] = ['',['RunMET2017D_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimMET_Prompt','HARVESTUL2017']]
+workflows[136.8101] = ['',['RunSingleEl2017D_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_Prompt_L1TEgDQM','HARVESTUL2017']]
+workflows[136.8111] = ['',['RunSingleMu2017D_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSingleMu_Prompt_Lumi','HARVESTUL2017_L1TMuDQM']]
+#workflows[136.8111] = ['',['RunSingleMu2017D_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimSingleMu_Prompt_Lumi','HARVEST2017_L1TMuDQM']]
+workflows[136.8121] = ['',['RunSinglePh2017D_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSinglePh_Prompt','HARVESTUL2017']]
+workflows[136.8131] = ['',['RunZeroBias2017D_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_ZeroBias_Prompt','HARVESTUL2017_ZeroBias']]
+#workflows[136.8131] = ['',['RunZeroBias2017D_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_Prompt_ULTrk','HARVEST2017_ULTrk']]
+
+### run 2017E for UL2017 final validation ###                                                                                                                                 
+workflows[136.8171] = ['',['RunDoubleEG2017E_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimDoubleEG_Prompt','HARVESTUL2017']]
+workflows[136.8181] = ['',['RunDoubleMuon2017E_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_DoubleMu_Prompt','HARVESTUL2017']]
+workflows[136.8191] = ['',['RunJetHT2017E_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimJetHT_Prompt','HARVESTUL2017']]
+#workflows[136.8191] = ['',['RunJetHT2017E_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimJetHT_Prompt','HARVEST2017']]
+workflows[136.8201] = ['',['RunMET2017E_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimMET_Prompt','HARVESTUL2017']]
+workflows[136.8221] = ['',['RunSingleEl2017E_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_Prompt_L1TEgDQM','HARVESTUL2017']]
+workflows[136.8231] = ['',['RunSingleMu2017E_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSingleMu_Prompt_Lumi','HARVESTUL2017_L1TMuDQM']]
+#workflows[136.8231] = ['',['RunSingleMu2017E_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimSingleMu_Prompt_Lumi','HARVEST2017_L1TMuDQM']]
+workflows[136.8241] = ['',['RunSinglePh2017E_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSinglePh_Prompt','HARVESTUL2017']]
+workflows[136.8251] = ['',['RunZeroBias2017E_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_ZeroBias_Prompt','HARVESTUL2017_ZeroBias']]
+#workflows[136.8251] = ['',['RunZeroBias2017E_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_Prompt_ULTrk','HARVEST2017_ULTrk']]
+
+
+### run 2017F for UL2017 final validation ###                                                                                                                                  
+workflows[136.8291] = ['',['RunDoubleEG2017F_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimDoubleEG_Prompt','HARVESTUL2017']]
+workflows[136.8301] = ['',['RunDoubleMuon2017F_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_DoubleMu_Prompt','HARVESTUL2017']]
+workflows[136.8312] = ['',['RunJetHT2017F_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimJetHT_Prompt','HARVESTUL2017']]
+#workflows[136.8311] = ['',['RunJetHT2017F_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimJetHT_Prompt','HARVEST2017']]
+workflows[136.8321] = ['',['RunMET2017F_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimMET_Prompt','HARVESTUL2017']]
+workflows[136.8341] = ['',['RunSingleEl2017F_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_Prompt_L1TEgDQM','HARVESTUL2017']]
+workflows[136.8351] = ['',['RunSingleMu2017F_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSingleMu_Prompt_Lumi','HARVESTUL2017_L1TMuDQM']]
+#workflows[136.8351] = ['',['RunSingleMu2017F_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_skimSingleMu_Prompt_Lumi','HARVEST2017_L1TMuDQM']]
+workflows[136.8361] = ['',['RunSinglePh2017F_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_skimSinglePh_Prompt','HARVESTUL2017']]
+workflows[136.8371] = ['',['RunZeroBias2017F_UL2017','HLTDR2_UL2017','RECODR2_UL2017reHLT_ZeroBias_Prompt','HARVESTUL2017_ZeroBias']]
+#workflows[136.8371] = ['',['RunZeroBias2017F_ULTrk','HLTDR2_2017','RECODR2_2017reHLT_Prompt_ULTrk','HARVEST2017_ULTrk']]
+
 
 ### fastsim ###
 workflows[5.1] = ['TTbar', ['TTbarFS','HARVESTFS']]
