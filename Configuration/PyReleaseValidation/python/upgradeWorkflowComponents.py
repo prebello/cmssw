@@ -17,6 +17,14 @@ upgradeKeys[2017] = [
     '2021PU',
     '2021Design',
     '2021DesignPU',
+    '2023',
+    '2023PU',
+    '2023Design',
+    '2023DesignPU',
+    '2024',
+    '2024PU',
+    '2024Design',
+    '2024DesignPU'
 ]
 
 upgradeKeys[2023] = [
@@ -294,6 +302,38 @@ upgradeProperties[2017] = {
         'BeamSpot': 'GaussSigmaZ4cm',
         'ScenToRun' : ['GenSimFull','DigiFull','RecoFull','HARVESTFull'],
     },
+    '2023' : {
+        'Geom' : 'DB:Extended',
+        'GT' : 'auto:phase1_2021_realistic',
+        'HLTmenu': '@relval2017',
+        'Era' : 'Run3',
+        'BeamSpot': 'Run3RoundOptics25ns13TeVLowSigmaZ',
+        'ScenToRun' : ['GenSimFull','DigiFull','RecoFull','HARVESTFull','ALCAFull'],
+    },
+    '2023Design' : {
+        'Geom' : 'DB:Extended',
+        'GT' : 'auto:phase1_2021_design',
+        'HLTmenu': '@relval2017',
+        'Era' : 'Run3',
+        'BeamSpot': 'GaussSigmaZ4cm',
+        'ScenToRun' : ['GenSimFull','DigiFull','RecoFull','HARVESTFull'],
+    },
+    '2024' : {
+        'Geom' : 'DB:Extended',
+        'GT' : 'auto:phase1_2021_realistic',
+        'HLTmenu': '@relval2017',
+        'Era' : 'Run3',
+        'BeamSpot': 'Run3RoundOptics25ns13TeVLowSigmaZ',
+        'ScenToRun' : ['GenSimFull','DigiFull','RecoFull','HARVESTFull','ALCAFull'],
+    },
+    '2024Design' : {
+        'Geom' : 'DB:Extended',
+        'GT' : 'auto:phase1_2021_design',
+        'HLTmenu': '@relval2017',
+        'Era' : 'Run3',
+        'BeamSpot': 'GaussSigmaZ4cm',
+        'ScenToRun' : ['GenSimFull','DigiFull','RecoFull','HARVESTFull'],
+    }
 }
 
 upgradeProperties[2017]['2017PU'] = deepcopy(upgradeProperties[2017]['2017'])
@@ -310,6 +350,15 @@ upgradeProperties[2017]['2021PU'] = deepcopy(upgradeProperties[2017]['2021'])
 upgradeProperties[2017]['2021PU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU','NanoFull']
 upgradeProperties[2017]['2021DesignPU'] = deepcopy(upgradeProperties[2017]['2021Design'])
 upgradeProperties[2017]['2021DesignPU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU']
+upgradeProperties[2017]['2023PU'] = deepcopy(upgradeProperties[2017]['2023'])
+upgradeProperties[2017]['2023PU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU','NanoFull']
+upgradeProperties[2017]['2023DesignPU'] = deepcopy(upgradeProperties[2017]['2023Design'])
+upgradeProperties[2017]['2023DesignPU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU']
+upgradeProperties[2017]['2024PU'] = deepcopy(upgradeProperties[2017]['2024'])
+upgradeProperties[2017]['2024PU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU','NanoFull']
+upgradeProperties[2017]['2024DesignPU'] = deepcopy(upgradeProperties[2017]['2024Design'])
+upgradeProperties[2017]['2024DesignPU']['ScenToRun'] = ['GenSimFull','DigiFullPU','RecoFullPU','HARVESTFullPU']
+
 
 upgradeProperties[2023] = {
     '2023D17' : {
